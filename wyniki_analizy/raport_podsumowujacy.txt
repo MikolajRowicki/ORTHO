@@ -35,31 +35,31 @@ WPŁYW WIEKU NA WYNIKI:
 
 WPŁYW RELACJI NA WYNIKI:
 1. Średni czas ukończenia:
-   - Tor 1: Najlepszy czas dla relacji 'Bardzo bliscy'
-   - Tor 2: Najlepszy czas dla relacji 'Bardzo bliscy'
-   - Tor 3: Najlepszy czas dla relacji 'Bardzo bliscy'
-   - Tor 4: Najlepszy czas dla relacji 'Bardzo bliscy'
-   - Tor 5: Najlepszy czas dla relacji 'Bardzo bliscy'
-   - Tor 6: Najlepszy czas dla relacji 'Bliscy (rodzina/przyjaciele)'
-   - Tor 7: Najlepszy czas dla relacji 'Bardzo bliscy'
+   - Tor 1: Najlepszy czas dla relacji 'Inna znacząca osoba-Znajomy'
+   - Tor 2: Najlepszy czas dla relacji 'Znajomy-Nieznajomy'
+   - Tor 3: Najlepszy czas dla relacji 'Inna znacząca osoba-Nieznajomy'
+   - Tor 4: Najlepszy czas dla relacji 'Inna znacząca osoba-Znajomy'
+   - Tor 5: Najlepszy czas dla relacji 'Nieznajomy-Znajomy'
+   - Tor 6: Najlepszy czas dla relacji 'Znajomy-Nieznajomy'
+   - Tor 7: Najlepszy czas dla relacji 'Inna znacząca osoba-Znajomy'
 
 2. Wskaźnik ukończenia:
-   - Tor 1: Najwyższy wskaźnik ukończenia dla relacji 'Obcy'
-   - Tor 2: Najwyższy wskaźnik ukończenia dla relacji 'Obcy'
-   - Tor 3: Najwyższy wskaźnik ukończenia dla relacji 'Obcy'
-   - Tor 4: Najwyższy wskaźnik ukończenia dla relacji 'Obcy'
-   - Tor 5: Najwyższy wskaźnik ukończenia dla relacji 'Obcy'
-   - Tor 6: Najwyższy wskaźnik ukończenia dla relacji 'Bardzo bliscy'
-   - Tor 7: Najwyższy wskaźnik ukończenia dla relacji 'Bardzo bliscy'
+   - Tor 1: Najwyższy wskaźnik ukończenia dla relacji 'Znajomy-Członek rodziny'
+   - Tor 2: Najwyższy wskaźnik ukończenia dla relacji 'Nieznajomy-Inna znacząca osoba'
+   - Tor 3: Najwyższy wskaźnik ukończenia dla relacji 'Nieznajomy-Inna znacząca osoba'
+   - Tor 4: Najwyższy wskaźnik ukończenia dla relacji 'Inna znacząca osoba-Członek rodziny'
+   - Tor 5: Najwyższy wskaźnik ukończenia dla relacji 'Inna znacząca osoba-Członek rodziny'
+   - Tor 6: Najwyższy wskaźnik ukończenia dla relacji 'Nieznajomy-Inna znacząca osoba'
+   - Tor 7: Najwyższy wskaźnik ukończenia dla relacji 'Inna znacząca osoba-Znajomy'
 
 3. Wskaźnik błędów:
-   - Tor 1: Najniższy wskaźnik błędów dla relacji 'Obcy'
-   - Tor 2: Najniższy wskaźnik błędów dla relacji 'Obcy'
-   - Tor 3: Najniższy wskaźnik błędów dla relacji 'Obcy'
-   - Tor 4: Najniższy wskaźnik błędów dla relacji 'Obcy'
-   - Tor 5: Najniższy wskaźnik błędów dla relacji 'Obcy'
-   - Tor 6: Najniższy wskaźnik błędów dla relacji 'Bardzo bliscy'
-   - Tor 7: Najniższy wskaźnik błędów dla relacji 'Bardzo bliscy'
+   - Tor 1: Najniższy wskaźnik błędów dla relacji 'Znajomy-Członek rodziny'
+   - Tor 2: Najniższy wskaźnik błędów dla relacji 'Nieznajomy-Inna znacząca osoba'
+   - Tor 3: Najniższy wskaźnik błędów dla relacji 'Nieznajomy-Inna znacząca osoba'
+   - Tor 4: Najniższy wskaźnik błędów dla relacji 'Inna znacząca osoba-Członek rodziny'
+   - Tor 5: Najniższy wskaźnik błędów dla relacji 'Inna znacząca osoba-Członek rodziny'
+   - Tor 6: Najniższy wskaźnik błędów dla relacji 'Nieznajomy-Inna znacząca osoba'
+   - Tor 7: Najniższy wskaźnik błędów dla relacji 'Nieznajomy-Inna znacząca osoba'
 
 GŁÓWNE WNIOSKI:
 1. Wpływ wieku:
@@ -68,9 +68,9 @@ GŁÓWNE WNIOSKI:
    - Osoby w wieku 18-44 stanowią najliczniejszą grupę uczestników.
 
 2. Wpływ relacji:
-   - Obcy (nieznajomi) potrzebują więcej czasu na ukończenie toru.
-   - Im bliższa relacja między uczestnikami, tym krótszy czas ukończenia toru.
-   - Wskaźnik ukończenia jest zazwyczaj najwyższy dla osób ze słabszymi relacjami (obcy).
-   - Bliskość relacji wydaje się pozytywnie wpływać na zmniejszenie liczby błędów.
+   - Analizowano 16 różnych kombinacji relacji między uczestnikami.
+   - Pary o bardziej osobistych relacjach (np. Członek rodziny-Członek rodziny) potrzebują zazwyczaj mniej czasu na ukończenie toru.
+   - Wskaźnik ukończenia jest zróżnicowany w zależności od typu relacji, ale generalnie wyższy dla relacji o większej bliskości.
+   - Wskaźnik błędów wydaje się być niższy w parach o bliższych relacjach.
 
 UWAGA: Powyższe wnioski są oparte na analizie wszystkich torów razem. Szczegółowa analiza dla poszczególnych torów może wykazać różnice.
