@@ -1,0 +1,10 @@
+RAPORT PODSUMOWUJĄCY ANALIZĘ WPŁYWU WIEKU I RELACJI NA WYNIKI W GRZE ORTHO
+================================================================================
+
+OGÓLNE INFORMACJE:
+- Łączna liczba analizowanych gier: 91861
+- Liczba przeanalizowanych torów: 7
+
+WPŁYW WIEKU NA WYNIKI:
+1. Średni czas ukończenia:
+   - Tor 1: 
