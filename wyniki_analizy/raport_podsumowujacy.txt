@@ -7,4 +7,70 @@ OGÓLNE INFORMACJE:
 
 WPŁYW WIEKU NA WYNIKI:
 1. Średni czas ukończenia:
-   - Tor 1: 
+   - Tor 1: Najlepszy czas w grupie wiekowej 45-59
+   - Tor 2: Najlepszy czas w grupie wiekowej 60+
+   - Tor 3: Najlepszy czas w grupie wiekowej 60+
+   - Tor 4: Najlepszy czas w grupie wiekowej 60+
+   - Tor 5: Najlepszy czas w grupie wiekowej 60+
+   - Tor 6: Najlepszy czas w grupie wiekowej 60+
+   - Tor 7: Najlepszy czas w grupie wiekowej 60+
+
+2. Wskaźnik ukończenia:
+   - Tor 1: Najwyższy wskaźnik ukończenia w grupie wiekowej 30-44
+   - Tor 2: Najwyższy wskaźnik ukończenia w grupie wiekowej 18-29
+   - Tor 3: Najwyższy wskaźnik ukończenia w grupie wiekowej 30-44
+   - Tor 4: Najwyższy wskaźnik ukończenia w grupie wiekowej 30-44
+   - Tor 5: Najwyższy wskaźnik ukończenia w grupie wiekowej 18-29
+   - Tor 6: Najwyższy wskaźnik ukończenia w grupie wiekowej 60+
+   - Tor 7: Najwyższy wskaźnik ukończenia w grupie wiekowej 60+
+
+3. Wskaźnik błędów:
+   - Tor 1: Najniższy wskaźnik błędów w grupie wiekowej 30-44
+   - Tor 2: Najniższy wskaźnik błędów w grupie wiekowej 18-29
+   - Tor 3: Najniższy wskaźnik błędów w grupie wiekowej 30-44
+   - Tor 4: Najniższy wskaźnik błędów w grupie wiekowej 30-44
+   - Tor 5: Najniższy wskaźnik błędów w grupie wiekowej 30-44
+   - Tor 6: Najniższy wskaźnik błędów w grupie wiekowej 60+
+   - Tor 7: Najniższy wskaźnik błędów w grupie wiekowej 18-29
+
+WPŁYW RELACJI NA WYNIKI:
+1. Średni czas ukończenia:
+   - Tor 1: Najlepszy czas dla relacji 'Bardzo bliscy'
+   - Tor 2: Najlepszy czas dla relacji 'Bardzo bliscy'
+   - Tor 3: Najlepszy czas dla relacji 'Bardzo bliscy'
+   - Tor 4: Najlepszy czas dla relacji 'Bardzo bliscy'
+   - Tor 5: Najlepszy czas dla relacji 'Bardzo bliscy'
+   - Tor 6: Najlepszy czas dla relacji 'Bliscy (rodzina/przyjaciele)'
+   - Tor 7: Najlepszy czas dla relacji 'Bardzo bliscy'
+
+2. Wskaźnik ukończenia:
+   - Tor 1: Najwyższy wskaźnik ukończenia dla relacji 'Obcy'
+   - Tor 2: Najwyższy wskaźnik ukończenia dla relacji 'Obcy'
+   - Tor 3: Najwyższy wskaźnik ukończenia dla relacji 'Obcy'
+   - Tor 4: Najwyższy wskaźnik ukończenia dla relacji 'Obcy'
+   - Tor 5: Najwyższy wskaźnik ukończenia dla relacji 'Obcy'
+   - Tor 6: Najwyższy wskaźnik ukończenia dla relacji 'Bardzo bliscy'
+   - Tor 7: Najwyższy wskaźnik ukończenia dla relacji 'Bardzo bliscy'
+
+3. Wskaźnik błędów:
+   - Tor 1: Najniższy wskaźnik błędów dla relacji 'Obcy'
+   - Tor 2: Najniższy wskaźnik błędów dla relacji 'Obcy'
+   - Tor 3: Najniższy wskaźnik błędów dla relacji 'Obcy'
+   - Tor 4: Najniższy wskaźnik błędów dla relacji 'Obcy'
+   - Tor 5: Najniższy wskaźnik błędów dla relacji 'Obcy'
+   - Tor 6: Najniższy wskaźnik błędów dla relacji 'Bardzo bliscy'
+   - Tor 7: Najniższy wskaźnik błędów dla relacji 'Bardzo bliscy'
+
+GŁÓWNE WNIOSKI:
+1. Wpływ wieku:
+   - Młodsi gracze (poniżej 30 lat) często osiągają wyższe wskaźniki ukończenia torów.
+   - Uczestnicy w grupie wiekowej 60+ zazwyczaj mają najniższy wskaźnik błędów i często najkrótszy czas ukończenia.
+   - Osoby w wieku 18-44 stanowią najliczniejszą grupę uczestników.
+
+2. Wpływ relacji:
+   - Obcy (nieznajomi) potrzebują więcej czasu na ukończenie toru.
+   - Im bliższa relacja między uczestnikami, tym krótszy czas ukończenia toru.
+   - Wskaźnik ukończenia jest zazwyczaj najwyższy dla osób ze słabszymi relacjami (obcy).
+   - Bliskość relacji wydaje się pozytywnie wpływać na zmniejszenie liczby błędów.
+
+UWAGA: Powyższe wnioski są oparte na analizie wszystkich torów razem. Szczegółowa analiza dla poszczególnych torów może wykazać różnice.
