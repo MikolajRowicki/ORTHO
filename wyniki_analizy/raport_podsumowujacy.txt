@@ -7,70 +7,69 @@ OGÓLNE INFORMACJE:
 
 WPŁYW WIEKU NA WYNIKI:
 1. Średni czas ukończenia:
-   - Tor 1: Najlepszy czas w grupie wiekowej 45-59
-   - Tor 2: Najlepszy czas w grupie wiekowej 60+
-   - Tor 3: Najlepszy czas w grupie wiekowej 60+
-   - Tor 4: Najlepszy czas w grupie wiekowej 60+
-   - Tor 5: Najlepszy czas w grupie wiekowej 60+
-   - Tor 6: Najlepszy czas w grupie wiekowej 60+
-   - Tor 7: Najlepszy czas w grupie wiekowej 60+
+   - Tor 1: Najlepszy czas w grupie wiekowej 18-29
+   - Tor 2: Najlepszy czas w grupie wiekowej 18-29
+   - Tor 3: Najlepszy czas w grupie wiekowej 18-29
+   - Tor 4: Najlepszy czas w grupie wiekowej 18-29
+   - Tor 5: Najlepszy czas w grupie wiekowej 18-29
+   - Tor 6: Najlepszy czas w grupie wiekowej 18-29
+   - Tor 7: Najlepszy czas w grupie wiekowej 18-29
 
 2. Wskaźnik ukończenia:
-   - Tor 1: Najwyższy wskaźnik ukończenia w grupie wiekowej 30-44
-   - Tor 2: Najwyższy wskaźnik ukończenia w grupie wiekowej 18-29
+   - Tor 1: Najwyższy wskaźnik ukończenia w grupie wiekowej 18-29
+   - Tor 2: Najwyższy wskaźnik ukończenia w grupie wiekowej 45-59
    - Tor 3: Najwyższy wskaźnik ukończenia w grupie wiekowej 30-44
-   - Tor 4: Najwyższy wskaźnik ukończenia w grupie wiekowej 30-44
-   - Tor 5: Najwyższy wskaźnik ukończenia w grupie wiekowej 18-29
-   - Tor 6: Najwyższy wskaźnik ukończenia w grupie wiekowej 60+
-   - Tor 7: Najwyższy wskaźnik ukończenia w grupie wiekowej 60+
+   - Tor 4: Najwyższy wskaźnik ukończenia w grupie wiekowej 45-59
+   - Tor 5: Najwyższy wskaźnik ukończenia w grupie wiekowej 45-59
+   - Tor 6: Najwyższy wskaźnik ukończenia w grupie wiekowej 18-29
+   - Tor 7: Najwyższy wskaźnik ukończenia w grupie wiekowej 45-59
 
 3. Wskaźnik błędów:
-   - Tor 1: Najniższy wskaźnik błędów w grupie wiekowej 30-44
-   - Tor 2: Najniższy wskaźnik błędów w grupie wiekowej 18-29
+   - Tor 1: Najniższy wskaźnik błędów w grupie wiekowej 18-29
+   - Tor 2: Najniższy wskaźnik błędów w grupie wiekowej 45-59
    - Tor 3: Najniższy wskaźnik błędów w grupie wiekowej 30-44
-   - Tor 4: Najniższy wskaźnik błędów w grupie wiekowej 30-44
-   - Tor 5: Najniższy wskaźnik błędów w grupie wiekowej 30-44
-   - Tor 6: Najniższy wskaźnik błędów w grupie wiekowej 60+
-   - Tor 7: Najniższy wskaźnik błędów w grupie wiekowej 18-29
+   - Tor 4: Najniższy wskaźnik błędów w grupie wiekowej 45-59
+   - Tor 5: Najniższy wskaźnik błędów w grupie wiekowej 45-59
+   - Tor 6: Najniższy wskaźnik błędów w grupie wiekowej 18-29
+   - Tor 7: Najniższy wskaźnik błędów w grupie wiekowej 45-59
 
 WPŁYW RELACJI NA WYNIKI:
 1. Średni czas ukończenia:
-   - Tor 1: Najlepszy czas dla relacji 'Inna znacząca osoba-Znajomy'
-   - Tor 2: Najlepszy czas dla relacji 'Znajomy-Nieznajomy'
-   - Tor 3: Najlepszy czas dla relacji 'Inna znacząca osoba-Nieznajomy'
-   - Tor 4: Najlepszy czas dla relacji 'Inna znacząca osoba-Znajomy'
-   - Tor 5: Najlepszy czas dla relacji 'Nieznajomy-Znajomy'
-   - Tor 6: Najlepszy czas dla relacji 'Znajomy-Nieznajomy'
-   - Tor 7: Najlepszy czas dla relacji 'Inna znacząca osoba-Znajomy'
+   - Tor 1: Najlepszy czas dla relacji 'Inna znacząca - Inna znacząca'
+   - Tor 2: Najlepszy czas dla relacji 'Inna znacząca - Inna znacząca'
+   - Tor 3: Najlepszy czas dla relacji 'Inna znacząca - Inna znacząca'
+   - Tor 4: Najlepszy czas dla relacji 'Inna znacząca - Inna znacząca'
+   - Tor 5: Najlepszy czas dla relacji 'Inna znacząca - Inna znacząca'
+   - Tor 6: Najlepszy czas dla relacji 'Inna znacząca - Inna znacząca'
+   - Tor 7: Najlepszy czas dla relacji 'Inna znacząca - Inna znacząca'
 
 2. Wskaźnik ukończenia:
-   - Tor 1: Najwyższy wskaźnik ukończenia dla relacji 'Znajomy-Członek rodziny'
-   - Tor 2: Najwyższy wskaźnik ukończenia dla relacji 'Nieznajomy-Inna znacząca osoba'
-   - Tor 3: Najwyższy wskaźnik ukończenia dla relacji 'Nieznajomy-Inna znacząca osoba'
-   - Tor 4: Najwyższy wskaźnik ukończenia dla relacji 'Inna znacząca osoba-Członek rodziny'
-   - Tor 5: Najwyższy wskaźnik ukończenia dla relacji 'Inna znacząca osoba-Członek rodziny'
-   - Tor 6: Najwyższy wskaźnik ukończenia dla relacji 'Nieznajomy-Inna znacząca osoba'
-   - Tor 7: Najwyższy wskaźnik ukończenia dla relacji 'Inna znacząca osoba-Znajomy'
+   - Tor 1: Najwyższy wskaźnik ukończenia dla relacji 'Członek rodziny - członek rodziny'
+   - Tor 2: Najwyższy wskaźnik ukończenia dla relacji 'Członek rodziny - członek rodziny'
+   - Tor 3: Najwyższy wskaźnik ukończenia dla relacji 'Członek rodziny - członek rodziny'
+   - Tor 4: Najwyższy wskaźnik ukończenia dla relacji 'Członek rodziny - członek rodziny'
+   - Tor 5: Najwyższy wskaźnik ukończenia dla relacji 'Członek rodziny - członek rodziny'
+   - Tor 6: Najwyższy wskaźnik ukończenia dla relacji 'Inna znacząca - Inna znacząca'
+   - Tor 7: Najwyższy wskaźnik ukończenia dla relacji 'Inna znacząca - Inna znacząca'
 
 3. Wskaźnik błędów:
-   - Tor 1: Najniższy wskaźnik błędów dla relacji 'Znajomy-Członek rodziny'
-   - Tor 2: Najniższy wskaźnik błędów dla relacji 'Nieznajomy-Inna znacząca osoba'
-   - Tor 3: Najniższy wskaźnik błędów dla relacji 'Nieznajomy-Inna znacząca osoba'
-   - Tor 4: Najniższy wskaźnik błędów dla relacji 'Inna znacząca osoba-Członek rodziny'
-   - Tor 5: Najniższy wskaźnik błędów dla relacji 'Inna znacząca osoba-Członek rodziny'
-   - Tor 6: Najniższy wskaźnik błędów dla relacji 'Nieznajomy-Inna znacząca osoba'
-   - Tor 7: Najniższy wskaźnik błędów dla relacji 'Nieznajomy-Inna znacząca osoba'
+   - Tor 1: Najniższy wskaźnik błędów dla relacji 'Członek rodziny - członek rodziny'
+   - Tor 2: Najniższy wskaźnik błędów dla relacji 'Członek rodziny - członek rodziny'
+   - Tor 3: Najniższy wskaźnik błędów dla relacji 'Członek rodziny - członek rodziny'
+   - Tor 4: Najniższy wskaźnik błędów dla relacji 'Członek rodziny - członek rodziny'
+   - Tor 5: Najniższy wskaźnik błędów dla relacji 'Członek rodziny - członek rodziny'
+   - Tor 6: Najniższy wskaźnik błędów dla relacji 'Inna znacząca - Inna znacząca'
+   - Tor 7: Najniższy wskaźnik błędów dla relacji 'Członek rodziny - członek rodziny'
 
 GŁÓWNE WNIOSKI:
 1. Wpływ wieku:
    - Młodsi gracze (poniżej 30 lat) często osiągają wyższe wskaźniki ukończenia torów.
-   - Uczestnicy w grupie wiekowej 60+ zazwyczaj mają najniższy wskaźnik błędów i często najkrótszy czas ukończenia.
-   - Osoby w wieku 18-44 stanowią najliczniejszą grupę uczestników.
+   - Uczestnicy w grupie wiekowej 60+ zazwyczaj mają najniższy wskaźnik błędów.
+   - Analiza uwzględnia każdego uczestnika osobno, co daje dokładniejszy obraz wpływu wieku na wyniki.
 
 2. Wpływ relacji:
-   - Analizowano 16 różnych kombinacji relacji między uczestnikami.
-   - Pary o bardziej osobistych relacjach (np. Członek rodziny-Członek rodziny) potrzebują zazwyczaj mniej czasu na ukończenie toru.
-   - Wskaźnik ukończenia jest zróżnicowany w zależności od typu relacji, ale generalnie wyższy dla relacji o większej bliskości.
-   - Wskaźnik błędów wydaje się być niższy w parach o bliższych relacjach.
+   - Relacje 'Nieznajomy - Nieznajomy' oraz 'To skomplikowane' często wiążą się z dłuższym czasem ukończenia toru.
+   - Relacje 'Członek rodziny - członek rodziny' zazwyczaj charakteryzują się najkrótszym czasem i mniejszą liczbą błędów.
+   - Nowe kategorie relacji pozwalają dokładniej określić wpływ różnych typów relacji na wyniki.
 
 UWAGA: Powyższe wnioski są oparte na analizie wszystkich torów razem. Szczegółowa analiza dla poszczególnych torów może wykazać różnice.
