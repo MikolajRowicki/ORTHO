@@ -1,0 +1,780 @@
+Podstawowe statystyki:
+Liczba wierszy: 122554
+Unikalne tory: [2 4 6 3 1 7 5]
+Unikalne grupy wiekowe X: ['18-29' '30-44' '< 18' '60+' '45-59']
+Unikalne grupy wiekowe Y: ['18-29' '30-44' '< 18' '45-59' '60+']
+Unikalne relacje: ['Znajomy - Znajomy' 'Członek rodziny - członek rodziny'
+ 'To skomplikowane' 'Nieznajomy - Nieznajomy'
+ 'Inna znacząca - Inna znacząca']
+Procent ukończonych podejść: 45.92%
+Analiza dla wszystkich torów łącznie:
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_X):
+Statystyka: 752.35, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_Y):
+Statystyka: 690.59, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla relacji (Relationship_Name):
+Statystyka: 1255.64, p-wartość: 0.0000, Istotne: True
+
+
+=== Analiza dla toru 1 ===
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_X):
+Statystyka: 69.39, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_Y):
+Statystyka: 37.54, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla relacji (Relationship_Name):
+Statystyka: 176.55, p-wartość: 0.0000, Istotne: True
+
+Szczegółowe testy Wilcoxona dla par grup wiekowych (Age_Group_X):
+18-29 vs 30-44: Statystyka=1274537.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=40.76s, 30-44=45.48s
+  Mediany czasów: 18-29=35.14s, 30-44=39.74s
+18-29 vs 45-59: Statystyka=417687.50, p-wartość=0.0010, Istotne=True
+  Średnie czasy: 18-29=40.76s, 45-59=44.86s
+  Mediany czasów: 18-29=35.14s, 45-59=39.19s
+18-29 vs 60+: Statystyka=419510.00, p-wartość=0.6171, Istotne=False
+  Średnie czasy: 18-29=40.76s, 60+=40.76s
+  Mediany czasów: 18-29=35.14s, 60+=33.25s
+18-29 vs < 18: Statystyka=2719809.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=40.76s, < 18=48.42s
+  Mediany czasów: 18-29=35.14s, < 18=40.57s
+30-44 vs 45-59: Statystyka=434990.50, p-wartość=0.7733, Istotne=False
+  Średnie czasy: 30-44=45.48s, 45-59=44.86s
+  Mediany czasów: 30-44=39.74s, 45-59=39.19s
+30-44 vs 60+: Statystyka=432055.00, p-wartość=0.0001, Istotne=True
+  Średnie czasy: 30-44=45.48s, 60+=40.76s
+  Mediany czasów: 30-44=39.74s, 60+=33.25s
+30-44 vs < 18: Statystyka=2833334.00, p-wartość=0.1733, Istotne=False
+  Średnie czasy: 30-44=45.48s, < 18=48.42s
+  Mediany czasów: 30-44=39.74s, < 18=40.57s
+45-59 vs 60+: Statystyka=138902.00, p-wartość=0.0031, Istotne=True
+  Średnie czasy: 45-59=44.86s, 60+=40.76s
+  Mediany czasów: 45-59=39.19s, 60+=33.25s
+45-59 vs < 18: Statystyka=911032.50, p-wartość=0.2352, Istotne=False
+  Średnie czasy: 45-59=44.86s, < 18=48.42s
+  Mediany czasów: 45-59=39.19s, < 18=40.57s
+60+ vs < 18: Statystyka=728439.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 60+=40.76s, < 18=48.42s
+  Mediany czasów: 60+=33.25s, < 18=40.57s
+
+Szczegółowe testy Wilcoxona dla par grup wiekowych (Age_Group_Y):
+18-29 vs 30-44: Statystyka=1103906.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=40.86s, 30-44=46.11s
+  Mediany czasów: 18-29=35.84s, 30-44=39.96s
+18-29 vs 45-59: Statystyka=345208.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=40.86s, 45-59=48.51s
+  Mediany czasów: 18-29=35.84s, 45-59=41.22s
+18-29 vs 60+: Statystyka=410071.50, p-wartość=0.1349, Istotne=False
+  Średnie czasy: 18-29=40.86s, 60+=44.59s
+  Mediany czasów: 18-29=35.84s, 60+=36.89s
+18-29 vs < 18: Statystyka=2893389.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=40.86s, < 18=46.92s
+  Mediany czasów: 18-29=35.84s, < 18=39.24s
+30-44 vs 45-59: Statystyka=339440.00, p-wartość=0.2379, Istotne=False
+  Średnie czasy: 30-44=46.11s, 45-59=48.51s
+  Mediany czasów: 30-44=39.96s, 45-59=41.22s
+30-44 vs 60+: Statystyka=397792.00, p-wartość=0.0852, Istotne=False
+  Średnie czasy: 30-44=46.11s, 60+=44.59s
+  Mediany czasów: 30-44=39.96s, 60+=36.89s
+30-44 vs < 18: Statystyka=2817958.00, p-wartość=0.6896, Istotne=False
+  Średnie czasy: 30-44=46.11s, < 18=46.92s
+  Mediany czasów: 30-44=39.96s, < 18=39.24s
+45-59 vs 60+: Statystyka=134045.50, p-wartość=0.0180, Istotne=True
+  Średnie czasy: 45-59=48.51s, 60+=44.59s
+  Mediany czasów: 45-59=41.22s, 60+=36.89s
+45-59 vs < 18: Statystyka=950589.00, p-wartość=0.1284, Istotne=False
+  Średnie czasy: 45-59=48.51s, < 18=46.92s
+  Mediany czasów: 45-59=41.22s, < 18=39.24s
+60+ vs < 18: Statystyka=938947.50, p-wartość=0.1197, Istotne=False
+  Średnie czasy: 60+=44.59s, < 18=46.92s
+  Mediany czasów: 60+=36.89s, < 18=39.24s
+
+Szczegółowe testy Wilcoxona dla par relacji (Relationship_Name):
+Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: Statystyka=1798872.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=49.66s, Inna znacząca - Inna znacząca=39.49s
+  Mediany czasów: Członek rodziny - członek rodziny=42.27s, Inna znacząca - Inna znacząca=35.19s
+Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy: Statystyka=737314.00, p-wartość=0.0005, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=49.66s, Nieznajomy - Nieznajomy=44.15s
+  Mediany czasów: Członek rodziny - członek rodziny=42.27s, Nieznajomy - Nieznajomy=35.94s
+Członek rodziny - członek rodziny vs To skomplikowane: Statystyka=3005567.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=49.66s, To skomplikowane=39.01s
+  Mediany czasów: Członek rodziny - członek rodziny=42.27s, To skomplikowane=32.12s
+Członek rodziny - członek rodziny vs Znajomy - Znajomy: Statystyka=3573267.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=49.66s, Znajomy - Znajomy=43.86s
+  Mediany czasów: Członek rodziny - członek rodziny=42.27s, Znajomy - Znajomy=37.29s
+Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: Statystyka=131458.00, p-wartość=0.1482, Istotne=False
+  Średnie czasy: Inna znacząca - Inna znacząca=39.49s, Nieznajomy - Nieznajomy=44.15s
+  Mediany czasów: Inna znacząca - Inna znacząca=35.19s, Nieznajomy - Nieznajomy=35.94s
+Inna znacząca - Inna znacząca vs To skomplikowane: Statystyka=546012.50, p-wartość=0.0291, Istotne=True
+  Średnie czasy: Inna znacząca - Inna znacząca=39.49s, To skomplikowane=39.01s
+  Mediany czasów: Inna znacząca - Inna znacząca=35.19s, To skomplikowane=32.12s
+Inna znacząca - Inna znacząca vs Znajomy - Znajomy: Statystyka=637868.00, p-wartość=0.0421, Istotne=True
+  Średnie czasy: Inna znacząca - Inna znacząca=39.49s, Znajomy - Znajomy=43.86s
+  Mediany czasów: Inna znacząca - Inna znacząca=35.19s, Znajomy - Znajomy=37.29s
+Nieznajomy - Nieznajomy vs To skomplikowane: Statystyka=246386.50, p-wartość=0.0023, Istotne=True
+  Średnie czasy: Nieznajomy - Nieznajomy=44.15s, To skomplikowane=39.01s
+  Mediany czasów: Nieznajomy - Nieznajomy=35.94s, To skomplikowane=32.12s
+Nieznajomy - Nieznajomy vs Znajomy - Znajomy: Statystyka=291408.50, p-wartość=0.8411, Istotne=False
+  Średnie czasy: Nieznajomy - Nieznajomy=44.15s, Znajomy - Znajomy=43.86s
+  Mediany czasów: Nieznajomy - Nieznajomy=35.94s, Znajomy - Znajomy=37.29s
+To skomplikowane vs Znajomy - Znajomy: Statystyka=967614.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: To skomplikowane=39.01s, Znajomy - Znajomy=43.86s
+  Mediany czasów: To skomplikowane=32.12s, Znajomy - Znajomy=37.29s
+
+
+=== Analiza dla toru 2 ===
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_X):
+Statystyka: 146.66, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_Y):
+Statystyka: 166.13, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla relacji (Relationship_Name):
+Statystyka: 172.24, p-wartość: 0.0000, Istotne: True
+
+Szczegółowe testy Wilcoxona dla par grup wiekowych (Age_Group_X):
+18-29 vs 30-44: Statystyka=1196248.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=37.70s, 30-44=45.95s
+  Mediany czasów: 18-29=33.15s, 30-44=39.81s
+18-29 vs 45-59: Statystyka=395650.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=37.70s, 45-59=46.83s
+  Mediany czasów: 18-29=33.15s, 45-59=41.22s
+18-29 vs 60+: Statystyka=482799.50, p-wartość=0.0932, Istotne=False
+  Średnie czasy: 18-29=37.70s, 60+=41.89s
+  Mediany czasów: 18-29=33.15s, 60+=34.17s
+18-29 vs < 18: Statystyka=2516233.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=37.70s, < 18=47.03s
+  Mediany czasów: 18-29=33.15s, < 18=39.91s
+30-44 vs 45-59: Statystyka=468348.00, p-wartość=0.6240, Istotne=False
+  Średnie czasy: 30-44=45.95s, 45-59=46.83s
+  Mediany czasów: 30-44=39.81s, 45-59=41.22s
+30-44 vs 60+: Statystyka=551099.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 30-44=45.95s, 60+=41.89s
+  Mediany czasów: 30-44=39.81s, 60+=34.17s
+30-44 vs < 18: Statystyka=2949508.00, p-wartość=0.9997, Istotne=False
+  Średnie czasy: 30-44=45.95s, < 18=47.03s
+  Mediany czasów: 30-44=39.81s, < 18=39.91s
+45-59 vs 60+: Statystyka=186393.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 45-59=46.83s, 60+=41.89s
+  Mediany czasów: 45-59=41.22s, 60+=34.17s
+45-59 vs < 18: Statystyka=1001267.00, p-wartość=0.6041, Istotne=False
+  Średnie czasy: 45-59=46.83s, < 18=47.03s
+  Mediany czasów: 45-59=41.22s, < 18=39.91s
+60+ vs < 18: Statystyka=887692.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 60+=41.89s, < 18=47.03s
+  Mediany czasów: 60+=34.17s, < 18=39.91s
+
+Szczegółowe testy Wilcoxona dla par grup wiekowych (Age_Group_Y):
+18-29 vs 30-44: Statystyka=1158324.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=38.54s, 30-44=44.14s
+  Mediany czasów: 18-29=33.42s, 30-44=38.62s
+18-29 vs 45-59: Statystyka=295330.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=38.54s, 45-59=48.16s
+  Mediany czasów: 18-29=33.42s, 45-59=41.09s
+18-29 vs 60+: Statystyka=524922.50, p-wartość=0.4373, Istotne=False
+  Średnie czasy: 18-29=38.54s, 60+=38.90s
+  Mediany czasów: 18-29=33.42s, 60+=33.07s
+18-29 vs < 18: Statystyka=2704784.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=38.54s, < 18=47.66s
+  Mediany czasów: 18-29=33.42s, < 18=40.59s
+30-44 vs 45-59: Statystyka=305991.00, p-wartość=0.0155, Istotne=True
+  Średnie czasy: 30-44=44.14s, 45-59=48.16s
+  Mediany czasów: 30-44=38.62s, 45-59=41.09s
+30-44 vs 60+: Statystyka=520638.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 30-44=44.14s, 60+=38.90s
+  Mediany czasów: 30-44=38.62s, 60+=33.07s
+30-44 vs < 18: Statystyka=2758349.50, p-wartość=0.0058, Istotne=True
+  Średnie czasy: 30-44=44.14s, < 18=47.66s
+  Mediany czasów: 30-44=38.62s, < 18=40.59s
+45-59 vs 60+: Statystyka=155522.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 45-59=48.16s, 60+=38.90s
+  Mediany czasów: 45-59=41.09s, 60+=33.07s
+45-59 vs < 18: Statystyka=832646.50, p-wartość=0.4020, Istotne=False
+  Średnie czasy: 45-59=48.16s, < 18=47.66s
+  Mediany czasów: 45-59=41.09s, < 18=40.59s
+60+ vs < 18: Statystyka=888897.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 60+=38.90s, < 18=47.66s
+  Mediany czasów: 60+=33.07s, < 18=40.59s
+
+Szczegółowe testy Wilcoxona dla par relacji (Relationship_Name):
+Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: Statystyka=1824024.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=48.42s, Inna znacząca - Inna znacząca=37.87s
+  Mediany czasów: Członek rodziny - członek rodziny=41.30s, Inna znacząca - Inna znacząca=32.98s
+Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy: Statystyka=733168.50, p-wartość=0.0041, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=48.42s, Nieznajomy - Nieznajomy=43.13s
+  Mediany czasów: Członek rodziny - członek rodziny=41.30s, Nieznajomy - Nieznajomy=38.62s
+Członek rodziny - członek rodziny vs To skomplikowane: Statystyka=3087503.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=48.42s, To skomplikowane=39.46s
+  Mediany czasów: Członek rodziny - członek rodziny=41.30s, To skomplikowane=34.06s
+Członek rodziny - członek rodziny vs Znajomy - Znajomy: Statystyka=3805819.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=48.42s, Znajomy - Znajomy=42.27s
+  Mediany czasów: Członek rodziny - członek rodziny=41.30s, Znajomy - Znajomy=36.10s
+Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: Statystyka=116095.50, p-wartość=0.0016, Istotne=True
+  Średnie czasy: Inna znacząca - Inna znacząca=37.87s, Nieznajomy - Nieznajomy=43.13s
+  Mediany czasów: Inna znacząca - Inna znacząca=32.98s, Nieznajomy - Nieznajomy=38.62s
+Inna znacząca - Inna znacząca vs To skomplikowane: Statystyka=501169.00, p-wartość=0.4407, Istotne=False
+  Średnie czasy: Inna znacząca - Inna znacząca=37.87s, To skomplikowane=39.46s
+  Mediany czasów: Inna znacząca - Inna znacząca=32.98s, To skomplikowane=34.06s
+Inna znacząca - Inna znacząca vs Znajomy - Znajomy: Statystyka=611255.00, p-wartość=0.0019, Istotne=True
+  Średnie czasy: Inna znacząca - Inna znacząca=37.87s, Znajomy - Znajomy=42.27s
+  Mediany czasów: Inna znacząca - Inna znacząca=32.98s, Znajomy - Znajomy=36.10s
+Nieznajomy - Nieznajomy vs To skomplikowane: Statystyka=249544.00, p-wartość=0.0082, Istotne=True
+  Średnie czasy: Nieznajomy - Nieznajomy=43.13s, To skomplikowane=39.46s
+  Mediany czasów: Nieznajomy - Nieznajomy=38.62s, To skomplikowane=34.06s
+Nieznajomy - Nieznajomy vs Znajomy - Znajomy: Statystyka=306423.50, p-wartość=0.3028, Istotne=False
+  Średnie czasy: Nieznajomy - Nieznajomy=43.13s, Znajomy - Znajomy=42.27s
+  Mediany czasów: Nieznajomy - Nieznajomy=38.62s, Znajomy - Znajomy=36.10s
+To skomplikowane vs Znajomy - Znajomy: Statystyka=1085684.00, p-wartość=0.0084, Istotne=True
+  Średnie czasy: To skomplikowane=39.46s, Znajomy - Znajomy=42.27s
+  Mediany czasów: To skomplikowane=34.06s, Znajomy - Znajomy=36.10s
+
+
+=== Analiza dla toru 3 ===
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_X):
+Statystyka: 142.42, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_Y):
+Statystyka: 229.60, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla relacji (Relationship_Name):
+Statystyka: 343.94, p-wartość: 0.0000, Istotne: True
+
+Szczegółowe testy Wilcoxona dla par grup wiekowych (Age_Group_X):
+18-29 vs 30-44: Statystyka=1210419.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=23.81s, 30-44=29.55s
+  Mediany czasów: 18-29=19.44s, 30-44=24.99s
+18-29 vs 45-59: Statystyka=460958.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=23.81s, 45-59=27.67s
+  Mediany czasów: 18-29=19.44s, 45-59=24.33s
+18-29 vs 60+: Statystyka=710707.50, p-wartość=0.5989, Istotne=False
+  Średnie czasy: 18-29=23.81s, 60+=24.31s
+  Mediany czasów: 18-29=19.44s, 60+=19.84s
+18-29 vs < 18: Statystyka=3038209.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=23.81s, < 18=29.38s
+  Mediany czasów: 18-29=19.44s, < 18=24.45s
+30-44 vs 45-59: Statystyka=528156.00, p-wartość=0.0412, Istotne=True
+  Średnie czasy: 30-44=29.55s, 45-59=27.67s
+  Mediany czasów: 30-44=24.99s, 45-59=24.33s
+30-44 vs 60+: Statystyka=793251.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 30-44=29.55s, 60+=24.31s
+  Mediany czasów: 30-44=24.99s, 60+=19.84s
+30-44 vs < 18: Statystyka=3446286.50, p-wartość=0.0364, Istotne=True
+  Średnie czasy: 30-44=29.55s, < 18=29.38s
+  Mediany czasów: 30-44=24.99s, < 18=24.45s
+45-59 vs 60+: Statystyka=267628.50, p-wartość=0.0001, Istotne=True
+  Średnie czasy: 45-59=27.67s, 60+=24.31s
+  Mediany czasów: 45-59=24.33s, 60+=19.84s
+45-59 vs < 18: Statystyka=1157728.50, p-wartość=0.4096, Istotne=False
+  Średnie czasy: 45-59=27.67s, < 18=29.38s
+  Mediany czasów: 45-59=24.33s, < 18=24.45s
+60+ vs < 18: Statystyka=1375027.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 60+=24.31s, < 18=29.38s
+  Mediany czasów: 60+=19.84s, < 18=24.45s
+
+Szczegółowe testy Wilcoxona dla par grup wiekowych (Age_Group_Y):
+18-29 vs 30-44: Statystyka=1097336.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=23.23s, 30-44=29.71s
+  Mediany czasów: 18-29=18.98s, 30-44=25.75s
+18-29 vs 45-59: Statystyka=307854.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=23.23s, 45-59=32.84s
+  Mediany czasów: 18-29=18.98s, 45-59=29.00s
+18-29 vs 60+: Statystyka=668345.00, p-wartość=0.7706, Istotne=False
+  Średnie czasy: 18-29=23.23s, 60+=23.82s
+  Mediany czasów: 18-29=18.98s, 60+=18.02s
+18-29 vs < 18: Statystyka=3300483.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=23.23s, < 18=29.00s
+  Mediany czasów: 18-29=18.98s, < 18=24.06s
+30-44 vs 45-59: Statystyka=328109.50, p-wartość=0.0001, Istotne=True
+  Średnie czasy: 30-44=29.71s, 45-59=32.84s
+  Mediany czasów: 30-44=25.75s, 45-59=29.00s
+30-44 vs 60+: Statystyka=653231.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 30-44=29.71s, 60+=23.82s
+  Mediany czasów: 30-44=25.75s, 60+=18.02s
+30-44 vs < 18: Statystyka=3338671.00, p-wartość=0.0245, Istotne=True
+  Średnie czasy: 30-44=29.71s, < 18=29.00s
+  Mediany czasów: 30-44=25.75s, < 18=24.06s
+45-59 vs 60+: Statystyka=235462.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 45-59=32.84s, 60+=23.82s
+  Mediany czasów: 45-59=29.00s, 60+=18.02s
+45-59 vs < 18: Statystyka=1220506.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 45-59=32.84s, < 18=29.00s
+  Mediany czasów: 45-59=29.00s, < 18=24.06s
+60+ vs < 18: Statystyka=1278304.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 60+=23.82s, < 18=29.00s
+  Mediany czasów: 60+=18.02s, < 18=24.06s
+
+Szczegółowe testy Wilcoxona dla par relacji (Relationship_Name):
+Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: Statystyka=2309560.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=31.43s, Inna znacząca - Inna znacząca=23.18s
+  Mediany czasów: Członek rodziny - członek rodziny=26.58s, Inna znacząca - Inna znacząca=18.57s
+Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy: Statystyka=956984.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=31.43s, Nieznajomy - Nieznajomy=27.78s
+  Mediany czasów: Członek rodziny - członek rodziny=26.58s, Nieznajomy - Nieznajomy=22.74s
+Członek rodziny - członek rodziny vs To skomplikowane: Statystyka=3778286.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=31.43s, To skomplikowane=24.19s
+  Mediany czasów: Członek rodziny - członek rodziny=26.58s, To skomplikowane=19.72s
+Członek rodziny - członek rodziny vs Znajomy - Znajomy: Statystyka=4769025.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=31.43s, Znajomy - Znajomy=25.08s
+  Mediany czasów: Członek rodziny - członek rodziny=26.58s, Znajomy - Znajomy=19.89s
+Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: Statystyka=165439.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Inna znacząca - Inna znacząca=23.18s, Nieznajomy - Nieznajomy=27.78s
+  Mediany czasów: Inna znacząca - Inna znacząca=18.57s, Nieznajomy - Nieznajomy=22.74s
+Inna znacząca - Inna znacząca vs To skomplikowane: Statystyka=682301.00, p-wartość=0.1262, Istotne=False
+  Średnie czasy: Inna znacząca - Inna znacząca=23.18s, To skomplikowane=24.19s
+  Mediany czasów: Inna znacząca - Inna znacząca=18.57s, To skomplikowane=19.72s
+Inna znacząca - Inna znacząca vs Znajomy - Znajomy: Statystyka=866855.00, p-wartość=0.0434, Istotne=True
+  Średnie czasy: Inna znacząca - Inna znacząca=23.18s, Znajomy - Znajomy=25.08s
+  Mediany czasów: Inna znacząca - Inna znacząca=18.57s, Znajomy - Znajomy=19.89s
+Nieznajomy - Nieznajomy vs To skomplikowane: Statystyka=373318.00, p-wartość=0.0001, Istotne=True
+  Średnie czasy: Nieznajomy - Nieznajomy=27.78s, To skomplikowane=24.19s
+  Mediany czasów: Nieznajomy - Nieznajomy=22.74s, To skomplikowane=19.72s
+Nieznajomy - Nieznajomy vs Znajomy - Znajomy: Statystyka=471947.50, p-wartość=0.0005, Istotne=True
+  Średnie czasy: Nieznajomy - Nieznajomy=27.78s, Znajomy - Znajomy=25.08s
+  Mediany czasów: Nieznajomy - Nieznajomy=22.74s, Znajomy - Znajomy=19.89s
+To skomplikowane vs Znajomy - Znajomy: Statystyka=1514644.50, p-wartość=0.5661, Istotne=False
+  Średnie czasy: To skomplikowane=24.19s, Znajomy - Znajomy=25.08s
+  Mediany czasów: To skomplikowane=19.72s, Znajomy - Znajomy=19.89s
+
+
+=== Analiza dla toru 4 ===
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_X):
+Statystyka: 102.40, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_Y):
+Statystyka: 126.64, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla relacji (Relationship_Name):
+Statystyka: 221.43, p-wartość: 0.0000, Istotne: True
+
+Szczegółowe testy Wilcoxona dla par grup wiekowych (Age_Group_X):
+18-29 vs 30-44: Statystyka=1366900.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=27.82s, 30-44=34.06s
+  Mediany czasów: 18-29=23.01s, 30-44=27.54s
+18-29 vs 45-59: Statystyka=420820.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=27.82s, 45-59=34.69s
+  Mediany czasów: 18-29=23.01s, 45-59=28.37s
+18-29 vs 60+: Statystyka=646744.00, p-wartość=0.2876, Istotne=False
+  Średnie czasy: 18-29=27.82s, 60+=29.38s
+  Mediany czasów: 18-29=23.01s, 60+=22.01s
+18-29 vs < 18: Statystyka=3199199.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=27.82s, < 18=33.27s
+  Mediany czasów: 18-29=23.01s, < 18=26.68s
+30-44 vs 45-59: Statystyka=417571.50, p-wartość=0.2367, Istotne=False
+  Średnie czasy: 30-44=34.06s, 45-59=34.69s
+  Mediany czasów: 30-44=27.54s, 45-59=28.37s
+30-44 vs 60+: Statystyka=615740.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 30-44=34.06s, 60+=29.38s
+  Mediany czasów: 30-44=27.54s, 60+=22.01s
+30-44 vs < 18: Statystyka=3121104.00, p-wartość=0.0708, Istotne=False
+  Średnie czasy: 30-44=34.06s, < 18=33.27s
+  Mediany czasów: 30-44=27.54s, < 18=26.68s
+45-59 vs 60+: Statystyka=201903.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 45-59=34.69s, 60+=29.38s
+  Mediany czasów: 45-59=28.37s, 60+=22.01s
+45-59 vs < 18: Statystyka=1029847.00, p-wartość=0.0189, Istotne=True
+  Średnie czasy: 45-59=34.69s, < 18=33.27s
+  Mediany czasów: 45-59=28.37s, < 18=26.68s
+60+ vs < 18: Statystyka=1033900.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 60+=29.38s, < 18=33.27s
+  Mediany czasów: 60+=22.01s, < 18=26.68s
+
+Szczegółowe testy Wilcoxona dla par grup wiekowych (Age_Group_Y):
+18-29 vs 30-44: Statystyka=1304211.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=27.43s, 30-44=33.79s
+  Mediany czasów: 18-29=22.63s, 30-44=27.81s
+18-29 vs 45-59: Statystyka=365017.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=27.43s, 45-59=36.03s
+  Mediany czasów: 18-29=22.63s, 45-59=30.23s
+18-29 vs 60+: Statystyka=584186.50, p-wartość=0.9804, Istotne=False
+  Średnie czasy: 18-29=27.43s, 60+=29.04s
+  Mediany czasów: 18-29=22.63s, 60+=22.35s
+18-29 vs < 18: Statystyka=3217540.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=27.43s, < 18=33.44s
+  Mediany czasów: 18-29=22.63s, < 18=26.63s
+30-44 vs 45-59: Statystyka=358957.50, p-wartość=0.0194, Istotne=True
+  Średnie czasy: 30-44=33.79s, 45-59=36.03s
+  Mediany czasów: 30-44=27.81s, 45-59=30.23s
+30-44 vs 60+: Statystyka=544889.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 30-44=33.79s, 60+=29.04s
+  Mediany czasów: 30-44=27.81s, 60+=22.35s
+30-44 vs < 18: Statystyka=3091358.50, p-wartość=0.3052, Istotne=False
+  Średnie czasy: 30-44=33.79s, < 18=33.44s
+  Mediany czasów: 30-44=27.81s, < 18=26.63s
+45-59 vs 60+: Statystyka=177658.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 45-59=36.03s, 60+=29.04s
+  Mediany czasów: 45-59=30.23s, 60+=22.35s
+45-59 vs < 18: Statystyka=1016003.00, p-wartość=0.0014, Istotne=True
+  Średnie czasy: 45-59=36.03s, < 18=33.44s
+  Mediany czasów: 45-59=30.23s, < 18=26.63s
+60+ vs < 18: Statystyka=1000811.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 60+=29.04s, < 18=33.44s
+  Mediany czasów: 60+=22.35s, < 18=26.63s
+
+Szczegółowe testy Wilcoxona dla par relacji (Relationship_Name):
+Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: Statystyka=2436933.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=35.24s, Inna znacząca - Inna znacząca=26.55s
+  Mediany czasów: Członek rodziny - członek rodziny=28.79s, Inna znacząca - Inna znacząca=21.82s
+Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy: Statystyka=620419.50, p-wartość=0.6723, Istotne=False
+  Średnie czasy: Członek rodziny - członek rodziny=35.24s, Nieznajomy - Nieznajomy=34.96s
+  Mediany czasów: Członek rodziny - członek rodziny=28.79s, Nieznajomy - Nieznajomy=28.73s
+Członek rodziny - członek rodziny vs To skomplikowane: Statystyka=3203232.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=35.24s, To skomplikowane=27.77s
+  Mediany czasów: Członek rodziny - członek rodziny=28.79s, To skomplikowane=21.93s
+Członek rodziny - członek rodziny vs Znajomy - Znajomy: Statystyka=4113424.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=35.24s, Znajomy - Znajomy=30.16s
+  Mediany czasów: Członek rodziny - członek rodziny=28.79s, Znajomy - Znajomy=24.12s
+Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: Statystyka=118170.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Inna znacząca - Inna znacząca=26.55s, Nieznajomy - Nieznajomy=34.96s
+  Mediany czasów: Inna znacząca - Inna znacząca=21.82s, Nieznajomy - Nieznajomy=28.73s
+Inna znacząca - Inna znacząca vs To skomplikowane: Statystyka=646884.00, p-wartość=0.5650, Istotne=False
+  Średnie czasy: Inna znacząca - Inna znacząca=26.55s, To skomplikowane=27.77s
+  Mediany czasów: Inna znacząca - Inna znacząca=21.82s, To skomplikowane=21.93s
+Inna znacząca - Inna znacząca vs Znajomy - Znajomy: Statystyka=819173.50, p-wartość=0.0003, Istotne=True
+  Średnie czasy: Inna znacząca - Inna znacząca=26.55s, Znajomy - Znajomy=30.16s
+  Mediany czasów: Inna znacząca - Inna znacząca=21.82s, Znajomy - Znajomy=24.12s
+Nieznajomy - Nieznajomy vs To skomplikowane: Statystyka=252118.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Nieznajomy - Nieznajomy=34.96s, To skomplikowane=27.77s
+  Mediany czasów: Nieznajomy - Nieznajomy=28.73s, To skomplikowane=21.93s
+Nieznajomy - Nieznajomy vs Znajomy - Znajomy: Statystyka=324115.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Nieznajomy - Nieznajomy=34.96s, Znajomy - Znajomy=30.16s
+  Mediany czasów: Nieznajomy - Nieznajomy=28.73s, Znajomy - Znajomy=24.12s
+To skomplikowane vs Znajomy - Znajomy: Statystyka=1112231.50, p-wartość=0.0013, Istotne=True
+  Średnie czasy: To skomplikowane=27.77s, Znajomy - Znajomy=30.16s
+  Mediany czasów: To skomplikowane=21.93s, Znajomy - Znajomy=24.12s
+
+
+=== Analiza dla toru 5 ===
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_X):
+Statystyka: 156.09, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_Y):
+Statystyka: 174.31, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla relacji (Relationship_Name):
+Statystyka: 120.88, p-wartość: 0.0000, Istotne: True
+
+Szczegółowe testy Wilcoxona dla par grup wiekowych (Age_Group_X):
+18-29 vs 30-44: Statystyka=1029637.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=37.58s, 30-44=45.65s
+  Mediany czasów: 18-29=32.92s, 30-44=40.02s
+18-29 vs 45-59: Statystyka=330808.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=37.58s, 45-59=46.03s
+  Mediany czasów: 18-29=32.92s, 45-59=39.76s
+18-29 vs 60+: Statystyka=430542.00, p-wartość=0.0055, Istotne=True
+  Średnie czasy: 18-29=37.58s, 60+=40.56s
+  Mediany czasów: 18-29=32.92s, 60+=35.94s
+18-29 vs < 18: Statystyka=2500794.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=37.58s, < 18=44.47s
+  Mediany czasów: 18-29=32.92s, < 18=39.57s
+30-44 vs 45-59: Statystyka=360926.50, p-wartość=0.9195, Istotne=False
+  Średnie czasy: 30-44=45.65s, 45-59=46.03s
+  Mediany czasów: 30-44=40.02s, 45-59=39.76s
+30-44 vs 60+: Statystyka=452071.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 30-44=45.65s, 60+=40.56s
+  Mediany czasów: 30-44=40.02s, 60+=35.94s
+30-44 vs < 18: Statystyka=2685934.50, p-wartość=0.0952, Istotne=False
+  Średnie czasy: 30-44=45.65s, < 18=44.47s
+  Mediany czasów: 30-44=40.02s, < 18=39.57s
+45-59 vs 60+: Statystyka=146795.50, p-wartość=0.0002, Istotne=True
+  Średnie czasy: 45-59=46.03s, 60+=40.56s
+  Mediany czasów: 45-59=39.76s, 60+=35.94s
+45-59 vs < 18: Statystyka=872218.50, p-wartość=0.2301, Istotne=False
+  Średnie czasy: 45-59=46.03s, < 18=44.47s
+  Mediany czasów: 45-59=39.76s, < 18=39.57s
+60+ vs < 18: Statystyka=840495.00, p-wartość=0.0002, Istotne=True
+  Średnie czasy: 60+=40.56s, < 18=44.47s
+  Mediany czasów: 60+=35.94s, < 18=39.57s
+
+Szczegółowe testy Wilcoxona dla par grup wiekowych (Age_Group_Y):
+18-29 vs 30-44: Statystyka=932069.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=37.80s, 30-44=43.89s
+  Mediany czasów: 18-29=32.70s, 30-44=39.22s
+18-29 vs 45-59: Statystyka=258943.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=37.80s, 45-59=46.44s
+  Mediany czasów: 18-29=32.70s, 45-59=43.06s
+18-29 vs 60+: Statystyka=478839.50, p-wartość=0.0886, Istotne=False
+  Średnie czasy: 18-29=37.80s, 60+=40.36s
+  Mediany czasów: 18-29=32.70s, 60+=34.68s
+18-29 vs < 18: Statystyka=2594434.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=37.80s, < 18=45.10s
+  Mediany czasów: 18-29=32.70s, < 18=39.85s
+30-44 vs 45-59: Statystyka=247238.50, p-wartość=0.0465, Istotne=True
+  Średnie czasy: 30-44=43.89s, 45-59=46.44s
+  Mediany czasów: 30-44=39.22s, 45-59=43.06s
+30-44 vs 60+: Statystyka=433625.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 30-44=43.89s, 60+=40.36s
+  Mediany czasów: 30-44=39.22s, 60+=34.68s
+30-44 vs < 18: Statystyka=2419678.50, p-wartość=0.4473, Istotne=False
+  Średnie czasy: 30-44=43.89s, < 18=45.10s
+  Mediany czasów: 30-44=39.22s, < 18=39.85s
+45-59 vs 60+: Statystyka=138548.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 45-59=46.44s, 60+=40.36s
+  Mediany czasów: 45-59=43.06s, 60+=34.68s
+45-59 vs < 18: Statystyka=778109.00, p-wartość=0.1093, Istotne=False
+  Średnie czasy: 45-59=46.44s, < 18=45.10s
+  Mediany czasów: 45-59=43.06s, < 18=39.85s
+60+ vs < 18: Statystyka=919928.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 60+=40.36s, < 18=45.10s
+  Mediany czasów: 60+=34.68s, < 18=39.85s
+
+Szczegółowe testy Wilcoxona dla par relacji (Relationship_Name):
+Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: Statystyka=1888401.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=45.61s, Inna znacząca - Inna znacząca=37.39s
+  Mediany czasów: Członek rodziny - członek rodziny=40.16s, Inna znacząca - Inna znacząca=33.11s
+Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy: Statystyka=697786.00, p-wartość=0.0096, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=45.61s, Nieznajomy - Nieznajomy=42.61s
+  Mediany czasów: Członek rodziny - członek rodziny=40.16s, Nieznajomy - Nieznajomy=36.79s
+Członek rodziny - członek rodziny vs To skomplikowane: Statystyka=2458240.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=45.61s, To skomplikowane=40.56s
+  Mediany czasów: Członek rodziny - członek rodziny=40.16s, To skomplikowane=35.35s
+Członek rodziny - członek rodziny vs Znajomy - Znajomy: Statystyka=3468224.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=45.61s, Znajomy - Znajomy=41.22s
+  Mediany czasów: Członek rodziny - członek rodziny=40.16s, Znajomy - Znajomy=36.34s
+Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: Statystyka=119467.50, p-wartość=0.0020, Istotne=True
+  Średnie czasy: Inna znacząca - Inna znacząca=37.39s, Nieznajomy - Nieznajomy=42.61s
+  Mediany czasów: Inna znacząca - Inna znacząca=33.11s, Nieznajomy - Nieznajomy=36.79s
+Inna znacząca - Inna znacząca vs To skomplikowane: Statystyka=424041.00, p-wartość=0.0071, Istotne=True
+  Średnie czasy: Inna znacząca - Inna znacząca=37.39s, To skomplikowane=40.56s
+  Mediany czasów: Inna znacząca - Inna znacząca=33.11s, To skomplikowane=35.35s
+Inna znacząca - Inna znacząca vs Znajomy - Znajomy: Statystyka=597861.00, p-wartość=0.0003, Istotne=True
+  Średnie czasy: Inna znacząca - Inna znacząca=37.39s, Znajomy - Znajomy=41.22s
+  Mediany czasów: Inna znacząca - Inna znacząca=33.11s, Znajomy - Znajomy=36.34s
+Nieznajomy - Nieznajomy vs To skomplikowane: Statystyka=195783.50, p-wartość=0.2094, Istotne=False
+  Średnie czasy: Nieznajomy - Nieznajomy=42.61s, To skomplikowane=40.56s
+  Mediany czasów: Nieznajomy - Nieznajomy=36.79s, To skomplikowane=35.35s
+Nieznajomy - Nieznajomy vs Znajomy - Znajomy: Statystyka=276266.00, p-wartość=0.4743, Istotne=False
+  Średnie czasy: Nieznajomy - Nieznajomy=42.61s, Znajomy - Znajomy=41.22s
+  Mediany czasów: Nieznajomy - Nieznajomy=36.79s, Znajomy - Znajomy=36.34s
+To skomplikowane vs Znajomy - Znajomy: Statystyka=892855.50, p-wartość=0.3823, Istotne=False
+  Średnie czasy: To skomplikowane=40.56s, Znajomy - Znajomy=41.22s
+  Mediany czasów: To skomplikowane=35.35s, Znajomy - Znajomy=36.34s
+
+
+=== Analiza dla toru 6 ===
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_X):
+Statystyka: 419.71, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_Y):
+Statystyka: 251.18, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla relacji (Relationship_Name):
+Statystyka: 402.54, p-wartość: 0.0000, Istotne: True
+
+Szczegółowe testy Wilcoxona dla par grup wiekowych (Age_Group_X):
+18-29 vs 30-44: Statystyka=1350858.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=13.60s, 30-44=19.16s
+  Mediany czasów: 18-29=8.66s, 30-44=12.85s
+18-29 vs 45-59: Statystyka=567433.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=13.60s, 45-59=18.15s
+  Mediany czasów: 18-29=8.66s, 45-59=11.35s
+18-29 vs 60+: Statystyka=1291535.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=13.60s, 60+=11.12s
+  Mediany czasów: 18-29=8.66s, 60+=6.11s
+18-29 vs < 18: Statystyka=5381994.00, p-wartość=0.9741, Istotne=False
+  Średnie czasy: 18-29=13.60s, < 18=15.02s
+  Mediany czasów: 18-29=8.66s, < 18=8.39s
+30-44 vs 45-59: Statystyka=519576.50, p-wartość=0.0043, Istotne=True
+  Średnie czasy: 30-44=19.16s, 45-59=18.15s
+  Mediany czasów: 30-44=12.85s, 45-59=11.35s
+30-44 vs 60+: Statystyka=1076878.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 30-44=19.16s, 60+=11.12s
+  Mediany czasów: 30-44=12.85s, 60+=6.11s
+30-44 vs < 18: Statystyka=4710989.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 30-44=19.16s, < 18=15.02s
+  Mediany czasów: 30-44=12.85s, < 18=8.39s
+45-59 vs 60+: Statystyka=383428.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 45-59=18.15s, 60+=11.12s
+  Mediany czasów: 45-59=11.35s, 60+=6.11s
+45-59 vs < 18: Statystyka=1657358.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 45-59=18.15s, < 18=15.02s
+  Mediany czasów: 45-59=11.35s, < 18=8.39s
+60+ vs < 18: Statystyka=1765025.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 60+=11.12s, < 18=15.02s
+  Mediany czasów: 60+=6.11s, < 18=8.39s
+
+Szczegółowe testy Wilcoxona dla par grup wiekowych (Age_Group_Y):
+18-29 vs 30-44: Statystyka=1506315.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=13.70s, 30-44=16.99s
+  Mediany czasów: 18-29=8.74s, 30-44=11.59s
+18-29 vs 45-59: Statystyka=458009.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=13.70s, 45-59=18.75s
+  Mediany czasów: 18-29=8.74s, 45-59=12.11s
+18-29 vs 60+: Statystyka=1171749.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=13.70s, 60+=11.50s
+  Mediany czasów: 18-29=8.74s, 60+=6.32s
+18-29 vs < 18: Statystyka=5354943.00, p-wartość=0.2011, Istotne=False
+  Średnie czasy: 18-29=13.70s, < 18=15.54s
+  Mediany czasów: 18-29=8.74s, < 18=8.71s
+30-44 vs 45-59: Statystyka=402579.50, p-wartość=0.1051, Istotne=False
+  Średnie czasy: 30-44=16.99s, 45-59=18.75s
+  Mediany czasów: 30-44=11.59s, 45-59=12.11s
+30-44 vs 60+: Statystyka=969296.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 30-44=16.99s, 60+=11.50s
+  Mediany czasów: 30-44=11.59s, 60+=6.32s
+30-44 vs < 18: Statystyka=4537809.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 30-44=16.99s, < 18=15.54s
+  Mediany czasów: 30-44=11.59s, < 18=8.71s
+45-59 vs 60+: Statystyka=318021.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 45-59=18.75s, 60+=11.50s
+  Mediany czasów: 45-59=12.11s, 60+=6.32s
+45-59 vs < 18: Statystyka=1503710.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 45-59=18.75s, < 18=15.54s
+  Mediany czasów: 45-59=12.11s, < 18=8.71s
+60+ vs < 18: Statystyka=1764149.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 60+=11.50s, < 18=15.54s
+  Mediany czasów: 60+=6.32s, < 18=8.71s
+
+Szczegółowe testy Wilcoxona dla par relacji (Relationship_Name):
+Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: Statystyka=3567352.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=17.85s, Inna znacząca - Inna znacząca=11.91s
+  Mediany czasów: Członek rodziny - członek rodziny=11.11s, Inna znacząca - Inna znacząca=7.57s
+Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy: Statystyka=1652900.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=17.85s, Nieznajomy - Nieznajomy=12.10s
+  Mediany czasów: Członek rodziny - członek rodziny=11.11s, Nieznajomy - Nieznajomy=6.55s
+Członek rodziny - członek rodziny vs To skomplikowane: Statystyka=4380063.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=17.85s, To skomplikowane=12.73s
+  Mediany czasów: Członek rodziny - członek rodziny=11.11s, To skomplikowane=7.72s
+Członek rodziny - członek rodziny vs Znajomy - Znajomy: Statystyka=6059293.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=17.85s, Znajomy - Znajomy=14.10s
+  Mediany czasów: Członek rodziny - członek rodziny=11.11s, Znajomy - Znajomy=7.83s
+Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: Statystyka=363985.50, p-wartość=0.2783, Istotne=False
+  Średnie czasy: Inna znacząca - Inna znacząca=11.91s, Nieznajomy - Nieznajomy=12.10s
+  Mediany czasów: Inna znacząca - Inna znacząca=7.57s, Nieznajomy - Nieznajomy=6.55s
+Inna znacząca - Inna znacząca vs To skomplikowane: Statystyka=945029.00, p-wartość=0.0423, Istotne=True
+  Średnie czasy: Inna znacząca - Inna znacząca=11.91s, To skomplikowane=12.73s
+  Mediany czasów: Inna znacząca - Inna znacząca=7.57s, To skomplikowane=7.72s
+Inna znacząca - Inna znacząca vs Znajomy - Znajomy: Statystyka=1310456.50, p-wartość=0.0034, Istotne=True
+  Średnie czasy: Inna znacząca - Inna znacząca=11.91s, Znajomy - Znajomy=14.10s
+  Mediany czasów: Inna znacząca - Inna znacząca=7.57s, Znajomy - Znajomy=7.83s
+Nieznajomy - Nieznajomy vs To skomplikowane: Statystyka=409808.00, p-wartość=0.0043, Istotne=True
+  Średnie czasy: Nieznajomy - Nieznajomy=12.10s, To skomplikowane=12.73s
+  Mediany czasów: Nieznajomy - Nieznajomy=6.55s, To skomplikowane=7.72s
+Nieznajomy - Nieznajomy vs Znajomy - Znajomy: Statystyka=570551.00, p-wartość=0.0007, Istotne=True
+  Średnie czasy: Nieznajomy - Nieznajomy=12.10s, Znajomy - Znajomy=14.10s
+  Mediany czasów: Nieznajomy - Nieznajomy=6.55s, Znajomy - Znajomy=7.83s
+To skomplikowane vs Znajomy - Znajomy: Statystyka=1735619.00, p-wartość=0.4437, Istotne=False
+  Średnie czasy: To skomplikowane=12.73s, Znajomy - Znajomy=14.10s
+  Mediany czasów: To skomplikowane=7.72s, Znajomy - Znajomy=7.83s
+
+
+=== Analiza dla toru 7 ===
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_X):
+Statystyka: 102.44, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_Y):
+Statystyka: 96.01, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla relacji (Relationship_Name):
+Statystyka: 83.43, p-wartość: 0.0000, Istotne: True
+
+Szczegółowe testy Wilcoxona dla par grup wiekowych (Age_Group_X):
+18-29 vs 30-44: Statystyka=524355.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=47.31s, 30-44=54.67s
+  Mediany czasów: 18-29=43.48s, 30-44=50.67s
+18-29 vs 45-59: Statystyka=190361.50, p-wartość=0.0005, Istotne=True
+  Średnie czasy: 18-29=47.31s, 45-59=53.68s
+  Mediany czasów: 18-29=43.48s, 45-59=48.05s
+18-29 vs 60+: Statystyka=195779.00, p-wartość=0.0610, Istotne=False
+  Średnie czasy: 18-29=47.31s, 60+=51.65s
+  Mediany czasów: 18-29=43.48s, 60+=47.95s
+18-29 vs < 18: Statystyka=1057812.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=47.31s, < 18=56.89s
+  Mediany czasów: 18-29=43.48s, < 18=53.59s
+30-44 vs 45-59: Statystyka=178641.50, p-wartość=0.3236, Istotne=False
+  Średnie czasy: 30-44=54.67s, 45-59=53.68s
+  Mediany czasów: 30-44=50.67s, 45-59=48.05s
+30-44 vs 60+: Statystyka=180223.50, p-wartość=0.0301, Istotne=True
+  Średnie czasy: 30-44=54.67s, 60+=51.65s
+  Mediany czasów: 30-44=50.67s, 60+=47.95s
+30-44 vs < 18: Statystyka=1008005.00, p-wartość=0.0384, Istotne=True
+  Średnie czasy: 30-44=54.67s, < 18=56.89s
+  Mediany czasów: 30-44=50.67s, < 18=53.59s
+45-59 vs 60+: Statystyka=60249.00, p-wartość=0.3027, Istotne=False
+  Średnie czasy: 45-59=53.68s, 60+=51.65s
+  Mediany czasów: 45-59=48.05s, 60+=47.95s
+45-59 vs < 18: Statystyka=336829.50, p-wartość=0.0236, Istotne=True
+  Średnie czasy: 45-59=53.68s, < 18=56.89s
+  Mediany czasów: 45-59=48.05s, < 18=53.59s
+60+ vs < 18: Statystyka=311926.00, p-wartość=0.0006, Istotne=True
+  Średnie czasy: 60+=51.65s, < 18=56.89s
+  Mediany czasów: 60+=47.95s, < 18=53.59s
+
+Szczegółowe testy Wilcoxona dla par grup wiekowych (Age_Group_Y):
+18-29 vs 30-44: Statystyka=493269.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=47.60s, 30-44=53.77s
+  Mediany czasów: 18-29=43.49s, 30-44=50.38s
+18-29 vs 45-59: Statystyka=170855.50, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=47.60s, 45-59=55.41s
+  Mediany czasów: 18-29=43.49s, 45-59=52.48s
+18-29 vs 60+: Statystyka=205101.00, p-wartość=0.3694, Istotne=False
+  Średnie czasy: 18-29=47.60s, 60+=50.90s
+  Mediany czasów: 18-29=43.49s, 60+=47.36s
+18-29 vs < 18: Statystyka=1100883.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: 18-29=47.60s, < 18=56.80s
+  Mediany czasów: 18-29=43.49s, < 18=53.37s
+30-44 vs 45-59: Statystyka=149032.00, p-wartość=0.3509, Istotne=False
+  Średnie czasy: 30-44=53.77s, 45-59=55.41s
+  Mediany czasów: 30-44=50.38s, 45-59=52.48s
+30-44 vs 60+: Statystyka=172916.50, p-wartość=0.0163, Istotne=True
+  Średnie czasy: 30-44=53.77s, 60+=50.90s
+  Mediany czasów: 30-44=50.38s, 60+=47.36s
+30-44 vs < 18: Statystyka=962537.00, p-wartość=0.0076, Istotne=True
+  Średnie czasy: 30-44=53.77s, < 18=56.80s
+  Mediany czasów: 30-44=50.38s, < 18=53.37s
+45-59 vs 60+: Statystyka=63412.00, p-wartość=0.0130, Istotne=True
+  Średnie czasy: 45-59=55.41s, 60+=50.90s
+  Mediany czasów: 45-59=52.48s, 60+=47.36s
+45-59 vs < 18: Statystyka=358715.00, p-wartość=0.4590, Istotne=False
+  Średnie czasy: 45-59=55.41s, < 18=56.80s
+  Mediany czasów: 45-59=52.48s, < 18=53.37s
+60+ vs < 18: Statystyka=328171.00, p-wartość=0.0001, Istotne=True
+  Średnie czasy: 60+=50.90s, < 18=56.80s
+  Mediany czasów: 60+=47.36s, < 18=53.37s
+
+Szczegółowe testy Wilcoxona dla par relacji (Relationship_Name):
+Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: Statystyka=860082.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=56.64s, Inna znacząca - Inna znacząca=47.27s
+  Mediany czasów: Członek rodziny - członek rodziny=53.50s, Inna znacząca - Inna znacząca=42.81s
+Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy: Statystyka=294441.00, p-wartość=0.0005, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=56.64s, Nieznajomy - Nieznajomy=49.85s
+  Mediany czasów: Członek rodziny - członek rodziny=53.50s, Nieznajomy - Nieznajomy=47.83s
+Członek rodziny - członek rodziny vs To skomplikowane: Statystyka=982881.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=56.64s, To skomplikowane=52.09s
+  Mediany czasów: Członek rodziny - członek rodziny=53.50s, To skomplikowane=49.00s
+Członek rodziny - członek rodziny vs Znajomy - Znajomy: Statystyka=1486265.00, p-wartość=0.0000, Istotne=True
+  Średnie czasy: Członek rodziny - członek rodziny=56.64s, Znajomy - Znajomy=50.77s
+  Mediany czasów: Członek rodziny - członek rodziny=53.50s, Znajomy - Znajomy=47.35s
+Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: Statystyka=53702.50, p-wartość=0.3925, Istotne=False
+  Średnie czasy: Inna znacząca - Inna znacząca=47.27s, Nieznajomy - Nieznajomy=49.85s
+  Mediany czasów: Inna znacząca - Inna znacząca=42.81s, Nieznajomy - Nieznajomy=47.83s
+Inna znacząca - Inna znacząca vs To skomplikowane: Statystyka=174543.50, p-wartość=0.0016, Istotne=True
+  Średnie czasy: Inna znacząca - Inna znacząca=47.27s, To skomplikowane=52.09s
+  Mediany czasów: Inna znacząca - Inna znacząca=42.81s, To skomplikowane=49.00s
+Inna znacząca - Inna znacząca vs Znajomy - Znajomy: Statystyka=265321.50, p-wartość=0.0067, Istotne=True
+  Średnie czasy: Inna znacząca - Inna znacząca=47.27s, Znajomy - Znajomy=50.77s
+  Mediany czasów: Inna znacząca - Inna znacząca=42.81s, Znajomy - Znajomy=47.35s
+Nieznajomy - Nieznajomy vs To skomplikowane: Statystyka=66700.00, p-wartość=0.2745, Istotne=False
+  Średnie czasy: Nieznajomy - Nieznajomy=49.85s, To skomplikowane=52.09s
+  Mediany czasów: Nieznajomy - Nieznajomy=47.83s, To skomplikowane=49.00s
+Nieznajomy - Nieznajomy vs Znajomy - Znajomy: Statystyka=100981.50, p-wartość=0.4723, Istotne=False
+  Średnie czasy: Nieznajomy - Nieznajomy=49.85s, Znajomy - Znajomy=50.77s
+  Mediany czasów: Nieznajomy - Nieznajomy=47.83s, Znajomy - Znajomy=47.35s
+To skomplikowane vs Znajomy - Znajomy: Statystyka=370144.00, p-wartość=0.4726, Istotne=False
+  Średnie czasy: To skomplikowane=52.09s, Znajomy - Znajomy=50.77s
+  Mediany czasów: To skomplikowane=49.00s, Znajomy - Znajomy=47.35s
+
+Wizualizacja wyników:
+Wykresy zostały zapisane do plików 'age_group_boxplots.png' i 'relationship_boxplots.png'.
+
+Analiza zakończona.
