@@ -8,6 +8,46 @@ Unikalne relacje: ['Znajomy - Znajomy' 'Członek rodziny - członek rodziny'
  'Inna znacząca - Inna znacząca']
 Procent ukończonych podejść: 45.92%
 
+================================================================================
+OBJAŚNIENIE TESTÓW STATYSTYCZNYCH
+================================================================================
+
+W analizie zastosowano następujące testy statystyczne:
+
+1. Test Kruskala-Wallisa:
+   - Jest to nieparametryczny odpowiednik jednoczynnikowej analizy wariancji (ANOVA).
+   - Hipoteza zerowa (H0): nie ma istotnych różnic między mediany czasów ukończenia zadań
+     w różnych grupach (wiekowych lub relacji).
+   - Hipoteza alternatywna (H1): istnieje przynajmniej jedna para grup, których mediany
+     czasów ukończenia różnią się istotnie.
+   - Interpretacja: jeśli p-wartość < 0.05, odrzucamy hipotezę zerową, co oznacza, że przynajmniej
+     jedna para grup różni się istotnie.
+
+2. Test Wilcoxona (dla par grup):
+   - Jest to nieparametryczny test dla par grup, odpowiednik testu t-Studenta dla prób zależnych.
+   - Hipoteza zerowa (H0): nie ma istotnej różnicy między medianami czasów ukończenia
+     w porównywanych dwóch grupach.
+   - Hipoteza alternatywna (H1): mediany czasów ukończenia różnią się istotnie między grupami.
+   - Interpretacja: jeśli p-wartość < 0.05, odrzucamy hipotezę zerową, co oznacza, że
+     czasy ukończenia w obu grupach różnią się istotnie.
+
+Poziom istotności:
+- We wszystkich testach przyjęto standardowy poziom istotności α = 0.05 (5%).
+- Oznacza to, że wyniki są uznawane za statystycznie istotne, gdy p-wartość < 0.05.
+- W takim przypadku, z 95% pewnością możemy stwierdzić, że zaobserwowane różnice
+  nie są dziełem przypadku.
+
+Zrównoważony sampling:
+- Aby zapewnić rzetelność porównań między grupami o różnej liczności, zastosowano
+  technikę zrównoważonego samplingu.
+- Polega ona na losowym wyborze równej liczby obserwacji z każdej grupy,
+  co eliminuje efekt nierównomiernego rozkładu danych.
+- Liczba obserwacji w każdej grupie po samplingu jest równa minimalnej liczności grupy
+  (ale nie mniejsza niż 10 obserwacji, o ile to możliwe).
+- Gwarantuje to, że wyniki testów nie są zaburzone przez nierównomierne rozłożenie danych.
+        
+
+Analiza statystyczna:
 UWAGA: W testach Wilcoxona zastosowano zrównoważony sampling, aby zapewnić równą liczność grup.
 Analiza dla wszystkich torów łącznie:
 
@@ -1406,7 +1446,451 @@ To skomplikowane vs Znajomy - Znajomy: Statystyka=250317.50, p-wartość=0.4254,
   Średnie czasy (zsamplowane): To skomplikowane=52.09s, Znajomy - Znajomy=51.09s
   Mediany czasów (zsamplowane): To skomplikowane=49.00s, Znajomy - Znajomy=46.36s
 
-Wizualizacja wyników:
-Wykresy zostały zapisane do plików 'age_group_boxplots.png' i 'relationship_boxplots.png'.
+================================================================================
+INTERPRETACJA WYNIKÓW
+================================================================================
+
+Interpretacja dla wszystkich torów łącznie:
+
+Interpretacja dla poszczególnych torów:
+
+=== Tor 1 ===
+
+1. Wpływ wieku uczestnika X na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między grupami wiekowymi (p = 0.0000).
+   - Oznacza to, że wiek uczestnika X ma znaczący wpływ na czas ukończenia zadań w torze 1.
+   - Szczegółowa analiza par grup wykazała istotne różnice między:
+     * 18-29 vs 30-44 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 35.14s) niż grupa 30-44 (mediana: 39.74s).
+     * 18-29 vs 45-59 (p = 0.0095):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 35.14s) niż grupa 45-59 (mediana: 39.19s).
+     * 18-29 vs < 18 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 35.14s) niż grupa < 18 (mediana: 40.57s).
+     * 30-44 vs 60+ (p = 0.0070):
+       Grupa 60+ osiągała lepsze czasy (mediana: 33.25s) niż grupa 30-44 (mediana: 39.74s).
+     * 45-59 vs 60+ (p = 0.0036):
+       Grupa 60+ osiągała lepsze czasy (mediana: 33.25s) niż grupa 45-59 (mediana: 39.19s).
+     * 60+ vs < 18 (p = 0.0192):
+       Grupa 60+ osiągała lepsze czasy (mediana: 33.25s) niż grupa < 18 (mediana: 40.57s).
+
+2. Wpływ wieku uczestnika Y na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między grupami wiekowymi (p = 0.0000).
+   - Oznacza to, że wiek uczestnika Y ma znaczący wpływ na czas ukończenia zadań w torze 1.
+   - Szczegółowa analiza par grup wykazała istotne różnice między:
+     * 18-29 vs 30-44 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 35.84s) niż grupa 30-44 (mediana: 39.96s).
+     * 18-29 vs 45-59 (p = 0.0074):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 35.84s) niż grupa 45-59 (mediana: 41.22s).
+     * 18-29 vs < 18 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 35.84s) niż grupa < 18 (mediana: 39.24s).
+     * 45-59 vs 60+ (p = 0.0224):
+       Grupa 60+ osiągała lepsze czasy (mediana: 36.89s) niż grupa 45-59 (mediana: 41.22s).
+     * 60+ vs < 18 (p = 0.0199):
+       Grupa 60+ osiągała lepsze czasy (mediana: 36.89s) niż grupa < 18 (mediana: 39.24s).
+
+3. Wpływ relacji między uczestnikami na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między typami relacji (p = 0.0000).
+   - Oznacza to, że rodzaj relacji między uczestnikami ma znaczący wpływ na czas ukończenia zadań w torze 1.
+   - Szczegółowa analiza par relacji wykazała istotne różnice między:
+     * Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca (p = 0.0000):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 35.19s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 42.27s).
+     * Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy (p = 0.0047):
+       Relacja 'Nieznajomy - Nieznajomy' osiągała lepsze czasy (mediana: 35.94s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 42.27s).
+     * Członek rodziny - członek rodziny vs To skomplikowane (p = 0.0000):
+       Relacja 'To skomplikowane' osiągała lepsze czasy (mediana: 32.12s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 42.27s).
+     * Członek rodziny - członek rodziny vs Znajomy - Znajomy (p = 0.0000):
+       Relacja 'Znajomy - Znajomy' osiągała lepsze czasy (mediana: 37.29s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 42.27s).
+     * Nieznajomy - Nieznajomy vs To skomplikowane (p = 0.0107):
+       Relacja 'To skomplikowane' osiągała lepsze czasy (mediana: 32.12s) niż relacja 'Nieznajomy - Nieznajomy' (mediana: 35.94s).
+     * To skomplikowane vs Znajomy - Znajomy (p = 0.0000):
+       Relacja 'To skomplikowane' osiągała lepsze czasy (mediana: 32.12s) niż relacja 'Znajomy - Znajomy' (mediana: 37.29s).
+
+=== Tor 2 ===
+
+1. Wpływ wieku uczestnika X na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między grupami wiekowymi (p = 0.0000).
+   - Oznacza to, że wiek uczestnika X ma znaczący wpływ na czas ukończenia zadań w torze 2.
+   - Szczegółowa analiza par grup wykazała istotne różnice między:
+     * 18-29 vs 30-44 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 33.15s) niż grupa 30-44 (mediana: 39.81s).
+     * 18-29 vs 45-59 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 33.15s) niż grupa 45-59 (mediana: 41.22s).
+     * 18-29 vs < 18 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 33.15s) niż grupa < 18 (mediana: 39.91s).
+     * 30-44 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 34.17s) niż grupa 30-44 (mediana: 39.81s).
+     * 45-59 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 34.17s) niż grupa 45-59 (mediana: 41.22s).
+     * 60+ vs < 18 (p = 0.0002):
+       Grupa 60+ osiągała lepsze czasy (mediana: 34.17s) niż grupa < 18 (mediana: 39.91s).
+
+2. Wpływ wieku uczestnika Y na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między grupami wiekowymi (p = 0.0000).
+   - Oznacza to, że wiek uczestnika Y ma znaczący wpływ na czas ukończenia zadań w torze 2.
+   - Szczegółowa analiza par grup wykazała istotne różnice między:
+     * 18-29 vs 30-44 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 33.42s) niż grupa 30-44 (mediana: 38.62s).
+     * 18-29 vs 45-59 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 33.42s) niż grupa 45-59 (mediana: 41.09s).
+     * 18-29 vs < 18 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 33.42s) niż grupa < 18 (mediana: 40.59s).
+     * 30-44 vs 45-59 (p = 0.0249):
+       Grupa 30-44 osiągała lepsze czasy (mediana: 38.62s) niż grupa 45-59 (mediana: 41.09s).
+     * 30-44 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 33.07s) niż grupa 30-44 (mediana: 38.62s).
+     * 30-44 vs < 18 (p = 0.0117):
+       Grupa 30-44 osiągała lepsze czasy (mediana: 38.62s) niż grupa < 18 (mediana: 40.59s).
+     * 45-59 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 33.07s) niż grupa 45-59 (mediana: 41.09s).
+     * 60+ vs < 18 (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 33.07s) niż grupa < 18 (mediana: 40.59s).
+
+3. Wpływ relacji między uczestnikami na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między typami relacji (p = 0.0000).
+   - Oznacza to, że rodzaj relacji między uczestnikami ma znaczący wpływ na czas ukończenia zadań w torze 2.
+   - Szczegółowa analiza par relacji wykazała istotne różnice między:
+     * Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca (p = 0.0000):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 32.98s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 41.30s).
+     * Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy (p = 0.0019):
+       Relacja 'Nieznajomy - Nieznajomy' osiągała lepsze czasy (mediana: 38.62s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 41.30s).
+     * Członek rodziny - członek rodziny vs To skomplikowane (p = 0.0000):
+       Relacja 'To skomplikowane' osiągała lepsze czasy (mediana: 34.06s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 41.30s).
+     * Członek rodziny - członek rodziny vs Znajomy - Znajomy (p = 0.0000):
+       Relacja 'Znajomy - Znajomy' osiągała lepsze czasy (mediana: 36.10s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 41.30s).
+     * Inna znacząca - Inna znacząca vs Znajomy - Znajomy (p = 0.0060):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 32.98s) niż relacja 'Znajomy - Znajomy' (mediana: 36.10s).
+     * Nieznajomy - Nieznajomy vs To skomplikowane (p = 0.0262):
+       Relacja 'To skomplikowane' osiągała lepsze czasy (mediana: 34.06s) niż relacja 'Nieznajomy - Nieznajomy' (mediana: 38.62s).
+     * To skomplikowane vs Znajomy - Znajomy (p = 0.0103):
+       Relacja 'To skomplikowane' osiągała lepsze czasy (mediana: 34.06s) niż relacja 'Znajomy - Znajomy' (mediana: 36.10s).
+
+=== Tor 3 ===
+
+1. Wpływ wieku uczestnika X na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między grupami wiekowymi (p = 0.0000).
+   - Oznacza to, że wiek uczestnika X ma znaczący wpływ na czas ukończenia zadań w torze 3.
+   - Szczegółowa analiza par grup wykazała istotne różnice między:
+     * 18-29 vs 30-44 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 19.44s) niż grupa 30-44 (mediana: 24.99s).
+     * 18-29 vs 45-59 (p = 0.0001):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 19.44s) niż grupa 45-59 (mediana: 24.33s).
+     * 18-29 vs < 18 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 19.44s) niż grupa < 18 (mediana: 24.45s).
+     * 30-44 vs 45-59 (p = 0.0257):
+       Grupa 45-59 osiągała lepsze czasy (mediana: 24.33s) niż grupa 30-44 (mediana: 24.99s).
+     * 30-44 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 19.84s) niż grupa 30-44 (mediana: 24.99s).
+     * 30-44 vs < 18 (p = 0.0015):
+       Grupa < 18 osiągała lepsze czasy (mediana: 24.45s) niż grupa 30-44 (mediana: 24.99s).
+     * 45-59 vs 60+ (p = 0.0005):
+       Grupa 60+ osiągała lepsze czasy (mediana: 19.84s) niż grupa 45-59 (mediana: 24.33s).
+     * 60+ vs < 18 (p = 0.0002):
+       Grupa 60+ osiągała lepsze czasy (mediana: 19.84s) niż grupa < 18 (mediana: 24.45s).
+
+2. Wpływ wieku uczestnika Y na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między grupami wiekowymi (p = 0.0000).
+   - Oznacza to, że wiek uczestnika Y ma znaczący wpływ na czas ukończenia zadań w torze 3.
+   - Szczegółowa analiza par grup wykazała istotne różnice między:
+     * 18-29 vs 30-44 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 18.98s) niż grupa 30-44 (mediana: 25.75s).
+     * 18-29 vs 45-59 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 18.98s) niż grupa 45-59 (mediana: 29.00s).
+     * 18-29 vs < 18 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 18.98s) niż grupa < 18 (mediana: 24.06s).
+     * 30-44 vs 45-59 (p = 0.0050):
+       Grupa 30-44 osiągała lepsze czasy (mediana: 25.75s) niż grupa 45-59 (mediana: 29.00s).
+     * 30-44 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 18.02s) niż grupa 30-44 (mediana: 25.75s).
+     * 45-59 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 18.02s) niż grupa 45-59 (mediana: 29.00s).
+     * 45-59 vs < 18 (p = 0.0001):
+       Grupa < 18 osiągała lepsze czasy (mediana: 24.06s) niż grupa 45-59 (mediana: 29.00s).
+     * 60+ vs < 18 (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 18.02s) niż grupa < 18 (mediana: 24.06s).
+
+3. Wpływ relacji między uczestnikami na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między typami relacji (p = 0.0000).
+   - Oznacza to, że rodzaj relacji między uczestnikami ma znaczący wpływ na czas ukończenia zadań w torze 3.
+   - Szczegółowa analiza par relacji wykazała istotne różnice między:
+     * Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca (p = 0.0000):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 18.57s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 26.58s).
+     * Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy (p = 0.0083):
+       Relacja 'Nieznajomy - Nieznajomy' osiągała lepsze czasy (mediana: 22.74s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 26.58s).
+     * Członek rodziny - członek rodziny vs To skomplikowane (p = 0.0000):
+       Relacja 'To skomplikowane' osiągała lepsze czasy (mediana: 19.72s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 26.58s).
+     * Członek rodziny - członek rodziny vs Znajomy - Znajomy (p = 0.0000):
+       Relacja 'Znajomy - Znajomy' osiągała lepsze czasy (mediana: 19.89s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 26.58s).
+     * Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy (p = 0.0000):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 18.57s) niż relacja 'Nieznajomy - Nieznajomy' (mediana: 22.74s).
+     * Nieznajomy - Nieznajomy vs To skomplikowane (p = 0.0001):
+       Relacja 'To skomplikowane' osiągała lepsze czasy (mediana: 19.72s) niż relacja 'Nieznajomy - Nieznajomy' (mediana: 22.74s).
+     * Nieznajomy - Nieznajomy vs Znajomy - Znajomy (p = 0.0066):
+       Relacja 'Znajomy - Znajomy' osiągała lepsze czasy (mediana: 19.89s) niż relacja 'Nieznajomy - Nieznajomy' (mediana: 22.74s).
+
+=== Tor 4 ===
+
+1. Wpływ wieku uczestnika X na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między grupami wiekowymi (p = 0.0000).
+   - Oznacza to, że wiek uczestnika X ma znaczący wpływ na czas ukończenia zadań w torze 4.
+   - Szczegółowa analiza par grup wykazała istotne różnice między:
+     * 18-29 vs 30-44 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 23.01s) niż grupa 30-44 (mediana: 27.54s).
+     * 18-29 vs 45-59 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 23.01s) niż grupa 45-59 (mediana: 28.37s).
+     * 18-29 vs < 18 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 23.01s) niż grupa < 18 (mediana: 26.68s).
+     * 30-44 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 22.01s) niż grupa 30-44 (mediana: 27.54s).
+     * 30-44 vs < 18 (p = 0.0199):
+       Grupa < 18 osiągała lepsze czasy (mediana: 26.68s) niż grupa 30-44 (mediana: 27.54s).
+     * 45-59 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 22.01s) niż grupa 45-59 (mediana: 28.37s).
+     * 60+ vs < 18 (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 22.01s) niż grupa < 18 (mediana: 26.68s).
+
+2. Wpływ wieku uczestnika Y na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między grupami wiekowymi (p = 0.0000).
+   - Oznacza to, że wiek uczestnika Y ma znaczący wpływ na czas ukończenia zadań w torze 4.
+   - Szczegółowa analiza par grup wykazała istotne różnice między:
+     * 18-29 vs 30-44 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 22.63s) niż grupa 30-44 (mediana: 27.81s).
+     * 18-29 vs 45-59 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 22.63s) niż grupa 45-59 (mediana: 30.23s).
+     * 18-29 vs < 18 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 22.63s) niż grupa < 18 (mediana: 26.63s).
+     * 30-44 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 22.35s) niż grupa 30-44 (mediana: 27.81s).
+     * 45-59 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 22.35s) niż grupa 45-59 (mediana: 30.23s).
+     * 45-59 vs < 18 (p = 0.0032):
+       Grupa < 18 osiągała lepsze czasy (mediana: 26.63s) niż grupa 45-59 (mediana: 30.23s).
+     * 60+ vs < 18 (p = 0.0011):
+       Grupa 60+ osiągała lepsze czasy (mediana: 22.35s) niż grupa < 18 (mediana: 26.63s).
+
+3. Wpływ relacji między uczestnikami na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między typami relacji (p = 0.0000).
+   - Oznacza to, że rodzaj relacji między uczestnikami ma znaczący wpływ na czas ukończenia zadań w torze 4.
+   - Szczegółowa analiza par relacji wykazała istotne różnice między:
+     * Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca (p = 0.0000):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 21.82s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 28.79s).
+     * Członek rodziny - członek rodziny vs To skomplikowane (p = 0.0000):
+       Relacja 'To skomplikowane' osiągała lepsze czasy (mediana: 21.93s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 28.79s).
+     * Członek rodziny - członek rodziny vs Znajomy - Znajomy (p = 0.0000):
+       Relacja 'Znajomy - Znajomy' osiągała lepsze czasy (mediana: 24.12s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 28.79s).
+     * Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy (p = 0.0000):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 21.82s) niż relacja 'Nieznajomy - Nieznajomy' (mediana: 28.73s).
+     * Inna znacząca - Inna znacząca vs Znajomy - Znajomy (p = 0.0035):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 21.82s) niż relacja 'Znajomy - Znajomy' (mediana: 24.12s).
+     * Nieznajomy - Nieznajomy vs To skomplikowane (p = 0.0000):
+       Relacja 'To skomplikowane' osiągała lepsze czasy (mediana: 21.93s) niż relacja 'Nieznajomy - Nieznajomy' (mediana: 28.73s).
+     * Nieznajomy - Nieznajomy vs Znajomy - Znajomy (p = 0.0007):
+       Relacja 'Znajomy - Znajomy' osiągała lepsze czasy (mediana: 24.12s) niż relacja 'Nieznajomy - Nieznajomy' (mediana: 28.73s).
+     * To skomplikowane vs Znajomy - Znajomy (p = 0.0068):
+       Relacja 'To skomplikowane' osiągała lepsze czasy (mediana: 21.93s) niż relacja 'Znajomy - Znajomy' (mediana: 24.12s).
+
+=== Tor 5 ===
+
+1. Wpływ wieku uczestnika X na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między grupami wiekowymi (p = 0.0000).
+   - Oznacza to, że wiek uczestnika X ma znaczący wpływ na czas ukończenia zadań w torze 5.
+   - Szczegółowa analiza par grup wykazała istotne różnice między:
+     * 18-29 vs 30-44 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 32.92s) niż grupa 30-44 (mediana: 40.02s).
+     * 18-29 vs 45-59 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 32.92s) niż grupa 45-59 (mediana: 39.76s).
+     * 18-29 vs 60+ (p = 0.0135):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 32.92s) niż grupa 60+ (mediana: 35.94s).
+     * 18-29 vs < 18 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 32.92s) niż grupa < 18 (mediana: 39.57s).
+     * 30-44 vs 60+ (p = 0.0002):
+       Grupa 60+ osiągała lepsze czasy (mediana: 35.94s) niż grupa 30-44 (mediana: 40.02s).
+     * 45-59 vs 60+ (p = 0.0002):
+       Grupa 60+ osiągała lepsze czasy (mediana: 35.94s) niż grupa 45-59 (mediana: 39.76s).
+     * 60+ vs < 18 (p = 0.0035):
+       Grupa 60+ osiągała lepsze czasy (mediana: 35.94s) niż grupa < 18 (mediana: 39.57s).
+
+2. Wpływ wieku uczestnika Y na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między grupami wiekowymi (p = 0.0000).
+   - Oznacza to, że wiek uczestnika Y ma znaczący wpływ na czas ukończenia zadań w torze 5.
+   - Szczegółowa analiza par grup wykazała istotne różnice między:
+     * 18-29 vs 30-44 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 32.70s) niż grupa 30-44 (mediana: 39.22s).
+     * 18-29 vs 45-59 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 32.70s) niż grupa 45-59 (mediana: 43.06s).
+     * 18-29 vs < 18 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 32.70s) niż grupa < 18 (mediana: 39.85s).
+     * 30-44 vs 60+ (p = 0.0001):
+       Grupa 60+ osiągała lepsze czasy (mediana: 34.68s) niż grupa 30-44 (mediana: 39.22s).
+     * 45-59 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 34.68s) niż grupa 45-59 (mediana: 43.06s).
+     * 60+ vs < 18 (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 34.68s) niż grupa < 18 (mediana: 39.85s).
+
+3. Wpływ relacji między uczestnikami na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między typami relacji (p = 0.0000).
+   - Oznacza to, że rodzaj relacji między uczestnikami ma znaczący wpływ na czas ukończenia zadań w torze 5.
+   - Szczegółowa analiza par relacji wykazała istotne różnice między:
+     * Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca (p = 0.0000):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 33.11s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 40.16s).
+     * Członek rodziny - członek rodziny vs To skomplikowane (p = 0.0000):
+       Relacja 'To skomplikowane' osiągała lepsze czasy (mediana: 35.35s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 40.16s).
+     * Członek rodziny - członek rodziny vs Znajomy - Znajomy (p = 0.0000):
+       Relacja 'Znajomy - Znajomy' osiągała lepsze czasy (mediana: 36.34s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 40.16s).
+     * Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy (p = 0.0197):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 33.11s) niż relacja 'Nieznajomy - Nieznajomy' (mediana: 36.79s).
+     * Inna znacząca - Inna znacząca vs To skomplikowane (p = 0.0050):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 33.11s) niż relacja 'To skomplikowane' (mediana: 35.35s).
+     * Inna znacząca - Inna znacząca vs Znajomy - Znajomy (p = 0.0013):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 33.11s) niż relacja 'Znajomy - Znajomy' (mediana: 36.34s).
+
+=== Tor 6 ===
+
+1. Wpływ wieku uczestnika X na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między grupami wiekowymi (p = 0.0000).
+   - Oznacza to, że wiek uczestnika X ma znaczący wpływ na czas ukończenia zadań w torze 6.
+   - Szczegółowa analiza par grup wykazała istotne różnice między:
+     * 18-29 vs 30-44 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 8.66s) niż grupa 30-44 (mediana: 12.85s).
+     * 18-29 vs 45-59 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 8.66s) niż grupa 45-59 (mediana: 11.35s).
+     * 18-29 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 6.11s) niż grupa 18-29 (mediana: 8.66s).
+     * 30-44 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 6.11s) niż grupa 30-44 (mediana: 12.85s).
+     * 30-44 vs < 18 (p = 0.0000):
+       Grupa < 18 osiągała lepsze czasy (mediana: 8.39s) niż grupa 30-44 (mediana: 12.85s).
+     * 45-59 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 6.11s) niż grupa 45-59 (mediana: 11.35s).
+     * 45-59 vs < 18 (p = 0.0000):
+       Grupa < 18 osiągała lepsze czasy (mediana: 8.39s) niż grupa 45-59 (mediana: 11.35s).
+     * 60+ vs < 18 (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 6.11s) niż grupa < 18 (mediana: 8.39s).
+
+2. Wpływ wieku uczestnika Y na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między grupami wiekowymi (p = 0.0000).
+   - Oznacza to, że wiek uczestnika Y ma znaczący wpływ na czas ukończenia zadań w torze 6.
+   - Szczegółowa analiza par grup wykazała istotne różnice między:
+     * 18-29 vs 30-44 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 8.74s) niż grupa 30-44 (mediana: 11.59s).
+     * 18-29 vs 45-59 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 8.74s) niż grupa 45-59 (mediana: 12.11s).
+     * 18-29 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 6.32s) niż grupa 18-29 (mediana: 8.74s).
+     * 30-44 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 6.32s) niż grupa 30-44 (mediana: 11.59s).
+     * 30-44 vs < 18 (p = 0.0000):
+       Grupa < 18 osiągała lepsze czasy (mediana: 8.71s) niż grupa 30-44 (mediana: 11.59s).
+     * 45-59 vs 60+ (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 6.32s) niż grupa 45-59 (mediana: 12.11s).
+     * 45-59 vs < 18 (p = 0.0000):
+       Grupa < 18 osiągała lepsze czasy (mediana: 8.71s) niż grupa 45-59 (mediana: 12.11s).
+     * 60+ vs < 18 (p = 0.0000):
+       Grupa 60+ osiągała lepsze czasy (mediana: 6.32s) niż grupa < 18 (mediana: 8.71s).
+
+3. Wpływ relacji między uczestnikami na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między typami relacji (p = 0.0000).
+   - Oznacza to, że rodzaj relacji między uczestnikami ma znaczący wpływ na czas ukończenia zadań w torze 6.
+   - Szczegółowa analiza par relacji wykazała istotne różnice między:
+     * Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca (p = 0.0000):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 7.57s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 11.11s).
+     * Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy (p = 0.0000):
+       Relacja 'Nieznajomy - Nieznajomy' osiągała lepsze czasy (mediana: 6.55s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 11.11s).
+     * Członek rodziny - członek rodziny vs To skomplikowane (p = 0.0000):
+       Relacja 'To skomplikowane' osiągała lepsze czasy (mediana: 7.72s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 11.11s).
+     * Członek rodziny - członek rodziny vs Znajomy - Znajomy (p = 0.0000):
+       Relacja 'Znajomy - Znajomy' osiągała lepsze czasy (mediana: 7.83s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 11.11s).
+     * Inna znacząca - Inna znacząca vs Znajomy - Znajomy (p = 0.0084):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 7.57s) niż relacja 'Znajomy - Znajomy' (mediana: 7.83s).
+     * Nieznajomy - Nieznajomy vs To skomplikowane (p = 0.0079):
+       Relacja 'Nieznajomy - Nieznajomy' osiągała lepsze czasy (mediana: 6.55s) niż relacja 'To skomplikowane' (mediana: 7.72s).
+     * Nieznajomy - Nieznajomy vs Znajomy - Znajomy (p = 0.0088):
+       Relacja 'Nieznajomy - Nieznajomy' osiągała lepsze czasy (mediana: 6.55s) niż relacja 'Znajomy - Znajomy' (mediana: 7.83s).
+
+=== Tor 7 ===
+
+1. Wpływ wieku uczestnika X na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między grupami wiekowymi (p = 0.0000).
+   - Oznacza to, że wiek uczestnika X ma znaczący wpływ na czas ukończenia zadań w torze 7.
+   - Szczegółowa analiza par grup wykazała istotne różnice między:
+     * 18-29 vs 30-44 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 43.48s) niż grupa 30-44 (mediana: 50.67s).
+     * 18-29 vs 45-59 (p = 0.0056):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 43.48s) niż grupa 45-59 (mediana: 48.05s).
+     * 18-29 vs < 18 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 43.48s) niż grupa < 18 (mediana: 53.59s).
+     * 30-44 vs 60+ (p = 0.0247):
+       Grupa 60+ osiągała lepsze czasy (mediana: 47.95s) niż grupa 30-44 (mediana: 50.67s).
+     * 30-44 vs < 18 (p = 0.0079):
+       Grupa 30-44 osiągała lepsze czasy (mediana: 50.67s) niż grupa < 18 (mediana: 53.59s).
+     * 45-59 vs < 18 (p = 0.0076):
+       Grupa 45-59 osiągała lepsze czasy (mediana: 48.05s) niż grupa < 18 (mediana: 53.59s).
+     * 60+ vs < 18 (p = 0.0010):
+       Grupa 60+ osiągała lepsze czasy (mediana: 47.95s) niż grupa < 18 (mediana: 53.59s).
+
+2. Wpływ wieku uczestnika Y na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między grupami wiekowymi (p = 0.0000).
+   - Oznacza to, że wiek uczestnika Y ma znaczący wpływ na czas ukończenia zadań w torze 7.
+   - Szczegółowa analiza par grup wykazała istotne różnice między:
+     * 18-29 vs 30-44 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 43.49s) niż grupa 30-44 (mediana: 50.38s).
+     * 18-29 vs 45-59 (p = 0.0002):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 43.49s) niż grupa 45-59 (mediana: 52.48s).
+     * 18-29 vs < 18 (p = 0.0000):
+       Grupa 18-29 osiągała lepsze czasy (mediana: 43.49s) niż grupa < 18 (mediana: 53.37s).
+     * 30-44 vs 60+ (p = 0.0222):
+       Grupa 60+ osiągała lepsze czasy (mediana: 47.36s) niż grupa 30-44 (mediana: 50.38s).
+     * 45-59 vs 60+ (p = 0.0186):
+       Grupa 60+ osiągała lepsze czasy (mediana: 47.36s) niż grupa 45-59 (mediana: 52.48s).
+     * 60+ vs < 18 (p = 0.0045):
+       Grupa 60+ osiągała lepsze czasy (mediana: 47.36s) niż grupa < 18 (mediana: 53.37s).
+
+3. Wpływ relacji między uczestnikami na czas ukończenia:
+   - Test Kruskala-Wallisa wykazał istotne różnice między typami relacji (p = 0.0000).
+   - Oznacza to, że rodzaj relacji między uczestnikami ma znaczący wpływ na czas ukończenia zadań w torze 7.
+   - Szczegółowa analiza par relacji wykazała istotne różnice między:
+     * Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca (p = 0.0000):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 42.81s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 53.50s).
+     * Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy (p = 0.0264):
+       Relacja 'Nieznajomy - Nieznajomy' osiągała lepsze czasy (mediana: 47.83s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 53.50s).
+     * Członek rodziny - członek rodziny vs To skomplikowane (p = 0.0015):
+       Relacja 'To skomplikowane' osiągała lepsze czasy (mediana: 49.00s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 53.50s).
+     * Członek rodziny - członek rodziny vs Znajomy - Znajomy (p = 0.0000):
+       Relacja 'Znajomy - Znajomy' osiągała lepsze czasy (mediana: 47.35s) niż relacja 'Członek rodziny - członek rodziny' (mediana: 53.50s).
+     * Inna znacząca - Inna znacząca vs To skomplikowane (p = 0.0062):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 42.81s) niż relacja 'To skomplikowane' (mediana: 49.00s).
+     * Inna znacząca - Inna znacząca vs Znajomy - Znajomy (p = 0.0391):
+       Relacja 'Inna znacząca - Inna znacząca' osiągała lepsze czasy (mediana: 42.81s) niż relacja 'Znajomy - Znajomy' (mediana: 47.35s).
+
+================================================================================
+PODSUMOWANIE
+================================================================================
+
+1. Interpretacja p-wartości:
+   - p < 0.001: Bardzo silny dowód przeciwko hipotezie zerowej (***) - różnica jest wysoce istotna.
+   - p < 0.01: Silny dowód przeciwko hipotezie zerowej (**) - różnica jest bardzo istotna.
+   - p < 0.05: Wystarczający dowód przeciwko hipotezie zerowej (*) - różnica jest istotna.
+   - p ≥ 0.05: Brak wystarczających dowodów przeciwko hipotezie zerowej - różnica nie jest istotna.
+
+2. Praktyczne znaczenie wyników:
+   - Test statystyczny może wykazać istotność, ale należy rozważyć również praktyczne
+     znaczenie różnic (np. czy różnica kilku sekund w czasie wykonania zadania jest istotna
+     z praktycznego punktu widzenia).
+   - Wielkość różnicy (efekt) jest równie ważna jak istotność statystyczna.
+   - Duże próby mogą wykazywać istotne statystycznie, lecz małe praktycznie różnice.
+
+3. Ograniczenia analizy:
+   - Nieparametryczne testy są bardziej odporne na odstające obserwacje i brak normalności,
+     ale mają mniejszą moc statystyczną niż testy parametryczne.
+   - Zrównoważony sampling może wpływać na wyniki, gdyż redukuje liczbę obserwacji.
+   - Analizy przeprowadzono przy założonym poziomie istotności α = 0.05, co oznacza,
+     że istnieje 5% ryzyko błędnego odrzucenia hipotezy zerowej (błąd I rodzaju).
+
+4. Zalecenia:
+   - W przypadku istotnych różnic warto przeprowadzić dodatkowe badania na większej próbie.
+   - Należy rozważyć zastosowanie korekty dla wielokrotnych porównań (np. metoda Bonferroniego),
+     aby zmniejszyć ryzyko błędu I rodzaju przy porównywaniu wielu par grup.
+   - Warto uwzględnić inne zmienne, które mogą wpływać na czas ukończenia zadań
+     (np. doświadczenie uczestników, poziom trudności zadań itp.).
+        
 
 Analiza zakończona.
