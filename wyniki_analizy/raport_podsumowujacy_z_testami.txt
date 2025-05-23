@@ -1,0 +1,170 @@
+RAPORT PODSUMOWUJĄCY ANALIZĘ WPŁYWU WIEKU I RELACJI NA WYNIKI W GRZE ORTHO
+Z TESTAMI STATYSTYCZNYMI I WĄSAMI ISTOTNOŚCI
+====================================================================================================
+
+OGÓLNE INFORMACJE:
+- Łączna liczba analizowanych gier: 91861
+- Liczba przeanalizowanych torów: 7
+- Testy statystyczne: Test t-Studenta dla porównań międzygrupowych
+- Poziomy istotności: * p<0.05, ** p<0.01, *** p<0.001
+
+WPŁYW WIEKU NA WYNIKI:
+1. Średni czas ukończenia (uporządkowane od najszybszych):
+   - Tor 1: 18-29 (41076ms), 30-44 (46404ms), 45-59 (46848ms), 60+ (48703ms), < 18 (50931ms), 
+   - Tor 2: 18-29 (38263ms), 30-44 (45372ms), 60+ (45421ms), 45-59 (47971ms), < 18 (49437ms), 
+   - Tor 3: 18-29 (23617ms), 60+ (25793ms), 30-44 (29833ms), 45-59 (30094ms), < 18 (31201ms), 
+   - Tor 4: 18-29 (27694ms), 60+ (33996ms), 30-44 (34077ms), < 18 (35107ms), 45-59 (35343ms), 
+   - Tor 5: 18-29 (37882ms), 60+ (43112ms), 30-44 (44835ms), < 18 (46098ms), 45-59 (46579ms), 
+   - Tor 6: 18-29 (13628ms), 60+ (14541ms), < 18 (16623ms), 30-44 (18105ms), 45-59 (18567ms), 
+   - Tor 7: 18-29 (47350ms), 60+ (52241ms), 45-59 (53976ms), 30-44 (54309ms), < 18 (57634ms), 
+
+2. Wskaźnik ukończenia (uporządkowane od najwyższych):
+   - Tor 1: 18-29 (0.44), 30-44 (0.43), 45-59 (0.43), < 18 (0.41), 60+ (0.35), 
+   - Tor 2: 45-59 (0.39), 30-44 (0.38), < 18 (0.37), 18-29 (0.37), 60+ (0.32), 
+   - Tor 3: 30-44 (0.46), < 18 (0.46), 18-29 (0.45), 45-59 (0.44), 60+ (0.36), 
+   - Tor 4: 45-59 (0.67), 30-44 (0.66), 18-29 (0.63), < 18 (0.62), 60+ (0.58), 
+   - Tor 5: 45-59 (0.61), 30-44 (0.60), 18-29 (0.60), < 18 (0.59), 60+ (0.53), 
+   - Tor 6: 18-29 (0.70), 45-59 (0.69), 30-44 (0.67), 60+ (0.67), < 18 (0.65), 
+   - Tor 7: 45-59 (0.30), 18-29 (0.30), 30-44 (0.29), 60+ (0.27), < 18 (0.25), 
+
+WPŁYW RELACJI NA WYNIKI:
+1. Średni czas ukończenia (uporządkowane od najszybszych):
+   - Tor 1: Inna znacząca - Inna znacząca (39973ms), To skomplikowane (41199ms), Nieznajomy - Nieznajomy (45135ms), Znajomy - Znajomy (45447ms), Członek rodziny - członek rodziny (50125ms), 
+   - Tor 2: Inna znacząca - Inna znacząca (38390ms), To skomplikowane (39224ms), Znajomy - Znajomy (43503ms), Nieznajomy - Nieznajomy (43798ms), Członek rodziny - członek rodziny (48796ms), 
+   - Tor 3: Inna znacząca - Inna znacząca (23304ms), Znajomy - Znajomy (25610ms), To skomplikowane (25992ms), Nieznajomy - Nieznajomy (28037ms), Członek rodziny - członek rodziny (31814ms), 
+   - Tor 4: Inna znacząca - Inna znacząca (26650ms), To skomplikowane (26904ms), Znajomy - Znajomy (30701ms), Członek rodziny - członek rodziny (36123ms), Nieznajomy - Nieznajomy (39105ms), 
+   - Tor 5: Inna znacząca - Inna znacząca (37521ms), To skomplikowane (40390ms), Znajomy - Znajomy (41686ms), Nieznajomy - Nieznajomy (42096ms), Członek rodziny - członek rodziny (46159ms), 
+   - Tor 6: Inna znacząca - Inna znacząca (13102ms), To skomplikowane (14028ms), Znajomy - Znajomy (14440ms), Nieznajomy - Nieznajomy (15113ms), Członek rodziny - członek rodziny (18127ms), 
+   - Tor 7: Inna znacząca - Inna znacząca (48316ms), Znajomy - Znajomy (48936ms), To skomplikowane (49913ms), Nieznajomy - Nieznajomy (51306ms), Członek rodziny - członek rodziny (57018ms), 
+
+ISTOTNE RÓŻNICE STATYSTYCZNE:
+
+Tor 1:
+  Istotne różnice w czasie według wieku:
+    18-29 vs 30-44: p=0.0000 ***
+    18-29 vs 45-59: p=0.0000 ***
+    18-29 vs 60+: p=0.0000 ***
+    18-29 vs < 18: p=0.0000 ***
+    30-44 vs < 18: p=0.0000 ***
+    45-59 vs < 18: p=0.0009 ***
+  Istotne różnice w czasie według relacji:
+    Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: p=0.0000 ***
+    Członek rodziny - członek rodziny vs To skomplikowane: p=0.0000 ***
+    Członek rodziny - członek rodziny vs Znajomy - Znajomy: p=0.0000 ***
+    Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: p=0.0329 *
+    Inna znacząca - Inna znacząca vs Znajomy - Znajomy: p=0.0001 ***
+    To skomplikowane vs Znajomy - Znajomy: p=0.0047 **
+
+Tor 2:
+  Istotne różnice w czasie według wieku:
+    18-29 vs 30-44: p=0.0000 ***
+    18-29 vs 45-59: p=0.0000 ***
+    18-29 vs 60+: p=0.0000 ***
+    18-29 vs < 18: p=0.0000 ***
+    30-44 vs 45-59: p=0.0155 *
+    30-44 vs < 18: p=0.0000 ***
+    60+ vs < 18: p=0.0194 *
+  Istotne różnice w czasie według relacji:
+    Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: p=0.0000 ***
+    Członek rodziny - członek rodziny vs To skomplikowane: p=0.0000 ***
+    Członek rodziny - członek rodziny vs Znajomy - Znajomy: p=0.0000 ***
+    Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: p=0.0105 *
+    Inna znacząca - Inna znacząca vs Znajomy - Znajomy: p=0.0000 ***
+    To skomplikowane vs Znajomy - Znajomy: p=0.0004 ***
+
+Tor 3:
+  Istotne różnice w czasie według wieku:
+    18-29 vs 30-44: p=0.0000 ***
+    18-29 vs 45-59: p=0.0000 ***
+    18-29 vs 60+: p=0.0209 *
+    18-29 vs < 18: p=0.0000 ***
+    30-44 vs 60+: p=0.0001 ***
+    30-44 vs < 18: p=0.0054 **
+    45-59 vs 60+: p=0.0002 ***
+    60+ vs < 18: p=0.0000 ***
+  Istotne różnice w czasie według relacji:
+    Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: p=0.0000 ***
+    Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy: p=0.0126 *
+    Członek rodziny - członek rodziny vs To skomplikowane: p=0.0000 ***
+    Członek rodziny - członek rodziny vs Znajomy - Znajomy: p=0.0000 ***
+    Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: p=0.0027 **
+    Inna znacząca - Inna znacząca vs To skomplikowane: p=0.0052 **
+    Inna znacząca - Inna znacząca vs Znajomy - Znajomy: p=0.0101 *
+
+Tor 4:
+  Istotne różnice w czasie według wieku:
+    18-29 vs 30-44: p=0.0000 ***
+    18-29 vs 45-59: p=0.0000 ***
+    18-29 vs 60+: p=0.0000 ***
+    18-29 vs < 18: p=0.0000 ***
+  Istotne różnice w czasie według relacji:
+    Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: p=0.0000 ***
+    Członek rodziny - członek rodziny vs To skomplikowane: p=0.0000 ***
+    Członek rodziny - członek rodziny vs Znajomy - Znajomy: p=0.0000 ***
+    Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: p=0.0000 ***
+    Inna znacząca - Inna znacząca vs Znajomy - Znajomy: p=0.0000 ***
+    Nieznajomy - Nieznajomy vs To skomplikowane: p=0.0000 ***
+    Nieznajomy - Nieznajomy vs Znajomy - Znajomy: p=0.0003 ***
+    To skomplikowane vs Znajomy - Znajomy: p=0.0006 ***
+
+Tor 5:
+  Istotne różnice w czasie według wieku:
+    18-29 vs 30-44: p=0.0000 ***
+    18-29 vs 45-59: p=0.0000 ***
+    18-29 vs 60+: p=0.0003 ***
+    18-29 vs < 18: p=0.0000 ***
+    30-44 vs < 18: p=0.0401 *
+  Istotne różnice w czasie według relacji:
+    Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: p=0.0000 ***
+    Członek rodziny - członek rodziny vs To skomplikowane: p=0.0000 ***
+    Członek rodziny - członek rodziny vs Znajomy - Znajomy: p=0.0000 ***
+    Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: p=0.0350 *
+    Inna znacząca - Inna znacząca vs To skomplikowane: p=0.0240 *
+    Inna znacząca - Inna znacząca vs Znajomy - Znajomy: p=0.0002 ***
+
+Tor 6:
+  Istotne różnice w czasie według wieku:
+    18-29 vs 30-44: p=0.0000 ***
+    18-29 vs 45-59: p=0.0000 ***
+    18-29 vs < 18: p=0.0000 ***
+    30-44 vs 60+: p=0.0001 ***
+    30-44 vs < 18: p=0.0002 ***
+    45-59 vs 60+: p=0.0001 ***
+    45-59 vs < 18: p=0.0014 **
+    60+ vs < 18: p=0.0209 *
+  Istotne różnice w czasie według relacji:
+    Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: p=0.0000 ***
+    Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy: p=0.0459 *
+    Członek rodziny - członek rodziny vs To skomplikowane: p=0.0000 ***
+    Członek rodziny - członek rodziny vs Znajomy - Znajomy: p=0.0000 ***
+    Inna znacząca - Inna znacząca vs Znajomy - Znajomy: p=0.0316 *
+
+Tor 7:
+  Istotne różnice w czasie według wieku:
+    18-29 vs 30-44: p=0.0000 ***
+    18-29 vs 45-59: p=0.0000 ***
+    18-29 vs 60+: p=0.0107 *
+    18-29 vs < 18: p=0.0000 ***
+    30-44 vs < 18: p=0.0001 ***
+    45-59 vs < 18: p=0.0049 **
+    60+ vs < 18: p=0.0123 *
+  Istotne różnice w czasie według relacji:
+    Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: p=0.0000 ***
+    Członek rodziny - członek rodziny vs To skomplikowane: p=0.0000 ***
+    Członek rodziny - członek rodziny vs Znajomy - Znajomy: p=0.0000 ***
+
+GŁÓWNE WNIOSKI:
+1. Wpływ wieku:
+   - Analiza z testami statystycznymi pokazuje istotne różnice między grupami wiekowymi
+   - Każdy uczestnik analizowany osobno (nie uśrednianie osi X i Y)
+   - Wąsy istotności na wykresach pokazują pary grup ze znaczącymi różnicami
+
+2. Wpływ relacji:
+   - Testy t-Studenta ujawniają istotne różnice między typami relacji
+   - Pięć kategorii relacji pozwala na precyzyjną analizę wpływu więzi społecznych
+
+3. Metodologia:
+   - Zastosowano testy t-Studenta dla porównań parami
+   - Wąsy istotności dodane do wykresów słupkowych
+   - Tabele uporządkowane według średnich czasów z dodatkowymi statystykami
+   - Analiza przeprowadzona osobno dla każdego toru

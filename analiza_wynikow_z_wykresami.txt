@@ -1,0 +1,1558 @@
+Wczytano 128179 wierszy z pliku games_with_relationship.csv
+Podstawowe statystyki:
+Liczba wierszy: 122554
+Unikalne tory: [2 4 6 3 1 7 5]
+Unikalne grupy wiekowe X: ['18-29' '30-44' '< 18' '60+' '45-59']
+Unikalne grupy wiekowe Y: ['18-29' '30-44' '< 18' '45-59' '60+']
+Unikalne relacje: ['Znajomy - Znajomy' 'Członek rodziny - członek rodziny'
+ 'To skomplikowane' 'Nieznajomy - Nieznajomy'
+ 'Inna znacząca - Inna znacząca']
+Procent ukończonych podejść: 45.92%
+
+================================================================================
+OBJAŚNIENIE TESTÓW STATYSTYCZNYCH
+================================================================================
+
+W analizie zastosowano następujące testy statystyczne:
+
+1. Test Kruskala-Wallisa:
+   - Jest to nieparametryczny odpowiednik jednoczynnikowej analizy wariancji (ANOVA).
+   - Hipoteza zerowa (H0): nie ma istotnych różnic między mediany czasów ukończenia zadań
+     w różnych grupach (wiekowych lub relacji).
+   - Hipoteza alternatywna (H1): istnieje przynajmniej jedna para grup, których mediany
+     czasów ukończenia różnią się istotnie.
+   - Interpretacja: jeśli p-wartość < 0.05, odrzucamy hipotezę zerową, co oznacza, że przynajmniej
+     jedna para grup różni się istotnie.
+
+2. Test Wilcoxona (dla par grup):
+   - Jest to nieparametryczny test dla par grup, odpowiednik testu t-Studenta dla prób zależnych.
+   - Hipoteza zerowa (H0): nie ma istotnej różnicy między medianami czasów ukończenia
+     w porównywanych dwóch grupach.
+   - Hipoteza alternatywna (H1): mediany czasów ukończenia różnią się istotnie między grupami.
+   - Interpretacja: jeśli p-wartość < 0.05, odrzucamy hipotezę zerową, co oznacza, że
+     czasy ukończenia w obu grupach różnią się istotnie.
+
+Poziom istotności:
+- We wszystkich testach przyjęto standardowy poziom istotności α = 0.05 (5%).
+- Oznacza to, że wyniki są uznawane za statystycznie istotne, gdy p-wartość < 0.05.
+
+Zrównoważony sampling:
+- Aby zapewnić rzetelność porównań między grupami o różnej liczności, zastosowano
+  technikę zrównoważonego samplingu w testach Wilcoxona.
+- Polega ona na losowym wyborze równej liczby obserwacji z każdej grupy.
+
+NOWE FUNKCJE:
+- Wykresy słupkowe z wąsami istotności statystycznej
+- Szczegółowe tabele porównawcze z wynikami testów
+- Podsumowujące heatmapy i wykresy istotności
+        
+
+Analiza statystyczna z wizualizacjami:
+UWAGA: Tworzone są wykresy słupkowe z wąsami istotności dla każdego toru osobno.
+Analiza dla wszystkich torów łącznie:
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_X):
+Statystyka: 752.35, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_Y):
+Statystyka: 690.59, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla relacji (Relationship_Name):
+Statystyka: 1255.64, p-wartość: 0.0000, Istotne: True
+
+
+=== Analiza dla toru 1 ===
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_X):
+Statystyka: 69.39, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_Y):
+Statystyka: 37.54, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla relacji (Relationship_Name):
+Statystyka: 176.55, p-wartość: 0.0000, Istotne: True
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par grup wiekowych (Age_Group_X):
+18-29 vs 30-44: Statystyka=1194813.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1744, n2=1631), Po zrównoważeniu: n=1631
+  Średnie czasy (oryginalne): 18-29=40.76s, 30-44=45.48s
+  Mediany czasów (oryginalne): 18-29=35.14s, 30-44=39.74s
+  Średnie czasy (zsamplowane): 18-29=40.85s, 30-44=45.48s
+  Mediany czasów (zsamplowane): 18-29=35.17s, 30-44=39.74s
+18-29 vs 45-59: Statystyka=127030.00, p-wartość=0.0095, Istotne=True
+  Próbki: Oryginalne (n1=1744, n2=529), Po zrównoważeniu: n=529
+  Średnie czasy (oryginalne): 18-29=40.76s, 45-59=44.86s
+  Mediany czasów (oryginalne): 18-29=35.14s, 45-59=39.19s
+  Średnie czasy (zsamplowane): 18-29=40.80s, 45-59=44.86s
+  Mediany czasów (zsamplowane): 18-29=35.05s, 45-59=39.19s
+18-29 vs 60+: Statystyka=115919.00, p-wartość=0.3956, Istotne=False
+  Próbki: Oryginalne (n1=1744, n2=474), Po zrównoważeniu: n=474
+  Średnie czasy (oryginalne): 18-29=40.76s, 60+=40.76s
+  Mediany czasów (oryginalne): 18-29=35.14s, 60+=33.25s
+  Średnie czasy (zsamplowane): 18-29=41.53s, 60+=40.76s
+  Mediany czasów (zsamplowane): 18-29=35.85s, 60+=33.25s
+18-29 vs < 18: Statystyka=1350838.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1744, n2=3558), Po zrównoważeniu: n=1744
+  Średnie czasy (oryginalne): 18-29=40.76s, < 18=48.42s
+  Mediany czasów (oryginalne): 18-29=35.14s, < 18=40.57s
+  Średnie czasy (zsamplowane): 18-29=40.76s, < 18=48.19s
+  Mediany czasów (zsamplowane): 18-29=35.14s, < 18=40.29s
+30-44 vs 45-59: Statystyka=140275.50, p-wartość=0.9431, Istotne=False
+  Próbki: Oryginalne (n1=1631, n2=529), Po zrównoważeniu: n=529
+  Średnie czasy (oryginalne): 30-44=45.48s, 45-59=44.86s
+  Mediany czasów (oryginalne): 30-44=39.74s, 45-59=39.19s
+  Średnie czasy (zsamplowane): 30-44=45.01s, 45-59=44.86s
+  Mediany czasów (zsamplowane): 30-44=38.14s, 45-59=39.19s
+30-44 vs 60+: Statystyka=123712.00, p-wartość=0.0070, Istotne=True
+  Próbki: Oryginalne (n1=1631, n2=474), Po zrównoważeniu: n=474
+  Średnie czasy (oryginalne): 30-44=45.48s, 60+=40.76s
+  Mediany czasów (oryginalne): 30-44=39.74s, 60+=33.25s
+  Średnie czasy (zsamplowane): 30-44=44.69s, 60+=40.76s
+  Mediany czasów (zsamplowane): 30-44=38.17s, 60+=33.25s
+30-44 vs < 18: Statystyka=1313958.50, p-wartość=0.5489, Istotne=False
+  Próbki: Oryginalne (n1=1631, n2=3558), Po zrównoważeniu: n=1631
+  Średnie czasy (oryginalne): 30-44=45.48s, < 18=48.42s
+  Mediany czasów (oryginalne): 30-44=39.74s, < 18=40.57s
+  Średnie czasy (zsamplowane): 30-44=45.48s, < 18=48.09s
+  Mediany czasów (zsamplowane): 30-44=39.74s, < 18=40.54s
+45-59 vs 60+: Statystyka=124600.00, p-wartość=0.0036, Istotne=True
+  Próbki: Oryginalne (n1=529, n2=474), Po zrównoważeniu: n=474
+  Średnie czasy (oryginalne): 45-59=44.86s, 60+=40.76s
+  Mediany czasów (oryginalne): 45-59=39.19s, 60+=33.25s
+  Średnie czasy (zsamplowane): 45-59=45.06s, 60+=40.76s
+  Mediany czasów (zsamplowane): 45-59=38.95s, 60+=33.25s
+45-59 vs < 18: Statystyka=140877.00, p-wartość=0.8474, Istotne=False
+  Próbki: Oryginalne (n1=529, n2=3558), Po zrównoważeniu: n=529
+  Średnie czasy (oryginalne): 45-59=44.86s, < 18=48.42s
+  Mediany czasów (oryginalne): 45-59=39.19s, < 18=40.57s
+  Średnie czasy (zsamplowane): 45-59=44.86s, < 18=46.74s
+  Mediany czasów (zsamplowane): 45-59=39.19s, < 18=37.94s
+60+ vs < 18: Statystyka=102470.50, p-wartość=0.0192, Istotne=True
+  Próbki: Oryginalne (n1=474, n2=3558), Po zrównoważeniu: n=474
+  Średnie czasy (oryginalne): 60+=40.76s, < 18=48.42s
+  Mediany czasów (oryginalne): 60+=33.25s, < 18=40.57s
+  Średnie czasy (zsamplowane): 60+=40.76s, < 18=46.46s
+  Mediany czasów (zsamplowane): 60+=33.25s, < 18=37.26s
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par grup wiekowych (Age_Group_Y):
+18-29 vs 30-44: Statystyka=975326.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1665, n2=1470), Po zrównoważeniu: n=1470
+  Średnie czasy (oryginalne): 18-29=40.86s, 30-44=46.11s
+  Mediany czasów (oryginalne): 18-29=35.84s, 30-44=39.96s
+  Średnie czasy (zsamplowane): 18-29=40.79s, 30-44=46.11s
+  Mediany czasów (zsamplowane): 18-29=35.91s, 30-44=39.96s
+18-29 vs 45-59: Statystyka=103247.00, p-wartość=0.0074, Istotne=True
+  Próbki: Oryginalne (n1=1665, n2=479), Po zrównoważeniu: n=479
+  Średnie czasy (oryginalne): 18-29=40.86s, 45-59=48.51s
+  Mediany czasów (oryginalne): 18-29=35.84s, 45-59=41.22s
+  Średnie czasy (zsamplowane): 18-29=41.94s, 45-59=48.51s
+  Mediany czasów (zsamplowane): 18-29=36.74s, 45-59=41.22s
+18-29 vs 60+: Statystyka=131965.50, p-wartość=0.8923, Istotne=False
+  Próbki: Oryginalne (n1=1665, n2=515), Po zrównoważeniu: n=515
+  Średnie czasy (oryginalne): 18-29=40.86s, 60+=44.59s
+  Mediany czasów (oryginalne): 18-29=35.84s, 60+=36.89s
+  Średnie czasy (zsamplowane): 18-29=42.09s, 60+=44.59s
+  Mediany czasów (zsamplowane): 18-29=36.79s, 60+=36.89s
+18-29 vs < 18: Statystyka=1271583.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1665, n2=3807), Po zrównoważeniu: n=1665
+  Średnie czasy (oryginalne): 18-29=40.86s, < 18=46.92s
+  Mediany czasów (oryginalne): 18-29=35.84s, < 18=39.24s
+  Średnie czasy (zsamplowane): 18-29=40.86s, < 18=46.54s
+  Mediany czasów (zsamplowane): 18-29=35.84s, < 18=39.14s
+30-44 vs 45-59: Statystyka=109635.50, p-wartość=0.2351, Istotne=False
+  Próbki: Oryginalne (n1=1470, n2=479), Po zrównoważeniu: n=479
+  Średnie czasy (oryginalne): 30-44=46.11s, 45-59=48.51s
+  Mediany czasów (oryginalne): 30-44=39.96s, 45-59=41.22s
+  Średnie czasy (zsamplowane): 30-44=46.33s, 45-59=48.51s
+  Mediany czasów (zsamplowane): 30-44=38.32s, 45-59=41.22s
+30-44 vs 60+: Statystyka=136236.50, p-wartość=0.4478, Istotne=False
+  Próbki: Oryginalne (n1=1470, n2=515), Po zrównoważeniu: n=515
+  Średnie czasy (oryginalne): 30-44=46.11s, 60+=44.59s
+  Mediany czasów (oryginalne): 30-44=39.96s, 60+=36.89s
+  Średnie czasy (zsamplowane): 30-44=45.60s, 60+=44.59s
+  Mediany czasów (zsamplowane): 30-44=38.14s, 60+=36.89s
+30-44 vs < 18: Statystyka=1089084.50, p-wartość=0.7075, Istotne=False
+  Próbki: Oryginalne (n1=1470, n2=3807), Po zrównoważeniu: n=1470
+  Średnie czasy (oryginalne): 30-44=46.11s, < 18=46.92s
+  Mediany czasów (oryginalne): 30-44=39.96s, < 18=39.24s
+  Średnie czasy (zsamplowane): 30-44=46.11s, < 18=46.62s
+  Mediany czasów (zsamplowane): 30-44=39.96s, < 18=39.18s
+45-59 vs 60+: Statystyka=124499.00, p-wartość=0.0224, Istotne=True
+  Próbki: Oryginalne (n1=479, n2=515), Po zrównoważeniu: n=479
+  Średnie czasy (oryginalne): 45-59=48.51s, 60+=44.59s
+  Mediany czasów (oryginalne): 45-59=41.22s, 60+=36.89s
+  Średnie czasy (zsamplowane): 45-59=48.51s, 60+=44.54s
+  Mediany czasów (zsamplowane): 45-59=41.22s, 60+=36.89s
+45-59 vs < 18: Statystyka=112970.00, p-wartość=0.6828, Istotne=False
+  Próbki: Oryginalne (n1=479, n2=3807), Po zrównoważeniu: n=479
+  Średnie czasy (oryginalne): 45-59=48.51s, < 18=46.92s
+  Mediany czasów (oryginalne): 45-59=41.22s, < 18=39.24s
+  Średnie czasy (zsamplowane): 45-59=48.51s, < 18=49.04s
+  Mediany czasów (zsamplowane): 45-59=41.22s, < 18=42.31s
+60+ vs < 18: Statystyka=121497.00, p-wartość=0.0199, Istotne=True
+  Próbki: Oryginalne (n1=515, n2=3807), Po zrównoważeniu: n=515
+  Średnie czasy (oryginalne): 60+=44.59s, < 18=46.92s
+  Mediany czasów (oryginalne): 60+=36.89s, < 18=39.24s
+  Średnie czasy (zsamplowane): 60+=44.59s, < 18=48.56s
+  Mediany czasów (zsamplowane): 60+=36.89s, < 18=41.36s
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par relacji (Relationship_Name):
+Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: Statystyka=371114.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=3827, n2=803), Po zrównoważeniu: n=803
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=49.66s, Inna znacząca - Inna znacząca=39.49s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=42.27s, Inna znacząca - Inna znacząca=35.19s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=48.72s, Inna znacząca - Inna znacząca=39.49s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=40.91s, Inna znacząca - Inna znacząca=35.19s
+Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy: Statystyka=67291.50, p-wartość=0.0047, Istotne=True
+  Próbki: Oryginalne (n1=3827, n2=346), Po zrównoważeniu: n=346
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=49.66s, Nieznajomy - Nieznajomy=44.15s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=42.27s, Nieznajomy - Nieznajomy=35.94s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=50.09s, Nieznajomy - Nieznajomy=44.15s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=42.42s, Nieznajomy - Nieznajomy=35.94s
+Członek rodziny - członek rodziny vs To skomplikowane: Statystyka=997798.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=3827, n2=1287), Po zrównoważeniu: n=1287
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=49.66s, To skomplikowane=39.01s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=42.27s, To skomplikowane=32.12s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=48.95s, To skomplikowane=39.01s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=40.94s, To skomplikowane=32.12s
+Członek rodziny - członek rodziny vs Znajomy - Znajomy: Statystyka=1538652.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=3827, n2=1673), Po zrównoważeniu: n=1673
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=49.66s, Znajomy - Znajomy=43.86s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=42.27s, Znajomy - Znajomy=37.29s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=48.89s, Znajomy - Znajomy=43.86s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=41.19s, Znajomy - Znajomy=37.29s
+Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: Statystyka=55498.00, p-wartość=0.0973, Istotne=False
+  Próbki: Oryginalne (n1=803, n2=346), Po zrównoważeniu: n=346
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=39.49s, Nieznajomy - Nieznajomy=44.15s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=35.19s, Nieznajomy - Nieznajomy=35.94s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=39.05s, Nieznajomy - Nieznajomy=44.15s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=34.48s, Nieznajomy - Nieznajomy=35.94s
+Inna znacząca - Inna znacząca vs To skomplikowane: Statystyka=338437.00, p-wartość=0.0845, Istotne=False
+  Próbki: Oryginalne (n1=803, n2=1287), Po zrównoważeniu: n=803
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=39.49s, To skomplikowane=39.01s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=35.19s, To skomplikowane=32.12s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=39.49s, To skomplikowane=38.77s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=35.19s, To skomplikowane=32.48s
+Inna znacząca - Inna znacząca vs Znajomy - Znajomy: Statystyka=311549.50, p-wartość=0.2428, Istotne=False
+  Próbki: Oryginalne (n1=803, n2=1673), Po zrównoważeniu: n=803
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=39.49s, Znajomy - Znajomy=43.86s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=35.19s, Znajomy - Znajomy=37.29s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=39.49s, Znajomy - Znajomy=42.29s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=35.19s, Znajomy - Znajomy=37.19s
+Nieznajomy - Nieznajomy vs To skomplikowane: Statystyka=66573.50, p-wartość=0.0107, Istotne=True
+  Próbki: Oryginalne (n1=346, n2=1287), Po zrównoważeniu: n=346
+  Średnie czasy (oryginalne): Nieznajomy - Nieznajomy=44.15s, To skomplikowane=39.01s
+  Mediany czasów (oryginalne): Nieznajomy - Nieznajomy=35.94s, To skomplikowane=32.12s
+  Średnie czasy (zsamplowane): Nieznajomy - Nieznajomy=44.15s, To skomplikowane=38.23s
+  Mediany czasów (zsamplowane): Nieznajomy - Nieznajomy=35.94s, To skomplikowane=32.80s
+Nieznajomy - Nieznajomy vs Znajomy - Znajomy: Statystyka=60117.00, p-wartość=0.9217, Istotne=False
+  Próbki: Oryginalne (n1=346, n2=1673), Po zrównoważeniu: n=346
+  Średnie czasy (oryginalne): Nieznajomy - Nieznajomy=44.15s, Znajomy - Znajomy=43.86s
+  Mediany czasów (oryginalne): Nieznajomy - Nieznajomy=35.94s, Znajomy - Znajomy=37.29s
+  Średnie czasy (zsamplowane): Nieznajomy - Nieznajomy=44.15s, Znajomy - Znajomy=42.76s
+  Mediany czasów (zsamplowane): Nieznajomy - Nieznajomy=35.94s, Znajomy - Znajomy=38.72s
+To skomplikowane vs Znajomy - Znajomy: Statystyka=745792.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1287, n2=1673), Po zrównoważeniu: n=1287
+  Średnie czasy (oryginalne): To skomplikowane=39.01s, Znajomy - Znajomy=43.86s
+  Mediany czasów (oryginalne): To skomplikowane=32.12s, Znajomy - Znajomy=37.29s
+  Średnie czasy (zsamplowane): To skomplikowane=39.01s, Znajomy - Znajomy=43.67s
+  Mediany czasów (zsamplowane): To skomplikowane=32.12s, Znajomy - Znajomy=36.94s
+
+Tworzenie wykresów z wąsami istotności dla toru 1...
+
+
+=== Analiza dla toru 2 ===
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_X):
+Statystyka: 146.66, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_Y):
+Statystyka: 166.13, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla relacji (Relationship_Name):
+Statystyka: 172.24, p-wartość: 0.0000, Istotne: True
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par grup wiekowych (Age_Group_X):
+18-29 vs 30-44: Statystyka=1154913.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1749, n2=1684), Po zrównoważeniu: n=1684
+  Średnie czasy (oryginalne): 18-29=37.70s, 30-44=45.95s
+  Mediany czasów (oryginalne): 18-29=33.15s, 30-44=39.81s
+  Średnie czasy (zsamplowane): 18-29=37.76s, 30-44=45.95s
+  Mediany czasów (zsamplowane): 18-29=33.24s, 30-44=39.81s
+18-29 vs 45-59: Statystyka=126750.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1749, n2=564), Po zrównoważeniu: n=564
+  Średnie czasy (oryginalne): 18-29=37.70s, 45-59=46.83s
+  Mediany czasów (oryginalne): 18-29=33.15s, 45-59=41.22s
+  Średnie czasy (zsamplowane): 18-29=37.31s, 45-59=46.83s
+  Mediany czasów (zsamplowane): 18-29=32.87s, 45-59=41.22s
+18-29 vs 60+: Statystyka=160311.50, p-wartość=0.1990, Istotne=False
+  Próbki: Oryginalne (n1=1749, n2=579), Po zrównoważeniu: n=579
+  Średnie czasy (oryginalne): 18-29=37.70s, 60+=41.89s
+  Mediany czasów (oryginalne): 18-29=33.15s, 60+=34.17s
+  Średnie czasy (zsamplowane): 18-29=37.50s, 60+=41.89s
+  Mediany czasów (zsamplowane): 18-29=33.47s, 60+=34.17s
+18-29 vs < 18: Statystyka=1269223.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1749, n2=3503), Po zrównoważeniu: n=1749
+  Średnie czasy (oryginalne): 18-29=37.70s, < 18=47.03s
+  Mediany czasów (oryginalne): 18-29=33.15s, < 18=39.91s
+  Średnie czasy (zsamplowane): 18-29=37.70s, < 18=46.59s
+  Mediany czasów (zsamplowane): 18-29=33.15s, < 18=39.19s
+30-44 vs 45-59: Statystyka=158472.50, p-wartość=0.9163, Istotne=False
+  Próbki: Oryginalne (n1=1684, n2=564), Po zrównoważeniu: n=564
+  Średnie czasy (oryginalne): 30-44=45.95s, 45-59=46.83s
+  Mediany czasów (oryginalne): 30-44=39.81s, 45-59=41.22s
+  Średnie czasy (zsamplowane): 30-44=45.57s, 45-59=46.83s
+  Mediany czasów (zsamplowane): 30-44=39.72s, 45-59=41.22s
+30-44 vs 60+: Statystyka=190920.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1684, n2=579), Po zrównoważeniu: n=579
+  Średnie czasy (oryginalne): 30-44=45.95s, 60+=41.89s
+  Mediany czasów (oryginalne): 30-44=39.81s, 60+=34.17s
+  Średnie czasy (zsamplowane): 30-44=45.38s, 60+=41.89s
+  Mediany czasów (zsamplowane): 30-44=39.64s, 60+=34.17s
+30-44 vs < 18: Statystyka=1434887.00, p-wartość=0.5478, Istotne=False
+  Próbki: Oryginalne (n1=1684, n2=3503), Po zrównoważeniu: n=1684
+  Średnie czasy (oryginalne): 30-44=45.95s, < 18=47.03s
+  Mediany czasów (oryginalne): 30-44=39.81s, < 18=39.91s
+  Średnie czasy (zsamplowane): 30-44=45.95s, < 18=46.29s
+  Mediany czasów (zsamplowane): 30-44=39.81s, < 18=39.18s
+45-59 vs 60+: Statystyka=181485.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=564, n2=579), Po zrównoważeniu: n=564
+  Średnie czasy (oryginalne): 45-59=46.83s, 60+=41.89s
+  Mediany czasów (oryginalne): 45-59=41.22s, 60+=34.17s
+  Średnie czasy (zsamplowane): 45-59=46.83s, 60+=42.03s
+  Mediany czasów (zsamplowane): 45-59=41.22s, 60+=34.13s
+45-59 vs < 18: Statystyka=161211.00, p-wartość=0.6926, Istotne=False
+  Próbki: Oryginalne (n1=564, n2=3503), Po zrównoważeniu: n=564
+  Średnie czasy (oryginalne): 45-59=46.83s, < 18=47.03s
+  Mediany czasów (oryginalne): 45-59=41.22s, < 18=39.91s
+  Średnie czasy (zsamplowane): 45-59=46.83s, < 18=46.64s
+  Mediany czasów (zsamplowane): 45-59=41.22s, < 18=40.09s
+60+ vs < 18: Statystyka=146099.50, p-wartość=0.0002, Istotne=True
+  Próbki: Oryginalne (n1=579, n2=3503), Po zrównoważeniu: n=579
+  Średnie czasy (oryginalne): 60+=41.89s, < 18=47.03s
+  Mediany czasów (oryginalne): 60+=34.17s, < 18=39.91s
+  Średnie czasy (zsamplowane): 60+=41.89s, < 18=46.69s
+  Mediany czasów (zsamplowane): 60+=34.17s, < 18=40.16s
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par grup wiekowych (Age_Group_Y):
+18-29 vs 30-44: Statystyka=1012899.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1754, n2=1537), Po zrównoważeniu: n=1537
+  Średnie czasy (oryginalne): 18-29=38.54s, 30-44=44.14s
+  Mediany czasów (oryginalne): 18-29=33.42s, 30-44=38.62s
+  Średnie czasy (zsamplowane): 18-29=38.45s, 30-44=44.14s
+  Mediany czasów (zsamplowane): 18-29=33.55s, 30-44=38.62s
+18-29 vs 45-59: Statystyka=70198.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1754, n2=431), Po zrównoważeniu: n=431
+  Średnie czasy (oryginalne): 18-29=38.54s, 45-59=48.16s
+  Mediany czasów (oryginalne): 18-29=33.42s, 45-59=41.09s
+  Średnie czasy (zsamplowane): 18-29=37.70s, 45-59=48.16s
+  Mediany czasów (zsamplowane): 18-29=33.85s, 45-59=41.09s
+18-29 vs 60+: Statystyka=172303.00, p-wartość=0.9169, Istotne=False
+  Próbki: Oryginalne (n1=1754, n2=586), Po zrównoważeniu: n=586
+  Średnie czasy (oryginalne): 18-29=38.54s, 60+=38.90s
+  Mediany czasów (oryginalne): 18-29=33.42s, 60+=33.07s
+  Średnie czasy (zsamplowane): 18-29=37.68s, 60+=38.90s
+  Mediany czasów (zsamplowane): 18-29=33.92s, 60+=33.07s
+18-29 vs < 18: Statystyka=1232812.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1754, n2=3771), Po zrównoważeniu: n=1754
+  Średnie czasy (oryginalne): 18-29=38.54s, < 18=47.66s
+  Mediany czasów (oryginalne): 18-29=33.42s, < 18=40.59s
+  Średnie czasy (zsamplowane): 18-29=38.54s, < 18=48.63s
+  Mediany czasów (zsamplowane): 18-29=33.42s, < 18=41.42s
+30-44 vs 45-59: Statystyka=84684.50, p-wartość=0.0249, Istotne=True
+  Próbki: Oryginalne (n1=1537, n2=431), Po zrównoważeniu: n=431
+  Średnie czasy (oryginalne): 30-44=44.14s, 45-59=48.16s
+  Mediany czasów (oryginalne): 30-44=38.62s, 45-59=41.09s
+  Średnie czasy (zsamplowane): 30-44=44.71s, 45-59=48.16s
+  Mediany czasów (zsamplowane): 30-44=37.89s, 45-59=41.09s
+30-44 vs 60+: Statystyka=195952.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1537, n2=586), Po zrównoważeniu: n=586
+  Średnie czasy (oryginalne): 30-44=44.14s, 60+=38.90s
+  Mediany czasów (oryginalne): 30-44=38.62s, 60+=33.07s
+  Średnie czasy (zsamplowane): 30-44=44.18s, 60+=38.90s
+  Mediany czasów (zsamplowane): 30-44=38.30s, 60+=33.07s
+30-44 vs < 18: Statystyka=1119182.00, p-wartość=0.0117, Istotne=True
+  Próbki: Oryginalne (n1=1537, n2=3771), Po zrównoważeniu: n=1537
+  Średnie czasy (oryginalne): 30-44=44.14s, < 18=47.66s
+  Mediany czasów (oryginalne): 30-44=38.62s, < 18=40.59s
+  Średnie czasy (zsamplowane): 30-44=44.14s, < 18=48.20s
+  Mediany czasów (zsamplowane): 30-44=38.62s, < 18=40.39s
+45-59 vs 60+: Statystyka=115165.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=431, n2=586), Po zrównoważeniu: n=431
+  Średnie czasy (oryginalne): 45-59=48.16s, 60+=38.90s
+  Mediany czasów (oryginalne): 45-59=41.09s, 60+=33.07s
+  Średnie czasy (zsamplowane): 45-59=48.16s, 60+=38.75s
+  Mediany czasów (zsamplowane): 45-59=41.09s, 60+=32.80s
+45-59 vs < 18: Statystyka=99276.50, p-wartość=0.0802, Istotne=False
+  Próbki: Oryginalne (n1=431, n2=3771), Po zrównoważeniu: n=431
+  Średnie czasy (oryginalne): 45-59=48.16s, < 18=47.66s
+  Mediany czasów (oryginalne): 45-59=41.09s, < 18=40.59s
+  Średnie czasy (zsamplowane): 45-59=48.16s, < 18=46.08s
+  Mediany czasów (zsamplowane): 45-59=41.09s, < 18=37.67s
+60+ vs < 18: Statystyka=141107.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=586, n2=3771), Po zrównoważeniu: n=586
+  Średnie czasy (oryginalne): 60+=38.90s, < 18=47.66s
+  Mediany czasów (oryginalne): 60+=33.07s, < 18=40.59s
+  Średnie czasy (zsamplowane): 60+=38.90s, < 18=47.31s
+  Mediany czasów (zsamplowane): 60+=33.07s, < 18=38.99s
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par relacji (Relationship_Name):
+Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: Statystyka=362925.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=3910, n2=768), Po zrównoważeniu: n=768
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=48.42s, Inna znacząca - Inna znacząca=37.87s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=41.30s, Inna znacząca - Inna znacząca=32.98s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=49.45s, Inna znacząca - Inna znacząca=37.87s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=42.48s, Inna znacząca - Inna znacząca=32.98s
+Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy: Statystyka=66902.00, p-wartość=0.0019, Istotne=True
+  Próbki: Oryginalne (n1=3910, n2=343), Po zrównoważeniu: n=343
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=48.42s, Nieznajomy - Nieznajomy=43.13s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=41.30s, Nieznajomy - Nieznajomy=38.62s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=51.19s, Nieznajomy - Nieznajomy=43.13s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=43.79s, Nieznajomy - Nieznajomy=38.62s
+Członek rodziny - członek rodziny vs To skomplikowane: Statystyka=1057618.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=3910, n2=1332), Po zrównoważeniu: n=1332
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=48.42s, To skomplikowane=39.46s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=41.30s, To skomplikowane=34.06s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=49.00s, To skomplikowane=39.46s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=41.94s, To skomplikowane=34.06s
+Członek rodziny - członek rodziny vs Znajomy - Znajomy: Statystyka=1665130.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=3910, n2=1726), Po zrównoważeniu: n=1726
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=48.42s, Znajomy - Znajomy=42.27s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=41.30s, Znajomy - Znajomy=36.10s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=48.09s, Znajomy - Znajomy=42.27s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=41.02s, Znajomy - Znajomy=36.10s
+Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: Statystyka=54285.50, p-wartość=0.0803, Istotne=False
+  Próbki: Oryginalne (n1=768, n2=343), Po zrównoważeniu: n=343
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=37.87s, Nieznajomy - Nieznajomy=43.13s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=32.98s, Nieznajomy - Nieznajomy=38.62s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=39.69s, Nieznajomy - Nieznajomy=43.13s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=35.05s, Nieznajomy - Nieznajomy=38.62s
+Inna znacząca - Inna znacząca vs To skomplikowane: Statystyka=296037.50, p-wartość=0.8970, Istotne=False
+  Próbki: Oryginalne (n1=768, n2=1332), Po zrównoważeniu: n=768
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=37.87s, To skomplikowane=39.46s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=32.98s, To skomplikowane=34.06s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=37.87s, To skomplikowane=38.56s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=32.98s, To skomplikowane=32.89s
+Inna znacząca - Inna znacząca vs Znajomy - Znajomy: Statystyka=271037.00, p-wartość=0.0060, Istotne=True
+  Próbki: Oryginalne (n1=768, n2=1726), Po zrównoważeniu: n=768
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=37.87s, Znajomy - Znajomy=42.27s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=32.98s, Znajomy - Znajomy=36.10s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=37.87s, Znajomy - Znajomy=42.77s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=32.98s, Znajomy - Znajomy=36.06s
+Nieznajomy - Nieznajomy vs To skomplikowane: Statystyka=64593.50, p-wartość=0.0262, Istotne=True
+  Próbki: Oryginalne (n1=343, n2=1332), Po zrównoważeniu: n=343
+  Średnie czasy (oryginalne): Nieznajomy - Nieznajomy=43.13s, To skomplikowane=39.46s
+  Mediany czasów (oryginalne): Nieznajomy - Nieznajomy=38.62s, To skomplikowane=34.06s
+  Średnie czasy (zsamplowane): Nieznajomy - Nieznajomy=43.13s, To skomplikowane=39.87s
+  Mediany czasów (zsamplowane): Nieznajomy - Nieznajomy=38.62s, To skomplikowane=34.43s
+Nieznajomy - Nieznajomy vs Znajomy - Znajomy: Statystyka=60040.00, p-wartość=0.6397, Istotne=False
+  Próbki: Oryginalne (n1=343, n2=1726), Po zrównoważeniu: n=343
+  Średnie czasy (oryginalne): Nieznajomy - Nieznajomy=43.13s, Znajomy - Znajomy=42.27s
+  Mediany czasów (oryginalne): Nieznajomy - Nieznajomy=38.62s, Znajomy - Znajomy=36.10s
+  Średnie czasy (zsamplowane): Nieznajomy - Nieznajomy=43.13s, Znajomy - Znajomy=43.34s
+  Mediany czasów (zsamplowane): Nieznajomy - Nieznajomy=38.62s, Znajomy - Znajomy=35.10s
+To skomplikowane vs Znajomy - Znajomy: Statystyka=836189.50, p-wartość=0.0103, Istotne=True
+  Próbki: Oryginalne (n1=1332, n2=1726), Po zrównoważeniu: n=1332
+  Średnie czasy (oryginalne): To skomplikowane=39.46s, Znajomy - Znajomy=42.27s
+  Mediany czasów (oryginalne): To skomplikowane=34.06s, Znajomy - Znajomy=36.10s
+  Średnie czasy (zsamplowane): To skomplikowane=39.46s, Znajomy - Znajomy=42.53s
+  Mediany czasów (zsamplowane): To skomplikowane=34.06s, Znajomy - Znajomy=35.77s
+
+Tworzenie wykresów z wąsami istotności dla toru 2...
+
+
+=== Analiza dla toru 3 ===
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_X):
+Statystyka: 142.42, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_Y):
+Statystyka: 229.60, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla relacji (Relationship_Name):
+Statystyka: 343.94, p-wartość: 0.0000, Istotne: True
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par grup wiekowych (Age_Group_X):
+18-29 vs 30-44: Statystyka=1126427.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1800, n2=1678), Po zrównoważeniu: n=1678
+  Średnie czasy (oryginalne): 18-29=23.81s, 30-44=29.55s
+  Mediany czasów (oryginalne): 18-29=19.44s, 30-44=24.99s
+  Średnie czasy (zsamplowane): 18-29=23.80s, 30-44=29.55s
+  Mediany czasów (zsamplowane): 18-29=19.48s, 30-44=24.99s
+18-29 vs 45-59: Statystyka=153542.50, p-wartość=0.0001, Istotne=True
+  Próbki: Oryginalne (n1=1800, n2=596), Po zrównoważeniu: n=596
+  Średnie czasy (oryginalne): 18-29=23.81s, 45-59=27.67s
+  Mediany czasów (oryginalne): 18-29=19.44s, 45-59=24.33s
+  Średnie czasy (zsamplowane): 18-29=23.74s, 45-59=27.67s
+  Mediany czasów (zsamplowane): 18-29=19.94s, 45-59=24.33s
+18-29 vs 60+: Statystyka=313581.00, p-wartość=0.4873, Istotne=False
+  Próbki: Oryginalne (n1=1800, n2=800), Po zrównoważeniu: n=800
+  Średnie czasy (oryginalne): 18-29=23.81s, 60+=24.31s
+  Mediany czasów (oryginalne): 18-29=19.44s, 60+=19.84s
+  Średnie czasy (zsamplowane): 18-29=23.47s, 60+=24.31s
+  Mediany czasów (zsamplowane): 18-29=19.48s, 60+=19.84s
+18-29 vs < 18: Statystyka=1411939.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1800, n2=3968), Po zrównoważeniu: n=1800
+  Średnie czasy (oryginalne): 18-29=23.81s, < 18=29.38s
+  Mediany czasów (oryginalne): 18-29=19.44s, < 18=24.45s
+  Średnie czasy (zsamplowane): 18-29=23.81s, < 18=28.68s
+  Mediany czasów (zsamplowane): 18-29=19.44s, < 18=23.77s
+30-44 vs 45-59: Statystyka=190866.00, p-wartość=0.0257, Istotne=True
+  Próbki: Oryginalne (n1=1678, n2=596), Po zrównoważeniu: n=596
+  Średnie czasy (oryginalne): 30-44=29.55s, 45-59=27.67s
+  Mediany czasów (oryginalne): 30-44=24.99s, 45-59=24.33s
+  Średnie czasy (zsamplowane): 30-44=30.21s, 45-59=27.67s
+  Mediany czasów (zsamplowane): 30-44=25.21s, 45-59=24.33s
+30-44 vs 60+: Statystyka=383735.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1678, n2=800), Po zrównoważeniu: n=800
+  Średnie czasy (oryginalne): 30-44=29.55s, 60+=24.31s
+  Mediany czasów (oryginalne): 30-44=24.99s, 60+=19.84s
+  Średnie czasy (zsamplowane): 30-44=29.95s, 60+=24.31s
+  Mediany czasów (zsamplowane): 30-44=25.25s, 60+=19.84s
+30-44 vs < 18: Statystyka=1497040.50, p-wartość=0.0015, Istotne=True
+  Próbki: Oryginalne (n1=1678, n2=3968), Po zrównoważeniu: n=1678
+  Średnie czasy (oryginalne): 30-44=29.55s, < 18=29.38s
+  Mediany czasów (oryginalne): 30-44=24.99s, < 18=24.45s
+  Średnie czasy (zsamplowane): 30-44=29.55s, < 18=28.40s
+  Mediany czasów (zsamplowane): 30-44=24.99s, < 18=23.32s
+45-59 vs 60+: Statystyka=198384.00, p-wartość=0.0005, Istotne=True
+  Próbki: Oryginalne (n1=596, n2=800), Po zrównoważeniu: n=596
+  Średnie czasy (oryginalne): 45-59=27.67s, 60+=24.31s
+  Mediany czasów (oryginalne): 45-59=24.33s, 60+=19.84s
+  Średnie czasy (zsamplowane): 45-59=27.67s, 60+=24.57s
+  Mediany czasów (zsamplowane): 45-59=24.33s, 60+=19.90s
+45-59 vs < 18: Statystyka=181293.00, p-wartość=0.5352, Istotne=False
+  Próbki: Oryginalne (n1=596, n2=3968), Po zrównoważeniu: n=596
+  Średnie czasy (oryginalne): 45-59=27.67s, < 18=29.38s
+  Mediany czasów (oryginalne): 45-59=24.33s, < 18=24.45s
+  Średnie czasy (zsamplowane): 45-59=27.67s, < 18=28.13s
+  Mediany czasów (zsamplowane): 45-59=24.33s, < 18=22.79s
+60+ vs < 18: Statystyka=285988.50, p-wartość=0.0002, Istotne=True
+  Próbki: Oryginalne (n1=800, n2=3968), Po zrównoważeniu: n=800
+  Średnie czasy (oryginalne): 60+=24.31s, < 18=29.38s
+  Mediany czasów (oryginalne): 60+=19.84s, < 18=24.45s
+  Średnie czasy (zsamplowane): 60+=24.31s, < 18=28.65s
+  Mediany czasów (zsamplowane): 60+=19.84s, < 18=23.98s
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par grup wiekowych (Age_Group_Y):
+18-29 vs 30-44: Statystyka=882434.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1848, n2=1502), Po zrównoważeniu: n=1502
+  Średnie czasy (oryginalne): 18-29=23.23s, 30-44=29.71s
+  Mediany czasów (oryginalne): 18-29=18.98s, 30-44=25.75s
+  Średnie czasy (zsamplowane): 18-29=23.07s, 30-44=29.71s
+  Mediany czasów (zsamplowane): 18-29=18.78s, 30-44=25.75s
+18-29 vs 45-59: Statystyka=81900.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1848, n2=495), Po zrównoważeniu: n=495
+  Średnie czasy (oryginalne): 18-29=23.23s, 45-59=32.84s
+  Mediany czasów (oryginalne): 18-29=18.98s, 45-59=29.00s
+  Średnie czasy (zsamplowane): 18-29=23.47s, 45-59=32.84s
+  Mediany czasów (zsamplowane): 18-29=18.75s, 45-59=29.00s
+18-29 vs 60+: Statystyka=259724.00, p-wartość=0.8029, Istotne=False
+  Próbki: Oryginalne (n1=1848, n2=718), Po zrównoważeniu: n=718
+  Średnie czasy (oryginalne): 18-29=23.23s, 60+=23.82s
+  Mediany czasów (oryginalne): 18-29=18.98s, 60+=18.02s
+  Średnie czasy (zsamplowane): 18-29=23.47s, 60+=23.82s
+  Mediany czasów (zsamplowane): 18-29=18.74s, 60+=18.02s
+18-29 vs < 18: Statystyka=1400560.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1848, n2=4279), Po zrównoważeniu: n=1848
+  Średnie czasy (oryginalne): 18-29=23.23s, < 18=29.00s
+  Mediany czasów (oryginalne): 18-29=18.98s, < 18=24.06s
+  Średnie czasy (zsamplowane): 18-29=23.23s, < 18=29.25s
+  Mediany czasów (zsamplowane): 18-29=18.98s, < 18=24.22s
+30-44 vs 45-59: Statystyka=109876.00, p-wartość=0.0050, Istotne=True
+  Próbki: Oryginalne (n1=1502, n2=495), Po zrównoważeniu: n=495
+  Średnie czasy (oryginalne): 30-44=29.71s, 45-59=32.84s
+  Mediany czasów (oryginalne): 30-44=25.75s, 45-59=29.00s
+  Średnie czasy (zsamplowane): 30-44=29.98s, 45-59=32.84s
+  Mediany czasów (zsamplowane): 30-44=26.66s, 45-59=29.00s
+30-44 vs 60+: Statystyka=312950.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1502, n2=718), Po zrównoważeniu: n=718
+  Średnie czasy (oryginalne): 30-44=29.71s, 60+=23.82s
+  Mediany czasów (oryginalne): 30-44=25.75s, 60+=18.02s
+  Średnie czasy (zsamplowane): 30-44=29.96s, 60+=23.82s
+  Mediany czasów (zsamplowane): 30-44=26.18s, 60+=18.02s
+30-44 vs < 18: Statystyka=1154712.50, p-wartość=0.2611, Istotne=False
+  Próbki: Oryginalne (n1=1502, n2=4279), Po zrównoważeniu: n=1502
+  Średnie czasy (oryginalne): 30-44=29.71s, < 18=29.00s
+  Mediany czasów (oryginalne): 30-44=25.75s, < 18=24.06s
+  Średnie czasy (zsamplowane): 30-44=29.71s, < 18=29.22s
+  Mediany czasów (zsamplowane): 30-44=25.75s, < 18=24.33s
+45-59 vs 60+: Statystyka=160721.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=495, n2=718), Po zrównoważeniu: n=495
+  Średnie czasy (oryginalne): 45-59=32.84s, 60+=23.82s
+  Mediany czasów (oryginalne): 45-59=29.00s, 60+=18.02s
+  Średnie czasy (zsamplowane): 45-59=32.84s, 60+=24.41s
+  Mediany czasów (zsamplowane): 45-59=29.00s, 60+=17.60s
+45-59 vs < 18: Statystyka=140134.00, p-wartość=0.0001, Istotne=True
+  Próbki: Oryginalne (n1=495, n2=4279), Po zrównoważeniu: n=495
+  Średnie czasy (oryginalne): 45-59=32.84s, < 18=29.00s
+  Mediany czasów (oryginalne): 45-59=29.00s, < 18=24.06s
+  Średnie czasy (zsamplowane): 45-59=32.84s, < 18=29.48s
+  Mediany czasów (zsamplowane): 45-59=29.00s, < 18=23.36s
+60+ vs < 18: Statystyka=211063.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=718, n2=4279), Po zrównoważeniu: n=718
+  Średnie czasy (oryginalne): 60+=23.82s, < 18=29.00s
+  Mediany czasów (oryginalne): 60+=18.02s, < 18=24.06s
+  Średnie czasy (zsamplowane): 60+=23.82s, < 18=29.35s
+  Mediany czasów (zsamplowane): 60+=18.02s, < 18=23.84s
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par relacji (Relationship_Name):
+Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: Statystyka=527015.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=3967, n2=917), Po zrównoważeniu: n=917
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=31.43s, Inna znacząca - Inna znacząca=23.18s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=26.58s, Inna znacząca - Inna znacząca=18.57s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=31.01s, Inna znacząca - Inna znacząca=23.18s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=25.79s, Inna znacząca - Inna znacząca=18.57s
+Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy: Statystyka=102069.00, p-wartość=0.0083, Istotne=True
+  Próbki: Oryginalne (n1=3967, n2=430), Po zrównoważeniu: n=430
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=31.43s, Nieznajomy - Nieznajomy=27.78s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=26.58s, Nieznajomy - Nieznajomy=22.74s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=31.48s, Nieznajomy - Nieznajomy=27.78s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=25.36s, Nieznajomy - Nieznajomy=22.74s
+Członek rodziny - członek rodziny vs To skomplikowane: Statystyka=1456768.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=3967, n2=1545), Po zrównoważeniu: n=1545
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=31.43s, To skomplikowane=24.19s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=26.58s, To skomplikowane=19.72s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=30.98s, To skomplikowane=24.19s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=26.12s, To skomplikowane=19.72s
+Członek rodziny - członek rodziny vs Znajomy - Znajomy: Statystyka=2367661.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=3967, n2=1983), Po zrównoważeniu: n=1983
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=31.43s, Znajomy - Znajomy=25.08s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=26.58s, Znajomy - Znajomy=19.89s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=31.12s, Znajomy - Znajomy=25.08s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=26.21s, Znajomy - Znajomy=19.89s
+Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: Statystyka=77596.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=917, n2=430), Po zrównoważeniu: n=430
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=23.18s, Nieznajomy - Nieznajomy=27.78s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=18.57s, Nieznajomy - Nieznajomy=22.74s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=23.27s, Nieznajomy - Nieznajomy=27.78s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=18.74s, Nieznajomy - Nieznajomy=22.74s
+Inna znacząca - Inna znacząca vs To skomplikowane: Statystyka=405064.00, p-wartość=0.1750, Istotne=False
+  Próbki: Oryginalne (n1=917, n2=1545), Po zrównoważeniu: n=917
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=23.18s, To skomplikowane=24.19s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=18.57s, To skomplikowane=19.72s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=23.18s, To skomplikowane=23.88s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=18.57s, To skomplikowane=19.65s
+Inna znacząca - Inna znacząca vs Znajomy - Znajomy: Statystyka=406483.50, p-wartość=0.2183, Istotne=False
+  Próbki: Oryginalne (n1=917, n2=1983), Po zrównoważeniu: n=917
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=23.18s, Znajomy - Znajomy=25.08s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=18.57s, Znajomy - Znajomy=19.89s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=23.18s, Znajomy - Znajomy=24.88s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=18.57s, Znajomy - Znajomy=19.42s
+Nieznajomy - Nieznajomy vs To skomplikowane: Statystyka=106284.00, p-wartość=0.0001, Istotne=True
+  Próbki: Oryginalne (n1=430, n2=1545), Po zrównoważeniu: n=430
+  Średnie czasy (oryginalne): Nieznajomy - Nieznajomy=27.78s, To skomplikowane=24.19s
+  Mediany czasów (oryginalne): Nieznajomy - Nieznajomy=22.74s, To skomplikowane=19.72s
+  Średnie czasy (zsamplowane): Nieznajomy - Nieznajomy=27.78s, To skomplikowane=23.05s
+  Mediany czasów (zsamplowane): Nieznajomy - Nieznajomy=22.74s, To skomplikowane=19.29s
+Nieznajomy - Nieznajomy vs Znajomy - Znajomy: Statystyka=102336.50, p-wartość=0.0066, Istotne=True
+  Próbki: Oryginalne (n1=430, n2=1983), Po zrównoważeniu: n=430
+  Średnie czasy (oryginalne): Nieznajomy - Nieznajomy=27.78s, Znajomy - Znajomy=25.08s
+  Mediany czasów (oryginalne): Nieznajomy - Nieznajomy=22.74s, Znajomy - Znajomy=19.89s
+  Średnie czasy (zsamplowane): Nieznajomy - Nieznajomy=27.78s, Znajomy - Znajomy=25.51s
+  Mediany czasów (zsamplowane): Nieznajomy - Nieznajomy=22.74s, Znajomy - Znajomy=20.02s
+To skomplikowane vs Znajomy - Znajomy: Statystyka=1172339.00, p-wartość=0.3932, Istotne=False
+  Próbki: Oryginalne (n1=1545, n2=1983), Po zrównoważeniu: n=1545
+  Średnie czasy (oryginalne): To skomplikowane=24.19s, Znajomy - Znajomy=25.08s
+  Mediany czasów (oryginalne): To skomplikowane=19.72s, Znajomy - Znajomy=19.89s
+  Średnie czasy (zsamplowane): To skomplikowane=24.19s, Znajomy - Znajomy=25.25s
+  Mediany czasów (zsamplowane): To skomplikowane=19.72s, Znajomy - Znajomy=20.15s
+
+Tworzenie wykresów z wąsami istotności dla toru 3...
+
+
+=== Analiza dla toru 4 ===
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_X):
+Statystyka: 102.40, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_Y):
+Statystyka: 126.64, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla relacji (Relationship_Name):
+Statystyka: 221.43, p-wartość: 0.0000, Istotne: True
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par grup wiekowych (Age_Group_X):
+18-29 vs 30-44: Statystyka=1151150.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1954, n2=1644), Po zrównoważeniu: n=1644
+  Średnie czasy (oryginalne): 18-29=27.82s, 30-44=34.06s
+  Mediany czasów (oryginalne): 18-29=23.01s, 30-44=27.54s
+  Średnie czasy (zsamplowane): 18-29=27.90s, 30-44=34.06s
+  Mediany czasów (zsamplowane): 18-29=22.96s, 30-44=27.54s
+18-29 vs 45-59: Statystyka=113025.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1954, n2=526), Po zrównoważeniu: n=526
+  Średnie czasy (oryginalne): 18-29=27.82s, 45-59=34.69s
+  Mediany czasów (oryginalne): 18-29=23.01s, 45-59=28.37s
+  Średnie czasy (zsamplowane): 18-29=28.27s, 45-59=34.69s
+  Mediany czasów (zsamplowane): 18-29=22.71s, 45-59=28.37s
+18-29 vs 60+: Statystyka=210390.50, p-wartość=0.6507, Istotne=False
+  Próbki: Oryginalne (n1=1954, n2=644), Po zrównoważeniu: n=644
+  Średnie czasy (oryginalne): 18-29=27.82s, 60+=29.38s
+  Mediany czasów (oryginalne): 18-29=23.01s, 60+=22.01s
+  Średnie czasy (zsamplowane): 18-29=27.96s, 60+=29.38s
+  Mediany czasów (zsamplowane): 18-29=22.44s, 60+=22.01s
+18-29 vs < 18: Statystyka=1727487.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1954, n2=3683), Po zrównoważeniu: n=1954
+  Średnie czasy (oryginalne): 18-29=27.82s, < 18=33.27s
+  Mediany czasów (oryginalne): 18-29=23.01s, < 18=26.68s
+  Średnie czasy (zsamplowane): 18-29=27.82s, < 18=32.92s
+  Mediany czasów (zsamplowane): 18-29=23.01s, < 18=25.92s
+30-44 vs 45-59: Statystyka=132380.50, p-wartość=0.2267, Istotne=False
+  Próbki: Oryginalne (n1=1644, n2=526), Po zrównoważeniu: n=526
+  Średnie czasy (oryginalne): 30-44=34.06s, 45-59=34.69s
+  Mediany czasów (oryginalne): 30-44=27.54s, 45-59=28.37s
+  Średnie czasy (zsamplowane): 30-44=32.85s, 45-59=34.69s
+  Mediany czasów (zsamplowane): 30-44=27.40s, 45-59=28.37s
+30-44 vs 60+: Statystyka=238027.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1644, n2=644), Po zrównoważeniu: n=644
+  Średnie czasy (oryginalne): 30-44=34.06s, 60+=29.38s
+  Mediany czasów (oryginalne): 30-44=27.54s, 60+=22.01s
+  Średnie czasy (zsamplowane): 30-44=33.07s, 60+=29.38s
+  Mediany czasów (zsamplowane): 30-44=27.25s, 60+=22.01s
+30-44 vs < 18: Statystyka=1414738.50, p-wartość=0.0199, Istotne=True
+  Próbki: Oryginalne (n1=1644, n2=3683), Po zrównoważeniu: n=1644
+  Średnie czasy (oryginalne): 30-44=34.06s, < 18=33.27s
+  Mediany czasów (oryginalne): 30-44=27.54s, < 18=26.68s
+  Średnie czasy (zsamplowane): 30-44=34.06s, < 18=33.13s
+  Mediany czasów (zsamplowane): 30-44=27.54s, < 18=25.90s
+45-59 vs 60+: Statystyka=163635.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=526, n2=644), Po zrównoważeniu: n=526
+  Średnie czasy (oryginalne): 45-59=34.69s, 60+=29.38s
+  Mediany czasów (oryginalne): 45-59=28.37s, 60+=22.01s
+  Średnie czasy (zsamplowane): 45-59=34.69s, 60+=30.26s
+  Mediany czasów (zsamplowane): 45-59=28.37s, 60+=21.49s
+45-59 vs < 18: Statystyka=145757.00, p-wartość=0.1322, Istotne=False
+  Próbki: Oryginalne (n1=526, n2=3683), Po zrównoważeniu: n=526
+  Średnie czasy (oryginalne): 45-59=34.69s, < 18=33.27s
+  Mediany czasów (oryginalne): 45-59=28.37s, < 18=26.68s
+  Średnie czasy (zsamplowane): 45-59=34.69s, < 18=33.29s
+  Mediany czasów (zsamplowane): 45-59=28.37s, < 18=27.59s
+60+ vs < 18: Statystyka=179842.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=644, n2=3683), Po zrównoważeniu: n=644
+  Średnie czasy (oryginalne): 60+=29.38s, < 18=33.27s
+  Mediany czasów (oryginalne): 60+=22.01s, < 18=26.68s
+  Średnie czasy (zsamplowane): 60+=29.38s, < 18=33.26s
+  Mediany czasów (zsamplowane): 60+=22.01s, < 18=26.82s
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par grup wiekowych (Age_Group_Y):
+18-29 vs 30-44: Statystyka=1074996.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1946, n2=1585), Po zrównoważeniu: n=1585
+  Średnie czasy (oryginalne): 18-29=27.43s, 30-44=33.79s
+  Mediany czasów (oryginalne): 18-29=22.63s, 30-44=27.81s
+  Średnie czasy (zsamplowane): 18-29=27.77s, 30-44=33.79s
+  Mediany czasów (zsamplowane): 18-29=23.01s, 30-44=27.81s
+18-29 vs 45-59: Statystyka=96573.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1946, n2=487), Po zrównoważeniu: n=487
+  Średnie czasy (oryginalne): 18-29=27.43s, 45-59=36.03s
+  Mediany czasów (oryginalne): 18-29=22.63s, 45-59=30.23s
+  Średnie czasy (zsamplowane): 18-29=29.34s, 45-59=36.03s
+  Mediany czasów (zsamplowane): 18-29=23.42s, 45-59=30.23s
+18-29 vs 60+: Statystyka=186024.50, p-wartość=0.3156, Istotne=False
+  Próbki: Oryginalne (n1=1946, n2=600), Po zrównoważeniu: n=600
+  Średnie czasy (oryginalne): 18-29=27.43s, 60+=29.04s
+  Mediany czasów (oryginalne): 18-29=22.63s, 60+=22.35s
+  Średnie czasy (zsamplowane): 18-29=29.09s, 60+=29.04s
+  Mediany czasów (zsamplowane): 18-29=23.27s, 60+=22.35s
+18-29 vs < 18: Statystyka=1669180.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1946, n2=3833), Po zrównoważeniu: n=1946
+  Średnie czasy (oryginalne): 18-29=27.43s, < 18=33.44s
+  Mediany czasów (oryginalne): 18-29=22.63s, < 18=26.63s
+  Średnie czasy (zsamplowane): 18-29=27.43s, < 18=32.69s
+  Mediany czasów (zsamplowane): 18-29=22.63s, < 18=25.82s
+30-44 vs 45-59: Statystyka=114045.00, p-wartość=0.3011, Istotne=False
+  Próbki: Oryginalne (n1=1585, n2=487), Po zrównoważeniu: n=487
+  Średnie czasy (oryginalne): 30-44=33.79s, 45-59=36.03s
+  Mediany czasów (oryginalne): 30-44=27.81s, 45-59=30.23s
+  Średnie czasy (zsamplowane): 30-44=35.36s, 45-59=36.03s
+  Mediany czasów (zsamplowane): 30-44=29.48s, 45-59=30.23s
+30-44 vs 60+: Statystyka=210713.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1585, n2=600), Po zrównoważeniu: n=600
+  Średnie czasy (oryginalne): 30-44=33.79s, 60+=29.04s
+  Mediany czasów (oryginalne): 30-44=27.81s, 60+=22.35s
+  Średnie czasy (zsamplowane): 30-44=35.45s, 60+=29.04s
+  Mediany czasów (zsamplowane): 30-44=28.68s, 60+=22.35s
+30-44 vs < 18: Statystyka=1296708.00, p-wartość=0.1151, Istotne=False
+  Próbki: Oryginalne (n1=1585, n2=3833), Po zrównoważeniu: n=1585
+  Średnie czasy (oryginalne): 30-44=33.79s, < 18=33.44s
+  Mediany czasów (oryginalne): 30-44=27.81s, < 18=26.63s
+  Średnie czasy (zsamplowane): 30-44=33.79s, < 18=32.95s
+  Mediany czasów (zsamplowane): 30-44=27.81s, < 18=26.14s
+45-59 vs 60+: Statystyka=144936.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=487, n2=600), Po zrównoważeniu: n=487
+  Średnie czasy (oryginalne): 45-59=36.03s, 60+=29.04s
+  Mediany czasów (oryginalne): 45-59=30.23s, 60+=22.35s
+  Średnie czasy (zsamplowane): 45-59=36.03s, 60+=28.25s
+  Mediany czasów (zsamplowane): 45-59=30.23s, 60+=22.94s
+45-59 vs < 18: Statystyka=131540.00, p-wartość=0.0032, Istotne=True
+  Próbki: Oryginalne (n1=487, n2=3833), Po zrównoważeniu: n=487
+  Średnie czasy (oryginalne): 45-59=36.03s, < 18=33.44s
+  Mediany czasów (oryginalne): 45-59=30.23s, < 18=26.63s
+  Średnie czasy (zsamplowane): 45-59=36.03s, < 18=31.98s
+  Mediany czasów (zsamplowane): 45-59=30.23s, < 18=25.34s
+60+ vs < 18: Statystyka=160439.50, p-wartość=0.0011, Istotne=True
+  Próbki: Oryginalne (n1=600, n2=3833), Po zrównoważeniu: n=600
+  Średnie czasy (oryginalne): 60+=29.04s, < 18=33.44s
+  Mediany czasów (oryginalne): 60+=22.35s, < 18=26.63s
+  Średnie czasy (zsamplowane): 60+=29.04s, < 18=31.93s
+  Mediany czasów (zsamplowane): 60+=22.35s, < 18=25.42s
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par relacji (Relationship_Name):
+Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: Statystyka=599788.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=4022, n2=991), Po zrównoważeniu: n=991
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=35.24s, Inna znacząca - Inna znacząca=26.55s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=28.79s, Inna znacząca - Inna znacząca=21.82s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=35.57s, Inna znacząca - Inna znacząca=26.55s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=28.71s, Inna znacząca - Inna znacząca=21.82s
+Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy: Statystyka=47951.00, p-wartość=0.6480, Istotne=False
+  Próbki: Oryginalne (n1=4022, n2=313), Po zrównoważeniu: n=313
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=35.24s, Nieznajomy - Nieznajomy=34.96s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=28.79s, Nieznajomy - Nieznajomy=28.73s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=35.83s, Nieznajomy - Nieznajomy=34.96s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=28.43s, Nieznajomy - Nieznajomy=28.73s
+Członek rodziny - członek rodziny vs To skomplikowane: Statystyka=1054962.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=4022, n2=1324), Po zrównoważeniu: n=1324
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=35.24s, To skomplikowane=27.77s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=28.79s, To skomplikowane=21.93s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=35.12s, To skomplikowane=27.77s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=28.44s, To skomplikowane=21.93s
+Członek rodziny - członek rodziny vs Znajomy - Znajomy: Statystyka=1847921.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=4022, n2=1801), Po zrównoważeniu: n=1801
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=35.24s, Znajomy - Znajomy=30.16s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=28.79s, Znajomy - Znajomy=24.12s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=35.26s, Znajomy - Znajomy=30.16s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=28.45s, Znajomy - Znajomy=24.12s
+Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: Statystyka=37039.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=991, n2=313), Po zrównoważeniu: n=313
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=26.55s, Nieznajomy - Nieznajomy=34.96s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=21.82s, Nieznajomy - Nieznajomy=28.73s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=26.99s, Nieznajomy - Nieznajomy=34.96s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=20.99s, Nieznajomy - Nieznajomy=28.73s
+Inna znacząca - Inna znacząca vs To skomplikowane: Statystyka=485514.50, p-wartość=0.6645, Istotne=False
+  Próbki: Oryginalne (n1=991, n2=1324), Po zrównoważeniu: n=991
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=26.55s, To skomplikowane=27.77s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=21.82s, To skomplikowane=21.93s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=26.55s, To skomplikowane=27.66s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=21.82s, To skomplikowane=21.79s
+Inna znacząca - Inna znacząca vs Znajomy - Znajomy: Statystyka=453803.00, p-wartość=0.0035, Istotne=True
+  Próbki: Oryginalne (n1=991, n2=1801), Po zrównoważeniu: n=991
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=26.55s, Znajomy - Znajomy=30.16s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=21.82s, Znajomy - Znajomy=24.12s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=26.55s, Znajomy - Znajomy=30.00s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=21.82s, Znajomy - Znajomy=24.12s
+Nieznajomy - Nieznajomy vs To skomplikowane: Statystyka=61207.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=313, n2=1324), Po zrównoważeniu: n=313
+  Średnie czasy (oryginalne): Nieznajomy - Nieznajomy=34.96s, To skomplikowane=27.77s
+  Mediany czasów (oryginalne): Nieznajomy - Nieznajomy=28.73s, To skomplikowane=21.93s
+  Średnie czasy (zsamplowane): Nieznajomy - Nieznajomy=34.96s, To skomplikowane=26.69s
+  Mediany czasów (zsamplowane): Nieznajomy - Nieznajomy=28.73s, To skomplikowane=20.92s
+Nieznajomy - Nieznajomy vs Znajomy - Znajomy: Statystyka=56631.50, p-wartość=0.0007, Istotne=True
+  Próbki: Oryginalne (n1=313, n2=1801), Po zrównoważeniu: n=313
+  Średnie czasy (oryginalne): Nieznajomy - Nieznajomy=34.96s, Znajomy - Znajomy=30.16s
+  Mediany czasów (oryginalne): Nieznajomy - Nieznajomy=28.73s, Znajomy - Znajomy=24.12s
+  Średnie czasy (zsamplowane): Nieznajomy - Nieznajomy=34.96s, Znajomy - Znajomy=30.21s
+  Mediany czasów (zsamplowane): Nieznajomy - Nieznajomy=28.73s, Znajomy - Znajomy=24.89s
+To skomplikowane vs Znajomy - Znajomy: Statystyka=823229.50, p-wartość=0.0068, Istotne=True
+  Próbki: Oryginalne (n1=1324, n2=1801), Po zrównoważeniu: n=1324
+  Średnie czasy (oryginalne): To skomplikowane=27.77s, Znajomy - Znajomy=30.16s
+  Mediany czasów (oryginalne): To skomplikowane=21.93s, Znajomy - Znajomy=24.12s
+  Średnie czasy (zsamplowane): To skomplikowane=27.77s, Znajomy - Znajomy=29.74s
+  Mediany czasów (zsamplowane): To skomplikowane=21.93s, Znajomy - Znajomy=24.08s
+
+Tworzenie wykresów z wąsami istotności dla toru 4...
+
+
+=== Analiza dla toru 5 ===
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_X):
+Statystyka: 156.09, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_Y):
+Statystyka: 174.31, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla relacji (Relationship_Name):
+Statystyka: 120.88, p-wartość: 0.0000, Istotne: True
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par grup wiekowych (Age_Group_X):
+18-29 vs 30-44: Statystyka=877113.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1748, n2=1496), Po zrównoważeniu: n=1496
+  Średnie czasy (oryginalne): 18-29=37.58s, 30-44=45.65s
+  Mediany czasów (oryginalne): 18-29=32.92s, 30-44=40.02s
+  Średnie czasy (zsamplowane): 18-29=37.47s, 30-44=45.65s
+  Mediany czasów (zsamplowane): 18-29=32.54s, 30-44=40.02s
+18-29 vs 45-59: Statystyka=91291.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1748, n2=484), Po zrównoważeniu: n=484
+  Średnie czasy (oryginalne): 18-29=37.58s, 45-59=46.03s
+  Mediany czasów (oryginalne): 18-29=32.92s, 45-59=39.76s
+  Średnie czasy (zsamplowane): 18-29=37.51s, 45-59=46.03s
+  Mediany czasów (zsamplowane): 18-29=33.03s, 45-59=39.76s
+18-29 vs 60+: Statystyka=130621.50, p-wartość=0.0135, Istotne=True
+  Próbki: Oryginalne (n1=1748, n2=535), Po zrównoważeniu: n=535
+  Średnie czasy (oryginalne): 18-29=37.58s, 60+=40.56s
+  Mediany czasów (oryginalne): 18-29=32.92s, 60+=35.94s
+  Średnie czasy (zsamplowane): 18-29=37.17s, 60+=40.56s
+  Mediany czasów (zsamplowane): 18-29=32.68s, 60+=35.94s
+18-29 vs < 18: Statystyka=1223904.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1748, n2=3487), Po zrównoważeniu: n=1748
+  Średnie czasy (oryginalne): 18-29=37.58s, < 18=44.47s
+  Mediany czasów (oryginalne): 18-29=32.92s, < 18=39.57s
+  Średnie czasy (zsamplowane): 18-29=37.58s, < 18=45.25s
+  Mediany czasów (zsamplowane): 18-29=32.92s, < 18=39.99s
+30-44 vs 45-59: Statystyka=114814.00, p-wartość=0.5948, Istotne=False
+  Próbki: Oryginalne (n1=1496, n2=484), Po zrównoważeniu: n=484
+  Średnie czasy (oryginalne): 30-44=45.65s, 45-59=46.03s
+  Mediany czasów (oryginalne): 30-44=40.02s, 45-59=39.76s
+  Średnie czasy (zsamplowane): 30-44=44.76s, 45-59=46.03s
+  Mediany czasów (zsamplowane): 30-44=39.26s, 45-59=39.76s
+30-44 vs 60+: Statystyka=162029.00, p-wartość=0.0002, Istotne=True
+  Próbki: Oryginalne (n1=1496, n2=535), Po zrównoważeniu: n=535
+  Średnie czasy (oryginalne): 30-44=45.65s, 60+=40.56s
+  Mediany czasów (oryginalne): 30-44=40.02s, 60+=35.94s
+  Średnie czasy (zsamplowane): 30-44=45.49s, 60+=40.56s
+  Mediany czasów (zsamplowane): 30-44=39.99s, 60+=35.94s
+30-44 vs < 18: Statystyka=1128140.50, p-wartość=0.6991, Istotne=False
+  Próbki: Oryginalne (n1=1496, n2=3487), Po zrównoważeniu: n=1496
+  Średnie czasy (oryginalne): 30-44=45.65s, < 18=44.47s
+  Mediany czasów (oryginalne): 30-44=40.02s, < 18=39.57s
+  Średnie czasy (zsamplowane): 30-44=45.65s, < 18=45.35s
+  Mediany czasów (zsamplowane): 30-44=40.02s, < 18=40.07s
+45-59 vs 60+: Statystyka=133375.50, p-wartość=0.0002, Istotne=True
+  Próbki: Oryginalne (n1=484, n2=535), Po zrównoważeniu: n=484
+  Średnie czasy (oryginalne): 45-59=46.03s, 60+=40.56s
+  Mediany czasów (oryginalne): 45-59=39.76s, 60+=35.94s
+  Średnie czasy (zsamplowane): 45-59=46.03s, 60+=40.37s
+  Mediany czasów (zsamplowane): 45-59=39.76s, 60+=36.01s
+45-59 vs < 18: Statystyka=122798.50, p-wartość=0.1923, Istotne=False
+  Próbki: Oryginalne (n1=484, n2=3487), Po zrównoważeniu: n=484
+  Średnie czasy (oryginalne): 45-59=46.03s, < 18=44.47s
+  Mediany czasów (oryginalne): 45-59=39.76s, < 18=39.57s
+  Średnie czasy (zsamplowane): 45-59=46.03s, < 18=43.59s
+  Mediany czasów (zsamplowane): 45-59=39.76s, < 18=39.02s
+60+ vs < 18: Statystyka=128359.50, p-wartość=0.0035, Istotne=True
+  Próbki: Oryginalne (n1=535, n2=3487), Po zrównoważeniu: n=535
+  Średnie czasy (oryginalne): 60+=40.56s, < 18=44.47s
+  Mediany czasów (oryginalne): 60+=35.94s, < 18=39.57s
+  Średnie czasy (zsamplowane): 60+=40.56s, < 18=44.18s
+  Mediany czasów (zsamplowane): 60+=35.94s, < 18=39.64s
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par grup wiekowych (Age_Group_Y):
+18-29 vs 30-44: Statystyka=719764.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1739, n2=1323), Po zrównoważeniu: n=1323
+  Średnie czasy (oryginalne): 18-29=37.80s, 30-44=43.89s
+  Mediany czasów (oryginalne): 18-29=32.70s, 30-44=39.22s
+  Średnie czasy (zsamplowane): 18-29=38.25s, 30-44=43.89s
+  Mediany czasów (zsamplowane): 18-29=33.02s, 30-44=39.22s
+18-29 vs 45-59: Statystyka=57351.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1739, n2=400), Po zrównoważeniu: n=400
+  Średnie czasy (oryginalne): 18-29=37.80s, 45-59=46.44s
+  Mediany czasów (oryginalne): 18-29=32.70s, 45-59=43.06s
+  Średnie czasy (zsamplowane): 18-29=36.48s, 45-59=46.44s
+  Mediany czasów (zsamplowane): 18-29=31.83s, 45-59=43.06s
+18-29 vs 60+: Statystyka=157739.50, p-wartość=0.1012, Istotne=False
+  Próbki: Oryginalne (n1=1739, n2=578), Po zrównoważeniu: n=578
+  Średnie czasy (oryginalne): 18-29=37.80s, 60+=40.36s
+  Mediany czasów (oryginalne): 18-29=32.70s, 60+=34.68s
+  Średnie czasy (zsamplowane): 18-29=37.68s, 60+=40.36s
+  Mediany czasów (zsamplowane): 18-29=32.04s, 60+=34.68s
+18-29 vs < 18: Statystyka=1201594.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1739, n2=3710), Po zrównoważeniu: n=1739
+  Średnie czasy (oryginalne): 18-29=37.80s, < 18=45.10s
+  Mediany czasów (oryginalne): 18-29=32.70s, < 18=39.85s
+  Średnie czasy (zsamplowane): 18-29=37.80s, < 18=45.50s
+  Mediany czasów (zsamplowane): 18-29=32.70s, < 18=39.99s
+30-44 vs 45-59: Statystyka=74891.00, p-wartość=0.1180, Istotne=False
+  Próbki: Oryginalne (n1=1323, n2=400), Po zrównoważeniu: n=400
+  Średnie czasy (oryginalne): 30-44=43.89s, 45-59=46.44s
+  Mediany czasów (oryginalne): 30-44=39.22s, 45-59=43.06s
+  Średnie czasy (zsamplowane): 30-44=43.90s, 45-59=46.44s
+  Mediany czasów (zsamplowane): 30-44=39.01s, 45-59=43.06s
+30-44 vs 60+: Statystyka=189630.50, p-wartość=0.0001, Istotne=True
+  Próbki: Oryginalne (n1=1323, n2=578), Po zrównoważeniu: n=578
+  Średnie czasy (oryginalne): 30-44=43.89s, 60+=40.36s
+  Mediany czasów (oryginalne): 30-44=39.22s, 60+=34.68s
+  Średnie czasy (zsamplowane): 30-44=44.07s, 60+=40.36s
+  Mediany czasów (zsamplowane): 30-44=39.16s, 60+=34.68s
+30-44 vs < 18: Statystyka=843561.00, p-wartość=0.1078, Istotne=False
+  Próbki: Oryginalne (n1=1323, n2=3710), Po zrównoważeniu: n=1323
+  Średnie czasy (oryginalne): 30-44=43.89s, < 18=45.10s
+  Mediany czasów (oryginalne): 30-44=39.22s, < 18=39.85s
+  Średnie czasy (zsamplowane): 30-44=43.89s, < 18=45.86s
+  Mediany czasów (zsamplowane): 30-44=39.22s, < 18=40.46s
+45-59 vs 60+: Statystyka=94036.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=400, n2=578), Po zrównoważeniu: n=400
+  Średnie czasy (oryginalne): 45-59=46.44s, 60+=40.36s
+  Mediany czasów (oryginalne): 45-59=43.06s, 60+=34.68s
+  Średnie czasy (zsamplowane): 45-59=46.44s, 60+=41.64s
+  Mediany czasów (zsamplowane): 45-59=43.06s, 60+=35.80s
+45-59 vs < 18: Statystyka=79534.50, p-wartość=0.8869, Istotne=False
+  Próbki: Oryginalne (n1=400, n2=3710), Po zrównoważeniu: n=400
+  Średnie czasy (oryginalne): 45-59=46.44s, < 18=45.10s
+  Mediany czasów (oryginalne): 45-59=43.06s, < 18=39.85s
+  Średnie czasy (zsamplowane): 45-59=46.44s, < 18=47.09s
+  Mediany czasów (zsamplowane): 45-59=43.06s, < 18=41.84s
+60+ vs < 18: Statystyka=137574.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=578, n2=3710), Po zrównoważeniu: n=578
+  Średnie czasy (oryginalne): 60+=40.36s, < 18=45.10s
+  Mediany czasów (oryginalne): 60+=34.68s, < 18=39.85s
+  Średnie czasy (zsamplowane): 60+=40.36s, < 18=46.11s
+  Mediany czasów (zsamplowane): 60+=34.68s, < 18=41.06s
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par relacji (Relationship_Name):
+Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: Statystyka=393466.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=3861, n2=812), Po zrównoważeniu: n=812
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=45.61s, Inna znacząca - Inna znacząca=37.39s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=40.16s, Inna znacząca - Inna znacząca=33.11s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=45.01s, Inna znacząca - Inna znacząca=37.39s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=39.63s, Inna znacząca - Inna znacząca=33.11s
+Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy: Statystyka=60299.00, p-wartość=0.0506, Istotne=False
+  Próbki: Oryginalne (n1=3861, n2=333), Po zrównoważeniu: n=333
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=45.61s, Nieznajomy - Nieznajomy=42.61s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=40.16s, Nieznajomy - Nieznajomy=36.79s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=45.56s, Nieznajomy - Nieznajomy=42.61s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=39.70s, Nieznajomy - Nieznajomy=36.79s
+Członek rodziny - członek rodziny vs To skomplikowane: Statystyka=714912.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=3861, n2=1125), Po zrównoważeniu: n=1125
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=45.61s, To skomplikowane=40.56s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=40.16s, To skomplikowane=35.35s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=45.07s, To skomplikowane=40.56s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=39.81s, To skomplikowane=35.35s
+Członek rodziny - członek rodziny vs Znajomy - Znajomy: Statystyka=1454321.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=3861, n2=1619), Po zrównoważeniu: n=1619
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=45.61s, Znajomy - Znajomy=41.22s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=40.16s, Znajomy - Znajomy=36.34s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=45.07s, Znajomy - Znajomy=41.22s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=39.70s, Znajomy - Znajomy=36.34s
+Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: Statystyka=49652.50, p-wartość=0.0197, Istotne=True
+  Próbki: Oryginalne (n1=812, n2=333), Po zrównoważeniu: n=333
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=37.39s, Nieznajomy - Nieznajomy=42.61s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=33.11s, Nieznajomy - Nieznajomy=36.79s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=38.44s, Nieznajomy - Nieznajomy=42.61s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=33.30s, Nieznajomy - Nieznajomy=36.79s
+Inna znacząca - Inna znacząca vs To skomplikowane: Statystyka=303141.50, p-wartość=0.0050, Istotne=True
+  Próbki: Oryginalne (n1=812, n2=1125), Po zrównoważeniu: n=812
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=37.39s, To skomplikowane=40.56s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=33.11s, To skomplikowane=35.35s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=37.39s, To skomplikowane=40.63s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=33.11s, To skomplikowane=35.95s
+Inna znacząca - Inna znacząca vs Znajomy - Znajomy: Statystyka=299247.00, p-wartość=0.0013, Istotne=True
+  Próbki: Oryginalne (n1=812, n2=1619), Po zrównoważeniu: n=812
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=37.39s, Znajomy - Znajomy=41.22s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=33.11s, Znajomy - Znajomy=36.34s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=37.39s, Znajomy - Znajomy=41.28s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=33.11s, Znajomy - Znajomy=36.19s
+Nieznajomy - Nieznajomy vs To skomplikowane: Statystyka=57110.00, p-wartość=0.5024, Istotne=False
+  Próbki: Oryginalne (n1=333, n2=1125), Po zrównoważeniu: n=333
+  Średnie czasy (oryginalne): Nieznajomy - Nieznajomy=42.61s, To skomplikowane=40.56s
+  Mediany czasów (oryginalne): Nieznajomy - Nieznajomy=36.79s, To skomplikowane=35.35s
+  Średnie czasy (zsamplowane): Nieznajomy - Nieznajomy=42.61s, To skomplikowane=40.06s
+  Mediany czasów (zsamplowane): Nieznajomy - Nieznajomy=36.79s, To skomplikowane=37.40s
+Nieznajomy - Nieznajomy vs Znajomy - Znajomy: Statystyka=55130.00, p-wartość=0.8994, Istotne=False
+  Próbki: Oryginalne (n1=333, n2=1619), Po zrównoważeniu: n=333
+  Średnie czasy (oryginalne): Nieznajomy - Nieznajomy=42.61s, Znajomy - Znajomy=41.22s
+  Mediany czasów (oryginalne): Nieznajomy - Nieznajomy=36.79s, Znajomy - Znajomy=36.34s
+  Średnie czasy (zsamplowane): Nieznajomy - Nieznajomy=42.61s, Znajomy - Znajomy=42.07s
+  Mediany czasów (zsamplowane): Nieznajomy - Nieznajomy=36.79s, Znajomy - Znajomy=37.19s
+To skomplikowane vs Znajomy - Znajomy: Statystyka=619329.00, p-wartość=0.3815, Istotne=False
+  Próbki: Oryginalne (n1=1125, n2=1619), Po zrównoważeniu: n=1125
+  Średnie czasy (oryginalne): To skomplikowane=40.56s, Znajomy - Znajomy=41.22s
+  Mediany czasów (oryginalne): To skomplikowane=35.35s, Znajomy - Znajomy=36.34s
+  Średnie czasy (zsamplowane): To skomplikowane=40.56s, Znajomy - Znajomy=41.24s
+  Mediany czasów (zsamplowane): To skomplikowane=35.35s, Znajomy - Znajomy=36.10s
+
+Tworzenie wykresów z wąsami istotności dla toru 5...
+
+
+=== Analiza dla toru 6 ===
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_X):
+Statystyka: 419.71, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_Y):
+Statystyka: 251.18, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla relacji (Relationship_Name):
+Statystyka: 402.54, p-wartość: 0.0000, Istotne: True
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par grup wiekowych (Age_Group_X):
+18-29 vs 30-44: Statystyka=961281.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=2261, n2=1600), Po zrównoważeniu: n=1600
+  Średnie czasy (oryginalne): 18-29=13.60s, 30-44=19.16s
+  Mediany czasów (oryginalne): 18-29=8.66s, 30-44=12.85s
+  Średnie czasy (zsamplowane): 18-29=13.76s, 30-44=19.16s
+  Mediany czasów (zsamplowane): 18-29=8.70s, 30-44=12.85s
+18-29 vs 45-59: Statystyka=154530.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=2261, n2=602), Po zrównoważeniu: n=602
+  Średnie czasy (oryginalne): 18-29=13.60s, 45-59=18.15s
+  Mediany czasów (oryginalne): 18-29=8.66s, 45-59=11.35s
+  Średnie czasy (zsamplowane): 18-29=14.02s, 45-59=18.15s
+  Mediany czasów (zsamplowane): 18-29=8.67s, 45-59=11.35s
+18-29 vs 60+: Statystyka=538376.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=2261, n2=939), Po zrównoważeniu: n=939
+  Średnie czasy (oryginalne): 18-29=13.60s, 60+=11.12s
+  Mediany czasów (oryginalne): 18-29=8.66s, 60+=6.11s
+  Średnie czasy (zsamplowane): 18-29=13.90s, 60+=11.12s
+  Mediany czasów (zsamplowane): 18-29=8.54s, 60+=6.11s
+18-29 vs < 18: Statystyka=2555731.00, p-wartość=0.9940, Istotne=False
+  Próbki: Oryginalne (n1=2261, n2=4763), Po zrównoważeniu: n=2261
+  Średnie czasy (oryginalne): 18-29=13.60s, < 18=15.02s
+  Mediany czasów (oryginalne): 18-29=8.66s, < 18=8.39s
+  Średnie czasy (zsamplowane): 18-29=13.60s, < 18=15.14s
+  Mediany czasów (zsamplowane): 18-29=8.66s, < 18=8.41s
+30-44 vs 45-59: Statystyka=190446.00, p-wartość=0.1255, Istotne=False
+  Próbki: Oryginalne (n1=1600, n2=602), Po zrównoważeniu: n=602
+  Średnie czasy (oryginalne): 30-44=19.16s, 45-59=18.15s
+  Mediany czasów (oryginalne): 30-44=12.85s, 45-59=11.35s
+  Średnie czasy (zsamplowane): 30-44=17.72s, 45-59=18.15s
+  Mediany czasów (zsamplowane): 30-44=12.41s, 45-59=11.35s
+30-44 vs 60+: Statystyka=625961.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1600, n2=939), Po zrównoważeniu: n=939
+  Średnie czasy (oryginalne): 30-44=19.16s, 60+=11.12s
+  Mediany czasów (oryginalne): 30-44=12.85s, 60+=6.11s
+  Średnie czasy (zsamplowane): 30-44=18.29s, 60+=11.12s
+  Mediany czasów (zsamplowane): 30-44=12.48s, 60+=6.11s
+30-44 vs < 18: Statystyka=1570934.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1600, n2=4763), Po zrównoważeniu: n=1600
+  Średnie czasy (oryginalne): 30-44=19.16s, < 18=15.02s
+  Mediany czasów (oryginalne): 30-44=12.85s, < 18=8.39s
+  Średnie czasy (zsamplowane): 30-44=19.16s, < 18=15.38s
+  Mediany czasów (zsamplowane): 30-44=12.85s, < 18=8.62s
+45-59 vs 60+: Statystyka=245403.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=602, n2=939), Po zrównoważeniu: n=602
+  Średnie czasy (oryginalne): 45-59=18.15s, 60+=11.12s
+  Mediany czasów (oryginalne): 45-59=11.35s, 60+=6.11s
+  Średnie czasy (zsamplowane): 45-59=18.15s, 60+=11.07s
+  Mediany czasów (zsamplowane): 45-59=11.35s, 60+=6.26s
+45-59 vs < 18: Statystyka=210202.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=602, n2=4763), Po zrównoważeniu: n=602
+  Średnie czasy (oryginalne): 45-59=18.15s, < 18=15.02s
+  Mediany czasów (oryginalne): 45-59=11.35s, < 18=8.39s
+  Średnie czasy (zsamplowane): 45-59=18.15s, < 18=15.05s
+  Mediany czasów (zsamplowane): 45-59=11.35s, < 18=8.49s
+60+ vs < 18: Statystyka=340834.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=939, n2=4763), Po zrównoważeniu: n=939
+  Średnie czasy (oryginalne): 60+=11.12s, < 18=15.02s
+  Mediany czasów (oryginalne): 60+=6.11s, < 18=8.39s
+  Średnie czasy (zsamplowane): 60+=11.12s, < 18=15.51s
+  Mediany czasów (zsamplowane): 60+=6.11s, < 18=9.03s
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par grup wiekowych (Age_Group_Y):
+18-29 vs 30-44: Statystyka=1117309.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=2225, n2=1625), Po zrównoważeniu: n=1625
+  Średnie czasy (oryginalne): 18-29=13.70s, 30-44=16.99s
+  Mediany czasów (oryginalne): 18-29=8.74s, 30-44=11.59s
+  Średnie czasy (zsamplowane): 18-29=13.82s, 30-44=16.99s
+  Mediany czasów (zsamplowane): 18-29=9.01s, 30-44=11.59s
+18-29 vs 45-59: Statystyka=111901.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=2225, n2=520), Po zrównoważeniu: n=520
+  Średnie czasy (oryginalne): 18-29=13.70s, 45-59=18.75s
+  Mediany czasów (oryginalne): 18-29=8.74s, 45-59=12.11s
+  Średnie czasy (zsamplowane): 18-29=14.27s, 45-59=18.75s
+  Mediany czasów (zsamplowane): 18-29=9.41s, 45-59=12.11s
+18-29 vs 60+: Statystyka=476412.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=2225, n2=889), Po zrównoważeniu: n=889
+  Średnie czasy (oryginalne): 18-29=13.70s, 60+=11.50s
+  Mediany czasów (oryginalne): 18-29=8.74s, 60+=6.32s
+  Średnie czasy (zsamplowane): 18-29=13.96s, 60+=11.50s
+  Mediany czasów (zsamplowane): 18-29=9.38s, 60+=6.32s
+18-29 vs < 18: Statystyka=2446563.50, p-wartość=0.5023, Istotne=False
+  Próbki: Oryginalne (n1=2225, n2=4906), Po zrównoważeniu: n=2225
+  Średnie czasy (oryginalne): 18-29=13.70s, < 18=15.54s
+  Mediany czasów (oryginalne): 18-29=8.74s, < 18=8.71s
+  Średnie czasy (zsamplowane): 18-29=13.70s, < 18=15.24s
+  Mediany czasów (zsamplowane): 18-29=8.74s, < 18=8.61s
+30-44 vs 45-59: Statystyka=136304.00, p-wartość=0.8198, Istotne=False
+  Próbki: Oryginalne (n1=1625, n2=520), Po zrównoważeniu: n=520
+  Średnie czasy (oryginalne): 30-44=16.99s, 45-59=18.75s
+  Mediany czasów (oryginalne): 30-44=11.59s, 45-59=12.11s
+  Średnie czasy (zsamplowane): 30-44=17.79s, 45-59=18.75s
+  Mediany czasów (zsamplowane): 30-44=13.00s, 45-59=12.11s
+30-44 vs 60+: Statystyka=541785.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1625, n2=889), Po zrównoważeniu: n=889
+  Średnie czasy (oryginalne): 30-44=16.99s, 60+=11.50s
+  Mediany czasów (oryginalne): 30-44=11.59s, 60+=6.32s
+  Średnie czasy (zsamplowane): 30-44=17.96s, 60+=11.50s
+  Mediany czasów (zsamplowane): 30-44=12.45s, 60+=6.32s
+30-44 vs < 18: Statystyka=1517800.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1625, n2=4906), Po zrównoważeniu: n=1625
+  Średnie czasy (oryginalne): 30-44=16.99s, < 18=15.54s
+  Mediany czasów (oryginalne): 30-44=11.59s, < 18=8.71s
+  Średnie czasy (zsamplowane): 30-44=16.99s, < 18=15.21s
+  Mediany czasów (zsamplowane): 30-44=11.59s, < 18=8.51s
+45-59 vs 60+: Statystyka=185683.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=520, n2=889), Po zrównoważeniu: n=520
+  Średnie czasy (oryginalne): 45-59=18.75s, 60+=11.50s
+  Mediany czasów (oryginalne): 45-59=12.11s, 60+=6.32s
+  Średnie czasy (zsamplowane): 45-59=18.75s, 60+=11.20s
+  Mediany czasów (zsamplowane): 45-59=12.11s, 60+=6.42s
+45-59 vs < 18: Statystyka=161741.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=520, n2=4906), Po zrównoważeniu: n=520
+  Średnie czasy (oryginalne): 45-59=18.75s, < 18=15.54s
+  Mediany czasów (oryginalne): 45-59=12.11s, < 18=8.71s
+  Średnie czasy (zsamplowane): 45-59=18.75s, < 18=14.46s
+  Mediany czasów (zsamplowane): 45-59=12.11s, < 18=8.62s
+60+ vs < 18: Statystyka=322504.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=889, n2=4906), Po zrównoważeniu: n=889
+  Średnie czasy (oryginalne): 60+=11.50s, < 18=15.54s
+  Mediany czasów (oryginalne): 60+=6.32s, < 18=8.71s
+  Średnie czasy (zsamplowane): 60+=11.50s, < 18=15.23s
+  Mediany czasów (zsamplowane): 60+=6.32s, < 18=8.68s
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par relacji (Relationship_Name):
+Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: Statystyka=1000712.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=4541, n2=1251), Po zrównoważeniu: n=1251
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=17.85s, Inna znacząca - Inna znacząca=11.91s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=11.11s, Inna znacząca - Inna znacząca=7.57s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=18.70s, Inna znacząca - Inna znacząca=11.91s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=11.51s, Inna znacząca - Inna znacząca=7.57s
+Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy: Statystyka=207919.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=4541, n2=564), Po zrównoważeniu: n=564
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=17.85s, Nieznajomy - Nieznajomy=12.10s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=11.11s, Nieznajomy - Nieznajomy=6.55s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=17.96s, Nieznajomy - Nieznajomy=12.10s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=11.79s, Nieznajomy - Nieznajomy=6.55s
+Członek rodziny - członek rodziny vs To skomplikowane: Statystyka=1545654.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=4541, n2=1581), Po zrównoważeniu: n=1581
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=17.85s, To skomplikowane=12.73s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=11.11s, To skomplikowane=7.72s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=18.30s, To skomplikowane=12.73s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=11.41s, To skomplikowane=7.72s
+Członek rodziny - członek rodziny vs Znajomy - Znajomy: Statystyka=2994571.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=4541, n2=2228), Po zrównoważeniu: n=2228
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=17.85s, Znajomy - Znajomy=14.10s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=11.11s, Znajomy - Znajomy=7.83s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=17.86s, Znajomy - Znajomy=14.10s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=11.18s, Znajomy - Znajomy=7.83s
+Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: Statystyka=156758.00, p-wartość=0.6756, Istotne=False
+  Próbki: Oryginalne (n1=1251, n2=564), Po zrównoważeniu: n=564
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=11.91s, Nieznajomy - Nieznajomy=12.10s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=7.57s, Nieznajomy - Nieznajomy=6.55s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=11.49s, Nieznajomy - Nieznajomy=12.10s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=7.02s, Nieznajomy - Nieznajomy=6.55s
+Inna znacząca - Inna znacząca vs To skomplikowane: Statystyka=752577.50, p-wartość=0.0977, Istotne=False
+  Próbki: Oryginalne (n1=1251, n2=1581), Po zrównoważeniu: n=1251
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=11.91s, To skomplikowane=12.73s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=7.57s, To skomplikowane=7.72s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=11.91s, To skomplikowane=12.50s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=7.57s, To skomplikowane=7.72s
+Inna znacząca - Inna znacząca vs Znajomy - Znajomy: Statystyka=734855.00, p-wartość=0.0084, Istotne=True
+  Próbki: Oryginalne (n1=1251, n2=2228), Po zrównoważeniu: n=1251
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=11.91s, Znajomy - Znajomy=14.10s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=7.57s, Znajomy - Znajomy=7.83s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=11.91s, Znajomy - Znajomy=14.01s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=7.57s, Znajomy - Znajomy=7.84s
+Nieznajomy - Nieznajomy vs To skomplikowane: Statystyka=144515.50, p-wartość=0.0079, Istotne=True
+  Próbki: Oryginalne (n1=564, n2=1581), Po zrównoważeniu: n=564
+  Średnie czasy (oryginalne): Nieznajomy - Nieznajomy=12.10s, To skomplikowane=12.73s
+  Mediany czasów (oryginalne): Nieznajomy - Nieznajomy=6.55s, To skomplikowane=7.72s
+  Średnie czasy (zsamplowane): Nieznajomy - Nieznajomy=12.10s, To skomplikowane=12.90s
+  Mediany czasów (zsamplowane): Nieznajomy - Nieznajomy=6.55s, To skomplikowane=7.95s
+Nieznajomy - Nieznajomy vs Znajomy - Znajomy: Statystyka=144714.50, p-wartość=0.0088, Istotne=True
+  Próbki: Oryginalne (n1=564, n2=2228), Po zrównoważeniu: n=564
+  Średnie czasy (oryginalne): Nieznajomy - Nieznajomy=12.10s, Znajomy - Znajomy=14.10s
+  Mediany czasów (oryginalne): Nieznajomy - Nieznajomy=6.55s, Znajomy - Znajomy=7.83s
+  Średnie czasy (zsamplowane): Nieznajomy - Nieznajomy=12.10s, Znajomy - Znajomy=14.49s
+  Mediany czasów (zsamplowane): Nieznajomy - Nieznajomy=6.55s, Znajomy - Znajomy=7.62s
+To skomplikowane vs Znajomy - Znajomy: Statystyka=1234824.50, p-wartość=0.5601, Istotne=False
+  Próbki: Oryginalne (n1=1581, n2=2228), Po zrównoważeniu: n=1581
+  Średnie czasy (oryginalne): To skomplikowane=12.73s, Znajomy - Znajomy=14.10s
+  Mediany czasów (oryginalne): To skomplikowane=7.72s, Znajomy - Znajomy=7.83s
+  Średnie czasy (zsamplowane): To skomplikowane=12.73s, Znajomy - Znajomy=14.02s
+  Mediany czasów (zsamplowane): To skomplikowane=7.72s, Znajomy - Znajomy=7.67s
+
+Tworzenie wykresów z wąsami istotności dla toru 6...
+
+
+=== Analiza dla toru 7 ===
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_X):
+Statystyka: 102.44, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla grup wiekowych (Age_Group_Y):
+Statystyka: 96.01, p-wartość: 0.0000, Istotne: True
+
+Test Kruskala-Wallisa dla relacji (Relationship_Name):
+Statystyka: 83.43, p-wartość: 0.0000, Istotne: True
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par grup wiekowych (Age_Group_X):
+18-29 vs 30-44: Statystyka=415113.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1256, n2=1000), Po zrównoważeniu: n=1000
+  Średnie czasy (oryginalne): 18-29=47.31s, 30-44=54.67s
+  Mediany czasów (oryginalne): 18-29=43.48s, 30-44=50.67s
+  Średnie czasy (zsamplowane): 18-29=47.25s, 30-44=54.67s
+  Mediany czasów (zsamplowane): 18-29=43.22s, 30-44=50.67s
+18-29 vs 45-59: Statystyka=52255.50, p-wartość=0.0056, Istotne=True
+  Próbki: Oryginalne (n1=1256, n2=345), Po zrównoważeniu: n=345
+  Średnie czasy (oryginalne): 18-29=47.31s, 45-59=53.68s
+  Mediany czasów (oryginalne): 18-29=43.48s, 45-59=48.05s
+  Średnie czasy (zsamplowane): 18-29=47.80s, 45-59=53.68s
+  Mediany czasów (zsamplowane): 18-29=43.08s, 45-59=48.05s
+18-29 vs 60+: Statystyka=52051.50, p-wartość=0.1352, Istotne=False
+  Próbki: Oryginalne (n1=1256, n2=334), Po zrównoważeniu: n=334
+  Średnie czasy (oryginalne): 18-29=47.31s, 60+=51.65s
+  Mediany czasów (oryginalne): 18-29=43.48s, 60+=47.95s
+  Średnie czasy (zsamplowane): 18-29=47.80s, 60+=51.65s
+  Mediany czasów (zsamplowane): 18-29=43.25s, 60+=47.95s
+18-29 vs < 18: Statystyka=613672.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1256, n2=2113), Po zrównoważeniu: n=1256
+  Średnie czasy (oryginalne): 18-29=47.31s, < 18=56.89s
+  Mediany czasów (oryginalne): 18-29=43.48s, < 18=53.59s
+  Średnie czasy (zsamplowane): 18-29=47.31s, < 18=57.66s
+  Mediany czasów (zsamplowane): 18-29=43.48s, < 18=54.38s
+30-44 vs 45-59: Statystyka=62382.00, p-wartość=0.2731, Istotne=False
+  Próbki: Oryginalne (n1=1000, n2=345), Po zrównoważeniu: n=345
+  Średnie czasy (oryginalne): 30-44=54.67s, 45-59=53.68s
+  Mediany czasów (oryginalne): 30-44=50.67s, 45-59=48.05s
+  Średnie czasy (zsamplowane): 30-44=55.18s, 45-59=53.68s
+  Mediany czasów (zsamplowane): 30-44=52.50s, 45-59=48.05s
+30-44 vs 60+: Statystyka=61381.50, p-wartość=0.0247, Istotne=True
+  Próbki: Oryginalne (n1=1000, n2=334), Po zrównoważeniu: n=334
+  Średnie czasy (oryginalne): 30-44=54.67s, 60+=51.65s
+  Mediany czasów (oryginalne): 30-44=50.67s, 60+=47.95s
+  Średnie czasy (zsamplowane): 30-44=55.50s, 60+=51.65s
+  Mediany czasów (zsamplowane): 30-44=52.64s, 60+=47.95s
+30-44 vs < 18: Statystyka=465702.50, p-wartość=0.0079, Istotne=True
+  Próbki: Oryginalne (n1=1000, n2=2113), Po zrównoważeniu: n=1000
+  Średnie czasy (oryginalne): 30-44=54.67s, < 18=56.89s
+  Mediany czasów (oryginalne): 30-44=50.67s, < 18=53.59s
+  Średnie czasy (zsamplowane): 30-44=54.67s, < 18=58.01s
+  Mediany czasów (zsamplowane): 30-44=50.67s, < 18=54.62s
+45-59 vs 60+: Statystyka=58131.50, p-wartość=0.3454, Istotne=False
+  Próbki: Oryginalne (n1=345, n2=334), Po zrównoważeniu: n=334
+  Średnie czasy (oryginalne): 45-59=53.68s, 60+=51.65s
+  Mediany czasów (oryginalne): 45-59=48.05s, 60+=47.95s
+  Średnie czasy (zsamplowane): 45-59=53.61s, 60+=51.65s
+  Mediany czasów (zsamplowane): 45-59=47.70s, 60+=47.95s
+45-59 vs < 18: Statystyka=52522.50, p-wartość=0.0076, Istotne=True
+  Próbki: Oryginalne (n1=345, n2=2113), Po zrównoważeniu: n=345
+  Średnie czasy (oryginalne): 45-59=53.68s, < 18=56.89s
+  Mediany czasów (oryginalne): 45-59=48.05s, < 18=53.59s
+  Średnie czasy (zsamplowane): 45-59=53.68s, < 18=59.07s
+  Mediany czasów (zsamplowane): 45-59=48.05s, < 18=55.99s
+60+ vs < 18: Statystyka=47569.00, p-wartość=0.0010, Istotne=True
+  Próbki: Oryginalne (n1=334, n2=2113), Po zrównoważeniu: n=334
+  Średnie czasy (oryginalne): 60+=51.65s, < 18=56.89s
+  Mediany czasów (oryginalne): 60+=47.95s, < 18=53.59s
+  Średnie czasy (zsamplowane): 60+=51.65s, < 18=58.90s
+  Mediany czasów (zsamplowane): 60+=47.95s, < 18=54.67s
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par grup wiekowych (Age_Group_Y):
+18-29 vs 30-44: Statystyka=365288.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1235, n2=927), Po zrównoważeniu: n=927
+  Średnie czasy (oryginalne): 18-29=47.60s, 30-44=53.77s
+  Mediany czasów (oryginalne): 18-29=43.49s, 30-44=50.38s
+  Średnie czasy (zsamplowane): 18-29=46.98s, 30-44=53.77s
+  Mediany czasów (zsamplowane): 18-29=43.08s, 30-44=50.38s
+18-29 vs 45-59: Statystyka=46160.50, p-wartość=0.0002, Istotne=True
+  Próbki: Oryginalne (n1=1235, n2=333), Po zrównoważeniu: n=333
+  Średnie czasy (oryginalne): 18-29=47.60s, 45-59=55.41s
+  Mediany czasów (oryginalne): 18-29=43.49s, 45-59=52.48s
+  Średnie czasy (zsamplowane): 18-29=47.68s, 45-59=55.41s
+  Mediany czasów (zsamplowane): 18-29=43.48s, 45-59=52.48s
+18-29 vs 60+: Statystyka=57148.50, p-wartość=0.5185, Istotne=False
+  Próbki: Oryginalne (n1=1235, n2=343), Po zrównoważeniu: n=343
+  Średnie czasy (oryginalne): 18-29=47.60s, 60+=50.90s
+  Mediany czasów (oryginalne): 18-29=43.49s, 60+=47.36s
+  Średnie czasy (zsamplowane): 18-29=47.73s, 60+=50.90s
+  Mediany czasów (zsamplowane): 18-29=43.48s, 60+=47.36s
+18-29 vs < 18: Statystyka=619119.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=1235, n2=2210), Po zrównoważeniu: n=1235
+  Średnie czasy (oryginalne): 18-29=47.60s, < 18=56.80s
+  Mediany czasów (oryginalne): 18-29=43.49s, < 18=53.37s
+  Średnie czasy (zsamplowane): 18-29=47.60s, < 18=56.72s
+  Mediany czasów (zsamplowane): 18-29=43.49s, < 18=52.82s
+30-44 vs 45-59: Statystyka=54123.50, p-wartość=0.5948, Istotne=False
+  Próbki: Oryginalne (n1=927, n2=333), Po zrównoważeniu: n=333
+  Średnie czasy (oryginalne): 30-44=53.77s, 45-59=55.41s
+  Mediany czasów (oryginalne): 30-44=50.38s, 45-59=52.48s
+  Średnie czasy (zsamplowane): 30-44=53.89s, 45-59=55.41s
+  Mediany czasów (zsamplowane): 30-44=51.02s, 45-59=52.48s
+30-44 vs 60+: Statystyka=64758.50, p-wartość=0.0222, Istotne=True
+  Próbki: Oryginalne (n1=927, n2=343), Po zrównoważeniu: n=343
+  Średnie czasy (oryginalne): 30-44=53.77s, 60+=50.90s
+  Mediany czasów (oryginalne): 30-44=50.38s, 60+=47.36s
+  Średnie czasy (zsamplowane): 30-44=54.01s, 60+=50.90s
+  Mediany czasów (zsamplowane): 30-44=51.68s, 60+=47.36s
+30-44 vs < 18: Statystyka=413224.00, p-wartość=0.1538, Istotne=False
+  Próbki: Oryginalne (n1=927, n2=2210), Po zrównoważeniu: n=927
+  Średnie czasy (oryginalne): 30-44=53.77s, < 18=56.80s
+  Mediany czasów (oryginalne): 30-44=50.38s, < 18=53.37s
+  Średnie czasy (zsamplowane): 30-44=53.77s, < 18=55.85s
+  Mediany czasów (zsamplowane): 30-44=50.38s, < 18=52.28s
+45-59 vs 60+: Statystyka=61290.00, p-wartość=0.0186, Istotne=True
+  Próbki: Oryginalne (n1=333, n2=343), Po zrównoważeniu: n=333
+  Średnie czasy (oryginalne): 45-59=55.41s, 60+=50.90s
+  Mediany czasów (oryginalne): 45-59=52.48s, 60+=47.36s
+  Średnie czasy (zsamplowane): 45-59=55.41s, 60+=51.10s
+  Mediany czasów (zsamplowane): 45-59=52.48s, 60+=47.36s
+45-59 vs < 18: Statystyka=54242.50, p-wartość=0.6284, Istotne=False
+  Próbki: Oryginalne (n1=333, n2=2210), Po zrównoważeniu: n=333
+  Średnie czasy (oryginalne): 45-59=55.41s, < 18=56.80s
+  Mediany czasów (oryginalne): 45-59=52.48s, < 18=53.37s
+  Średnie czasy (zsamplowane): 45-59=55.41s, < 18=57.19s
+  Mediany czasów (zsamplowane): 45-59=52.48s, < 18=52.34s
+60+ vs < 18: Statystyka=51447.50, p-wartość=0.0045, Istotne=True
+  Próbki: Oryginalne (n1=343, n2=2210), Po zrównoważeniu: n=343
+  Średnie czasy (oryginalne): 60+=50.90s, < 18=56.80s
+  Mediany czasów (oryginalne): 60+=47.36s, < 18=53.37s
+  Średnie czasy (zsamplowane): 60+=50.90s, < 18=56.88s
+  Mediany czasów (zsamplowane): 60+=47.36s, < 18=51.33s
+
+Szczegółowe testy Wilcoxona z zrównoważonym samplingiem dla par relacji (Relationship_Name):
+Członek rodziny - członek rodziny vs Inna znacząca - Inna znacząca: Statystyka=189558.50, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=2553, n2=557), Po zrównoważeniu: n=557
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=56.64s, Inna znacząca - Inna znacząca=47.27s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=53.50s, Inna znacząca - Inna znacząca=42.81s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=56.78s, Inna znacząca - Inna znacząca=47.27s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=54.19s, Inna znacząca - Inna znacząca=42.81s
+Członek rodziny - członek rodziny vs Nieznajomy - Nieznajomy: Statystyka=22788.00, p-wartość=0.0264, Istotne=True
+  Próbki: Oryginalne (n1=2553, n2=201), Po zrównoważeniu: n=201
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=56.64s, Nieznajomy - Nieznajomy=49.85s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=53.50s, Nieznajomy - Nieznajomy=47.83s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=55.23s, Nieznajomy - Nieznajomy=49.85s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=54.87s, Nieznajomy - Nieznajomy=47.83s
+Członek rodziny - członek rodziny vs To skomplikowane: Statystyka=268262.50, p-wartość=0.0015, Istotne=True
+  Próbki: Oryginalne (n1=2553, n2=699), Po zrównoważeniu: n=699
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=56.64s, To skomplikowane=52.09s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=53.50s, To skomplikowane=49.00s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=56.65s, To skomplikowane=52.09s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=53.94s, To skomplikowane=49.00s
+Członek rodziny - członek rodziny vs Znajomy - Znajomy: Statystyka=603197.00, p-wartość=0.0000, Istotne=True
+  Próbki: Oryginalne (n1=2553, n2=1038), Po zrównoważeniu: n=1038
+  Średnie czasy (oryginalne): Członek rodziny - członek rodziny=56.64s, Znajomy - Znajomy=50.77s
+  Mediany czasów (oryginalne): Członek rodziny - członek rodziny=53.50s, Znajomy - Znajomy=47.35s
+  Średnie czasy (zsamplowane): Członek rodziny - członek rodziny=56.54s, Znajomy - Znajomy=50.77s
+  Mediany czasów (zsamplowane): Członek rodziny - członek rodziny=54.09s, Znajomy - Znajomy=47.35s
+Inna znacząca - Inna znacząca vs Nieznajomy - Nieznajomy: Statystyka=18548.50, p-wartość=0.1562, Istotne=False
+  Próbki: Oryginalne (n1=557, n2=201), Po zrównoważeniu: n=201
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=47.27s, Nieznajomy - Nieznajomy=49.85s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=42.81s, Nieznajomy - Nieznajomy=47.83s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=44.65s, Nieznajomy - Nieznajomy=49.85s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=42.74s, Nieznajomy - Nieznajomy=47.83s
+Inna znacząca - Inna znacząca vs To skomplikowane: Statystyka=140428.50, p-wartość=0.0062, Istotne=True
+  Próbki: Oryginalne (n1=557, n2=699), Po zrównoważeniu: n=557
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=47.27s, To skomplikowane=52.09s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=42.81s, To skomplikowane=49.00s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=47.27s, To skomplikowane=51.91s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=42.81s, To skomplikowane=47.85s
+Inna znacząca - Inna znacząca vs Znajomy - Znajomy: Statystyka=144049.00, p-wartość=0.0391, Istotne=True
+  Próbki: Oryginalne (n1=557, n2=1038), Po zrównoważeniu: n=557
+  Średnie czasy (oryginalne): Inna znacząca - Inna znacząca=47.27s, Znajomy - Znajomy=50.77s
+  Mediany czasów (oryginalne): Inna znacząca - Inna znacząca=42.81s, Znajomy - Znajomy=47.35s
+  Średnie czasy (zsamplowane): Inna znacząca - Inna znacząca=47.27s, Znajomy - Znajomy=51.29s
+  Mediany czasów (zsamplowane): Inna znacząca - Inna znacząca=42.81s, Znajomy - Znajomy=46.41s
+Nieznajomy - Nieznajomy vs To skomplikowane: Statystyka=19190.00, p-wartość=0.3859, Istotne=False
+  Próbki: Oryginalne (n1=201, n2=699), Po zrównoważeniu: n=201
+  Średnie czasy (oryginalne): Nieznajomy - Nieznajomy=49.85s, To skomplikowane=52.09s
+  Mediany czasów (oryginalne): Nieznajomy - Nieznajomy=47.83s, To skomplikowane=49.00s
+  Średnie czasy (zsamplowane): Nieznajomy - Nieznajomy=49.85s, To skomplikowane=51.52s
+  Mediany czasów (zsamplowane): Nieznajomy - Nieznajomy=47.83s, To skomplikowane=48.93s
+Nieznajomy - Nieznajomy vs Znajomy - Znajomy: Statystyka=19850.50, p-wartość=0.7641, Istotne=False
+  Próbki: Oryginalne (n1=201, n2=1038), Po zrównoważeniu: n=201
+  Średnie czasy (oryginalne): Nieznajomy - Nieznajomy=49.85s, Znajomy - Znajomy=50.77s
+  Mediany czasów (oryginalne): Nieznajomy - Nieznajomy=47.83s, Znajomy - Znajomy=47.35s
+  Średnie czasy (zsamplowane): Nieznajomy - Nieznajomy=49.85s, Znajomy - Znajomy=51.36s
+  Mediany czasów (zsamplowane): Nieznajomy - Nieznajomy=47.83s, Znajomy - Znajomy=44.03s
+To skomplikowane vs Znajomy - Znajomy: Statystyka=250317.50, p-wartość=0.4254, Istotne=False
+  Próbki: Oryginalne (n1=699, n2=1038), Po zrównoważeniu: n=699
+  Średnie czasy (oryginalne): To skomplikowane=52.09s, Znajomy - Znajomy=50.77s
+  Mediany czasów (oryginalne): To skomplikowane=49.00s, Znajomy - Znajomy=47.35s
+  Średnie czasy (zsamplowane): To skomplikowane=52.09s, Znajomy - Znajomy=51.09s
+  Mediany czasów (zsamplowane): To skomplikowane=49.00s, Znajomy - Znajomy=46.36s
+
+Tworzenie wykresów z wąsami istotności dla toru 7...
+
+Tworzenie podsumowującego wykresu istotności...
+
+=== TABELA WYNIKÓW TESTÓW KRUSKALA-WALLISA ===
+   Tor  Wiek_X_stat  Wiek_X_p  Wiek_X_istotne  Wiek_Y_stat  Wiek_Y_p  \
+0    1      69.3941       0.0            True      37.5376       0.0   
+1    2     146.6579       0.0            True     166.1311       0.0   
+2    3     142.4220       0.0            True     229.6001       0.0   
+3    4     102.4004       0.0            True     126.6416       0.0   
+4    5     156.0870       0.0            True     174.3099       0.0   
+5    6     419.7106       0.0            True     251.1765       0.0   
+6    7     102.4360       0.0            True      96.0105       0.0   
+
+   Wiek_Y_istotne  Relacje_stat  Relacje_p  Relacje_istotne  
+0            True      176.5519        0.0             True  
+1            True      172.2423        0.0             True  
+2            True      343.9391        0.0             True  
+3            True      221.4341        0.0             True  
+4            True      120.8811        0.0             True  
+5            True      402.5353        0.0             True  
+6            True       83.4300        0.0             True  
+
+=== TABELA PODSUMOWANIA TESTÓW WILCOXONA ===
+   Tor  Wiek_X_istotne  Wiek_X_wszystkie  Wiek_X_procent  Wiek_Y_istotne  \
+0    1               6                10            60.0               5   
+1    2               6                10            60.0               8   
+2    3               8                10            80.0               8   
+3    4               7                10            70.0               7   
+4    5               7                10            70.0               6   
+5    6               8                10            80.0               8   
+6    7               7                10            70.0               6   
+
+   Wiek_Y_wszystkie  Wiek_Y_procent  Relacje_istotne  Relacje_wszystkie  \
+0                10            50.0                6                 10   
+1                10            80.0                7                 10   
+2                10            80.0                7                 10   
+3                10            70.0                8                 10   
+4                10            60.0                6                 10   
+5                10            80.0                7                 10   
+6                10            60.0                6                 10   
+
+   Relacje_procent  
+0             60.0  
+1             70.0  
+2             70.0  
+3             80.0  
+4             60.0  
+5             70.0  
+6             60.0  
+
+=== SZCZEGÓŁOWE ISTOTNE PORÓWNANIA ===
+     Tor Kategoria                             Grupa1  \
+13     1   Relacje  Członek rodziny - członek rodziny   
+11     1   Relacje  Członek rodziny - członek rodziny   
+14     1   Relacje  Członek rodziny - członek rodziny   
+16     1   Relacje                   To skomplikowane   
+12     1   Relacje  Członek rodziny - członek rodziny   
+..   ...       ...                                ...   
+132    7    Wiek_Y                              18-29   
+133    7    Wiek_Y                              18-29   
+137    7    Wiek_Y                                60+   
+136    7    Wiek_Y                              45-59   
+135    7    Wiek_Y                              30-44   
+
+                            Grupa2  p_wartosc  Mediana1  Mediana2  \
+13                To skomplikowane     0.0000    42.275   32.1150   
+11   Inna znacząca - Inna znacząca     0.0000    42.275   35.1850   
+14               Znajomy - Znajomy     0.0000    42.275   37.2870   
+16               Znajomy - Znajomy     0.0000    32.115   37.2870   
+12         Nieznajomy - Nieznajomy     0.0047    42.275   35.9355   
+..                             ...        ...       ...       ...   
+132                          30-44     0.0000    43.493   50.3830   
+133                          45-59     0.0002    43.493   52.4850   
+137                           < 18     0.0045    47.364   53.3695   
+136                            60+     0.0186    52.485   47.3640   
+135                            60+     0.0222    50.383   47.3640   
+
+                      Lepsza_grupa  
+13                To skomplikowane  
+11   Inna znacząca - Inna znacząca  
+14               Znajomy - Znajomy  
+16                To skomplikowane  
+12         Nieznajomy - Nieznajomy  
+..                             ...  
+132                          18-29  
+133                          18-29  
+137                            60+  
+136                            60+  
+135                            60+  
+
+[144 rows x 8 columns]
+
+Analiza zakończona. Utworzono:
+- Wykresy słupkowe z wąsami istotności dla każdego toru
+- Podsumowujący wykres istotności dla wszystkich torów
+- Szczegółowe tabele CSV z wynikami testów
+- Tradycyjne boxploty
